@@ -2,8 +2,6 @@
 ## React Universal Saga (currency-exchange)
 [![Build Status](https://travis-ci.org/nattatorn-dev/currency-exchange.svg?branch=master)](https://travis-ci.org/nattatorn-dev/currency-exchange) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nattatorn-dev/currency-exchange/master/LICENSE)
 
----
-
 ## Getting Started
 
 Universal React App Starter featuring Redux Saga. Heavily modified version of [React Redux Universal Hot Example](https://github.com/erikras/react-redux-universal-hot-example) combined with Redux Saga [real-world](https://github.com/yelouafi/redux-saga/tree/master/examples/real-world) example.
