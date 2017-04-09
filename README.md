@@ -1,6 +1,7 @@
 
-# # React Universal Saga (currency-exchange)
-[![Build Status](https://travis-ci.org/nattatorn-dev/currency-exchange.svg?branch=master)](https://travis-ci.org/nattatorn-dev/currency-exchange)
+## React Universal Saga (currency-exchange)
+[![Build Status](https://travis-ci.org/nattatorn-dev/currency-exchange.svg?branch=master)](https://travis-ci.org/nattatorn-dev/currency-exchange) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nattatorn-dev/currency-exchange/master/LICENSE)
+
 ---
 
 ## Getting Started
