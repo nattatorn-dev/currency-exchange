@@ -1,0 +1,124 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1fu65wt5du = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyPopular/components/PopularList.js',hash = '2e9a3fc852002725abf3e4b876e5e28696c081d6',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyPopular/components/PopularList.js', statementMap: { '0': { start: { line: 17, column: 0 }, end: { line: 24, column: 1 } }, '1': { start: { line: 26, column: 0 }, end: { line: 28, column: 1 } }, '2': { start: { line: 33, column: 21 }, end: { line: 41, column: 5 } }, '3': { start: { line: 33, column: 28 }, end: { line: 41, column: 3 } }, '4': { start: { line: 43, column: 21 }, end: { line: 43, column: 83 } }, '5': { start: { line: 43, column: 43 }, end: { line: 43, column: 83 } }, '6': { start: { line: 44, column: 25 }, end: { line: 64, column: 7 } }, '7': { start: { line: 45, column: 4 }, end: { line: 64, column: 7 } }, '8': { start: { line: 46, column: 6 }, end: { line: 63, column: 11 } }, '9': { start: { line: 66, column: 23 }, end: { line: 66, column: 77 } }, '10': { start: { line: 66, column: 42 }, end: { line: 66, column: 77 } }, '11': { start: { line: 67, column: 19 }, end: { line: 67, column: 57 } }, '12': { start: { line: 69, column: 20 }, end: { line: 113, column: 7 } }, '13': { start: { line: 70, column: 4 }, end: { line: 113, column: 7 } }, '14': { start: { line: 71, column: 6 }, end: { line: 112, column: 24 } }, '15': { start: { line: 103, column: 22 }, end: { line: 103, column: 78 } }, '16': { start: { line: 115, column: 2 }, end: { line: 121, column: 12 } } }, fnMap: { '0': { name: 'PopularList', decl: { start: { line: 30, column: 9 }, end: { line: 30, column: 20 } }, loc: { start: { line: 32, column: 2 }, end: { line: 122, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 33, column: 21 }, end: { line: 33, column: 22 } }, loc: { start: { line: 33, column: 28 }, end: { line: 41, column: 3 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 43, column: 21 }, end: { line: 43, column: 22 } }, loc: { start: { line: 43, column: 43 }, end: { line: 43, column: 83 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 44, column: 25 }, end: { line: 44, column: 26 } }, loc: { start: { line: 45, column: 4 }, end: { line: 64, column: 7 } } }, '4': { name: '(anonymous_4)', decl: { start: { line: 45, column: 14 }, end: { line: 45, column: 15 } }, loc: { start: { line: 46, column: 6 }, end: { line: 63, column: 11 } } }, '5': { name: '(anonymous_5)', decl: { start: { line: 66, column: 23 }, end: { line: 66, column: 24 } }, loc: { start: { line: 66, column: 42 }, end: { line: 66, column: 77 } } }, '6': { name: '(anonymous_6)', decl: { start: { line: 69, column: 20 }, end: { line: 69, column: 21 } }, loc: { start: { line: 70, column: 4 }, end: { line: 113, column: 7 } } }, '7': { name: '(anonymous_7)', decl: { start: { line: 70, column: 15 }, end: { line: 70, column: 16 } }, loc: { start: { line: 71, column: 6 }, end: { line: 112, column: 24 } } }, '8': { name: '(anonymous_8)', decl: { start: { line: 102, column: 29 }, end: { line: 102, column: 30 } }, loc: { start: { line: 103, column: 22 }, end: { line: 103, column: 78 } } } }, branchMap: { '0': { loc: { start: { line: 43, column: 43 }, end: { line: 43, column: 83 } }, type: 'cond-expr', locations: [{ start: { line: 43, column: 56 }, end: { line: 43, column: 76 } }, { start: { line: 43, column: 79 }, end: { line: 43, column: 83 } }] }, '1': { loc: { start: { line: 66, column: 42 }, end: { line: 66, column: 77 } }, type: 'cond-expr', locations: [{ start: { line: 66, column: 52 }, end: { line: 66, column: 63 } }, { start: { line: 66, column: 66 }, end: { line: 66, column: 77 } }] }, '2': { loc: { start: { line: 115, column: 9 }, end: { line: 121, column: 12 } }, type: 'cond-expr', locations: [{ start: { line: 116, column: 6 }, end: { line: 118, column: 10 } }, { start: { line: 119, column: 6 }, end: { line: 121, column: 12 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactSticky = require('react-sticky');
+var /* istanbul ignore next */_helpers = require('../../../helpers');
+var /* istanbul ignore next */_services = require('../../../services');
+
+var /* istanbul ignore next */_shared = require('../../../shared'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_1fu65wt5du.s[0];
+
+
+
+
+
+
+
+
+
+
+PopularList.propTypes = {
+  actions: /* istanbul ignore next */_react2.default.PropTypes.shape({
+    toggleShowCurrencyPopular: /* istanbul ignore next */_react2.default.PropTypes.func.isRequired }),
+
+  banks: /* istanbul ignore next */_react2.default.PropTypes.array.isRequired,
+  loadingLabel: /* istanbul ignore next */_react2.default.PropTypes.string.isRequired,
+  setting: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired }; /* istanbul ignore next */++cov_1fu65wt5du.s[1];
+
+
+PopularList.defaultProps = {
+  loadingLabel: 'Loading...' };
+
+
+function PopularList( /* istanbul ignore next */_ref)
+
+{/* istanbul ignore next */var toggleShowCurrencyPopular = _ref.actions.toggleShowCurrencyPopular,banks = _ref.banks,loadingLabel = _ref.loadingLabel,setting = _ref.setting; /* istanbul ignore next */++cov_1fu65wt5du.f[0];++cov_1fu65wt5du.s[2];
+  var styleImage = function styleImage(e) {/* istanbul ignore next */++cov_1fu65wt5du.f[1];++cov_1fu65wt5du.s[3];return {
+      backgroundImage: /* istanbul ignore next */_helpers.url.currency(e.currencyDetails.code),
+      height: '30px',
+      width: '30px',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '145% 110%',
+      borderRadius: '150px',
+      boxShadow: '0 0 8px rgba(0, 0, 0, .2)' };
+  }; /* istanbul ignore next */++cov_1fu65wt5du.s[4];
+
+  var extendName = function /* istanbul ignore next */extendName( /* istanbul ignore next */_ref2) {/* istanbul ignore next */var extendName = _ref2.extendName; /* istanbul ignore next */++cov_1fu65wt5du.f[2];++cov_1fu65wt5du.s[5];return extendName ? /* istanbul ignore next */(++cov_1fu65wt5du.b[0][0], ' : ' + extendName) : /* istanbul ignore next */(++cov_1fu65wt5du.b[0][1], null);}; /* istanbul ignore next */++cov_1fu65wt5du.s[6];
+  var listCurrencies = function listCurrencies( /* istanbul ignore next */_ref3)
+  {/* istanbul ignore next */var data = _ref3.data; /* istanbul ignore next */++cov_1fu65wt5du.f[3];++cov_1fu65wt5du.s[7];return data.map(function (e, k)
+    {/* istanbul ignore next */++cov_1fu65wt5du.f[4];++cov_1fu65wt5du.s[8];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'tr', /* istanbul ignore next */{ key: k },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorder, /* istanbul ignore next */null,
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: styleImage(e) },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginLeft: '45px', width: '170px' } },
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'strong', /* istanbul ignore next */{ style: { fontWeight: '400' } },
+                  e.currencyDetails.code),
+
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { color: 'gray', marginTop: '-2px' } },
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.SectionDetail, /* istanbul ignore next */null,
+                    e.currencyDetails.name, extendName(e)))))),
+
+
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderNumber, /* istanbul ignore next */null, /* istanbul ignore next */_services.number.isNumber(e.buy)),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderNumber, /* istanbul ignore next */null, /* istanbul ignore next */_services.number.isNumber(e.sell))));
+    });
+  }; /* istanbul ignore next */++cov_1fu65wt5du.s[9];
+
+  var renderToggle = function renderToggle( /* istanbul ignore next */_ref4) {/* istanbul ignore next */var isTotal = _ref4.isTotal; /* istanbul ignore next */++cov_1fu65wt5du.f[5];++cov_1fu65wt5du.s[10];return isTotal ? /* istanbul ignore next */(++cov_1fu65wt5du.b[1][0], 'show less') : /* istanbul ignore next */(++cov_1fu65wt5du.b[1][1], 'show more');};
+  var currLang = /* istanbul ignore next */(++cov_1fu65wt5du.s[11], setting.langs[setting.lang].messages); /* istanbul ignore next */++cov_1fu65wt5du.s[12];
+
+  var listBanks = function listBanks()
+  {/* istanbul ignore next */++cov_1fu65wt5du.f[6];++cov_1fu65wt5du.s[13];return banks.map(function (e, k)
+    {/* istanbul ignore next */++cov_1fu65wt5du.f[7];++cov_1fu65wt5du.s[14];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactSticky.StickyContainer, /* istanbul ignore next */{ key: /* istanbul ignore next */'stick-' + k, style: { zIndex: 2 } },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ key: k },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactSticky.Sticky, /* istanbul ignore next */{ style: { zIndex: 1 } },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.SectionMain, /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.BankImageCircle, /* istanbul ignore next */{ bank: e.bankNameEng },
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.BankLabel, /* istanbul ignore next */null, e.bankNameThai),
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.BankLabel, /* istanbul ignore next */null, e.bankNameEng)))),
+
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'table', /* istanbul ignore next */{ style: { border: 1, width: '100%' } },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'thead', /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'tr', /* istanbul ignore next */null,
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderHeader, /* istanbul ignore next */null,
+                    currLang.BANK_TABLE_COL_CURRENCIES),
+
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderHeader, /* istanbul ignore next */{ align: 'right' },
+                    currLang.BANK_TABLE_COL_SELL),
+
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderHeader, /* istanbul ignore next */{ align: 'right' },
+                    currLang.BANK_TABLE_COL_BUY))),
+
+
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'tbody', /* istanbul ignore next */null,
+                listCurrencies(e),
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'tr', /* istanbul ignore next */null,
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorder, /* istanbul ignore next */{ align: 'center', colSpan: '4' },
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'a', /* istanbul ignore next */{
+                        /* istanbul ignore next */'data-id': k,
+                        style: { cursor: 'pointer', color: 'cornflowerblue' },
+                        onClick: function /* istanbul ignore next */onClick(e)
+                        {/* istanbul ignore next */++cov_1fu65wt5du.f[8];++cov_1fu65wt5du.s[15];return toggleShowCurrencyPopular(+e.currentTarget.dataset.id);} },
+
+                      renderToggle(e)))))))));
+
+
+
+
+
+
+    });
+  }; /* istanbul ignore next */++cov_1fu65wt5du.s[16];
+
+  return banks.length === 0 ? /* istanbul ignore next */(++cov_1fu65wt5du.b[2][0],
+  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null,
+    loadingLabel)) : /* istanbul ignore next */(++cov_1fu65wt5du.b[2][1],
+
+  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+    listBanks()));
+
+} /* istanbul ignore next */exports.default =
+
+PopularList;

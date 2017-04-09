@@ -1,0 +1,51 @@
+'use strict';var _currencyExchange = require('../currencyExchange');var _currencyExchange2 = _interopRequireDefault(_currencyExchange);
+var _actions = require('../../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('router currencyExchange', function () {
+  it('returns correct initial state', function () {
+    expect((0, _currencyExchange2.default)(undefined, {})).toEqual({});
+  });
+
+  it('returns current state if no action matched', function () {
+    var curState = { banks: [], currency: 'USD', rate: '100' };
+    var action = {
+      type: 'test' };
+
+    var nextState = (0, _currencyExchange2.default)(curState, action);
+    expect(nextState).toBe(curState);
+    expect(nextState).toEqual(curState);
+  });
+
+  it('add currency exchange when receiving ADD_CURRENCY_EXCHANGE action', function () {
+    var curState = { banks: [], currency: '', rate: '' };
+    var action = {
+      type: ActionTypes.ADD_CURRENCY_EXCHANGE,
+      banks: [
+      {
+        bankNameThai: 'ธนาคารไทยพาณิชย์',
+        bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+        data: [],
+        isTotal: true }],
+
+
+      currency: 'USD',
+      rate: '100' };
+
+    var nextState = (0, _currencyExchange2.default)(curState, action);
+    console.log('nextState', nextState);
+    var expectedState = {
+      banks: [
+      {
+        bankNameThai: 'ธนาคารไทยพาณิชย์',
+        bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+        data: [],
+        isTotal: true }],
+
+
+      currency: 'USD',
+      rate: '100' };
+
+    expect(nextState).toEqual(expectedState);
+    expect(nextState).not.toBe(curState);
+  });
+});

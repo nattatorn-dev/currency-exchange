@@ -1,0 +1,125 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _slicedToArray2 = require('babel-runtime/helpers/slicedToArray');var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);var cov_r23yi0n9s = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/components/ComparisonList.js',hash = 'a3db3c1397dab36d579ae0b25571bb2a8ffe77f5',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/components/ComparisonList.js', statementMap: { '0': { start: { line: 16, column: 0 }, end: { line: 19, column: 1 } }, '1': { start: { line: 22, column: 26 }, end: { line: 23, column: 75 } }, '2': { start: { line: 23, column: 4 }, end: { line: 23, column: 75 } }, '3': { start: { line: 24, column: 19 }, end: { line: 24, column: 57 } }, '4': { start: { line: 25, column: 25 }, end: { line: 71, column: 3 } }, '5': { start: { line: 29, column: 4 }, end: { line: 70, column: 12 } }, '6': { start: { line: 72, column: 29 }, end: { line: 80, column: 5 } }, '7': { start: { line: 72, column: 37 }, end: { line: 80, column: 3 } }, '8': { start: { line: 81, column: 20 }, end: { line: 116, column: 3 } }, '9': { start: { line: 82, column: 4 }, end: { line: 115, column: 10 } }, '10': { start: { line: 113, column: 32 }, end: { line: 113, column: 54 } }, '11': { start: { line: 118, column: 2 }, end: { line: 122, column: 3 } } }, fnMap: { '0': { name: 'ComparisonList', decl: { start: { line: 21, column: 9 }, end: { line: 21, column: 23 } }, loc: { start: { line: 21, column: 83 }, end: { line: 123, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 22, column: 26 }, end: { line: 22, column: 27 } }, loc: { start: { line: 23, column: 4 }, end: { line: 23, column: 75 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 25, column: 25 }, end: { line: 25, column: 26 } }, loc: { start: { line: 29, column: 4 }, end: { line: 70, column: 12 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 72, column: 29 }, end: { line: 72, column: 30 } }, loc: { start: { line: 72, column: 37 }, end: { line: 80, column: 3 } } }, '4': { name: '(anonymous_4)', decl: { start: { line: 81, column: 20 }, end: { line: 81, column: 21 } }, loc: { start: { line: 82, column: 4 }, end: { line: 115, column: 10 } } }, '5': { name: '(anonymous_5)', decl: { start: { line: 113, column: 20 }, end: { line: 113, column: 21 } }, loc: { start: { line: 113, column: 32 }, end: { line: 113, column: 54 } } } }, branchMap: { '0': { loc: { start: { line: 23, column: 4 }, end: { line: 23, column: 75 } }, type: 'cond-expr', locations: [{ start: { line: 23, column: 17 }, end: { line: 23, column: 68 } }, { start: { line: 23, column: 71 }, end: { line: 23, column: 75 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_helpers = require('../../../helpers');
+var /* istanbul ignore next */_services = require('../../../services');
+
+var /* istanbul ignore next */_SectionCalculation = require('./SectionCalculation'); /* istanbul ignore next */var _SectionCalculation2 = _interopRequireDefault(_SectionCalculation);
+var /* istanbul ignore next */_shared = require('../../../shared'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_r23yi0n9s.s[0];
+
+
+
+
+
+
+
+
+
+ComparisonList.propTypes = {
+  banks: /* istanbul ignore next */_react2.default.PropTypes.array.isRequired,
+  setting: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired };
+
+
+function ComparisonList( /* istanbul ignore next */_ref) {/* istanbul ignore next */var banks = _ref.banks,_ref$banks = (0, _slicedToArray3.default)(_ref.banks, 1),firstBank = _ref$banks[0],loadingLabel = _ref.loadingLabel,setting = _ref.setting; /* istanbul ignore next */++cov_r23yi0n9s.f[0];++cov_r23yi0n9s.s[1];
+  var renderHighLevel = function renderHighLevel(number)
+  {/* istanbul ignore next */++cov_r23yi0n9s.f[1];++cov_r23yi0n9s.s[2];return number < 4 ? /* istanbul ignore next */(++cov_r23yi0n9s.b[0][0], /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.NumberImageCircle, /* istanbul ignore next */{ number: number, size: '25px' })) : /* istanbul ignore next */(++cov_r23yi0n9s.b[0][1], null);};
+  var currLang = /* istanbul ignore next */(++cov_r23yi0n9s.s[3], setting.langs[setting.lang].messages); /* istanbul ignore next */++cov_r23yi0n9s.s[4];
+  var listCurrencies = function listCurrencies( /* istanbul ignore next */_ref2,
+
+  k)
+
+  {/* istanbul ignore next */var bankNameThai = _ref2.bankNameThai,bankNameEng = _ref2.bankNameEng,_ref2$data = (0, _slicedToArray3.default)(_ref2.data, 1),firstBank = _ref2$data[0]; /* istanbul ignore next */++cov_r23yi0n9s.f[2];++cov_r23yi0n9s.s[5];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'tbody', /* istanbul ignore next */{ key: /* istanbul ignore next */'tbody-' + bankNameEng },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'tr', /* istanbul ignore next */{ key: bankNameEng },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorder, /* istanbul ignore next */null,
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.BankImageCircle, /* istanbul ignore next */{ bank: bankNameEng },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginLeft: '45px', width: '170px' } },
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'strong', /* istanbul ignore next */{ style: { fontWeight: '600' } },
+                  bankNameThai),
+
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+                    style: {
+                      width: '250px',
+                      color: 'gray',
+                      marginTop: '-2px',
+                      fontSize: '10.5px' } },
+
+
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+                    bankNameEng)))),
+
+
+
+
+            renderHighLevel(k + 1)),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderNumber, /* istanbul ignore next */null,
+            /* istanbul ignore next */_services.number.isNumber(firstBank.buy)),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderNumber, /* istanbul ignore next */null,
+            /* istanbul ignore next */_services.number.isNumber(firstBank.sell))),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'tr', /* istanbul ignore next */{
+            key: /* istanbul ignore next */'calculation-' + bankNameEng,
+            style: {
+              backgroundColor: setting.themes[setting.theme].backgroundColorDetail,
+              textAlign: 'right',
+              letterSpacing: '0.5px' } },
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_SectionCalculation2.default, /* istanbul ignore next */{ firstBank: firstBank, setting: setting }))));
+
+  }; /* istanbul ignore next */++cov_r23yi0n9s.s[6];
+
+  var styleCurrencyImage = function styleCurrencyImage() {/* istanbul ignore next */++cov_r23yi0n9s.f[3];++cov_r23yi0n9s.s[7];return {
+      backgroundImage: /* istanbul ignore next */_helpers.url.currency(firstBank.currencyDetails.code),
+      height: '38px',
+      width: '38px',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: '145% 110%',
+      borderRadius: '150px',
+      boxShadow: '0 0 8px rgba(0, 0, 0, .2)' };
+  }; /* istanbul ignore next */++cov_r23yi0n9s.s[8];
+  var listBanks = function listBanks()
+  {/* istanbul ignore next */++cov_r23yi0n9s.f[4];++cov_r23yi0n9s.s[9];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.SectionMain, /* istanbul ignore next */null,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: styleCurrencyImage(banks) },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+                style: { marginTop: '5px', width: '170px', position: 'absolute' } },
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginLeft: '50px' } },
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'strong', /* istanbul ignore next */{ style: { fontWeight: '600' } },
+                  firstBank.currencyDetails.code)),
+
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginLeft: '50px' } },
+                firstBank.currencyDetails.name)))),
+
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'table', /* istanbul ignore next */{ style: { border: 1, width: '100%' } },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'thead', /* istanbul ignore next */null,
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'tr', /* istanbul ignore next */null,
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderHeader, /* istanbul ignore next */null,
+                currLang.BANK_TABLE_COL_CURRENCIES),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderHeader, /* istanbul ignore next */{ align: 'right' },
+                currLang.BANK_TABLE_COL_SELL),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.TdBorderHeader, /* istanbul ignore next */{ align: 'right' },
+                currLang.BANK_TABLE_COL_BUY))),
+
+
+
+          banks.map(function (e, k) {/* istanbul ignore next */++cov_r23yi0n9s.f[5];++cov_r23yi0n9s.s[10];return listCurrencies(e, k);}))));
+
+  }; /* istanbul ignore next */++cov_r23yi0n9s.s[11];
+
+
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+      listBanks()));
+
+
+} /* istanbul ignore next */exports.default =
+
+ComparisonList;

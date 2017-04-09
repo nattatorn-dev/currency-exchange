@@ -1,0 +1,9 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var fontFamilies = exports.fontFamilies = {
+  arial: {
+    fontPrimary: 'Arial, sans-serif' },
+
+  kanit: {
+    fontPrimary: 'Kanit, sans-serif' },
+
+  athiti: {
+    fontPrimary: 'Athiti, sans-serif' } };

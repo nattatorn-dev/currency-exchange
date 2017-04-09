@@ -1,0 +1,68 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _createClass2 = require('babel-runtime/helpers/createClass');var _createClass3 = _interopRequireDefault(_createClass2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);var cov_266xrmfwbt = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/CurrencyExchangePage.js',hash = 'e1bb3abcd912a681db422dcdad41100e29970b92',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/CurrencyExchangePage.js', statementMap: { '0': { start: { line: 23, column: 4 }, end: { line: 23, column: 72 } }, '1': { start: { line: 27, column: 4 }, end: { line: 29, column: 5 } }, '2': { start: { line: 28, column: 6 }, end: { line: 28, column: 72 } }, '3': { start: { line: 33, column: 35 }, end: { line: 33, column: 45 } }, '4': { start: { line: 35, column: 4 }, end: { line: 41, column: 14 } }, '5': { start: { line: 45, column: 24 }, end: { line: 56, column: 1 } }, '6': { start: { line: 46, column: 50 }, end: { line: 46, column: 55 } }, '7': { start: { line: 47, column: 19 }, end: { line: 47, column: 41 } }, '8': { start: { line: 49, column: 2 }, end: { line: 55, column: 3 } }, '9': { start: { line: 58, column: 27 }, end: { line: 65, column: 3 } }, '10': { start: { line: 58, column: 41 }, end: { line: 65, column: 1 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 22, column: 2 }, end: { line: 22, column: 3 } }, loc: { start: { line: 22, column: 24 }, end: { line: 24, column: 3 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 26, column: 2 }, end: { line: 26, column: 3 } }, loc: { start: { line: 26, column: 42 }, end: { line: 30, column: 3 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 32, column: 2 }, end: { line: 32, column: 3 } }, loc: { start: { line: 32, column: 12 }, end: { line: 42, column: 3 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 45, column: 24 }, end: { line: 45, column: 25 } }, loc: { start: { line: 45, column: 33 }, end: { line: 56, column: 1 } } }, '4': { name: '(anonymous_4)', decl: { start: { line: 58, column: 27 }, end: { line: 58, column: 28 } }, loc: { start: { line: 58, column: 41 }, end: { line: 65, column: 1 } } } }, branchMap: { '0': { loc: { start: { line: 27, column: 4 }, end: { line: 29, column: 5 } }, type: 'if', locations: [{ start: { line: 27, column: 4 }, end: { line: 29, column: 5 } }, { start: { line: 27, column: 4 }, end: { line: 29, column: 5 } }] }, '1': { loc: { start: { line: 35, column: 11 }, end: { line: 41, column: 14 } }, type: 'cond-expr', locations: [{ start: { line: 36, column: 8 }, end: { line: 36, column: 57 } }, { start: { line: 37, column: 8 }, end: { line: 41, column: 14 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _class, _temp;var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_redux = require('redux');
+var /* istanbul ignore next */_actions = require('./actions');
+var /* istanbul ignore next */_selectors = require('./selectors');
+var /* istanbul ignore next */_selectors2 = require('../app/selectors');
+
+var /* istanbul ignore next */_components = require('./components');
+var /* istanbul ignore next */_shared = require('../../shared'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var
+
+CurrencyExchangePage = (_temp = _class = function (_Component) {(0, _inherits3.default)(CurrencyExchangePage, _Component);function CurrencyExchangePage() {(0, _classCallCheck3.default)(this, CurrencyExchangePage);return (0, _possibleConstructorReturn3.default)(this, (CurrencyExchangePage.__proto__ || (0, _getPrototypeOf2.default)(CurrencyExchangePage)).apply(this, arguments));}(0, _createClass3.default)(CurrencyExchangePage, [{ key: 'componentWillMount', value: function componentWillMount()
+
+
+
+
+
+
+
+
+
+
+    {/* istanbul ignore next */++cov_266xrmfwbt.f[0];++cov_266xrmfwbt.s[0];
+      this.props.actions.loadRepoPage(this.props.login, this.props.name);
+    } }, { key: 'componentWillReceiveProps', value: function componentWillReceiveProps(
+
+    nextProps) {/* istanbul ignore next */++cov_266xrmfwbt.f[1];++cov_266xrmfwbt.s[1];
+      if (nextProps.fullName !== this.props.fullName) {/* istanbul ignore next */++cov_266xrmfwbt.b[0][0];++cov_266xrmfwbt.s[2];
+        this.props.actions.loadRepoPage(nextProps.login, nextProps.name);
+      } else /* istanbul ignore next */{++cov_266xrmfwbt.b[0][1];}
+    } }, { key: 'render', value: function render()
+
+    {/* istanbul ignore next */++cov_266xrmfwbt.f[2];var _ref = (++cov_266xrmfwbt.s[3],
+      this.props),banks = _ref.banks,name = _ref.name,login = _ref.login; /* istanbul ignore next */++cov_266xrmfwbt.s[4];
+
+      return !banks ? /* istanbul ignore next */(++cov_266xrmfwbt.b[1][0],
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'i', /* istanbul ignore next */null, /* istanbul ignore next */'Loading ', name, /* istanbul ignore next */' ', login, /* istanbul ignore next */' details...'))) : /* istanbul ignore next */(++cov_266xrmfwbt.b[1][1],
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.Container, /* istanbul ignore next */{ padding: '0 5% 5% 5%' },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_components.ComparisonList, this.props))));
+
+
+    } }]);return CurrencyExchangePage;}(_react.Component), _class.propTypes = { actions: /* istanbul ignore next */_react.PropTypes.shape({ loadRepoPage: /* istanbul ignore next */_react.PropTypes.func.isRequired }), fullName: /* istanbul ignore next */_react.PropTypes.string.isRequired, login: /* istanbul ignore next */_react.PropTypes.string.isRequired, name: /* istanbul ignore next */_react.PropTypes.string.isRequired, setting: /* istanbul ignore next */_react.PropTypes.object }, _temp); /* istanbul ignore next */++cov_266xrmfwbt.s[5];
+
+
+var mapStateToProps = function mapStateToProps(state) {/* istanbul ignore next */++cov_266xrmfwbt.f[3];var _ref2 = (++cov_266xrmfwbt.s[6],
+  state),_ref2$router$params = _ref2.router.params,login = _ref2$router$params.login,name = _ref2$router$params.name;
+  var fullName = /* istanbul ignore next */(++cov_266xrmfwbt.s[7], login + '/' + name); /* istanbul ignore next */++cov_266xrmfwbt.s[8];
+
+  return {
+    banks: /* istanbul ignore next */(0, _selectors.getBankCurrencyExchange)(state),
+    fullName: fullName,
+    login: login,
+    name: name,
+    setting: /* istanbul ignore next */(0, _selectors2.getAppSetting)(state) };
+
+}; /* istanbul ignore next */++cov_266xrmfwbt.s[9];
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {/* istanbul ignore next */++cov_266xrmfwbt.f[4];++cov_266xrmfwbt.s[10];return {
+    actions: /* istanbul ignore next */(0, _redux.bindActionCreators)(
+    {
+      loadRepoPage: /* istanbul ignore next */_actions.loadRepoPage },
+
+    dispatch) };
+
+}; /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
+CurrencyExchangePage);

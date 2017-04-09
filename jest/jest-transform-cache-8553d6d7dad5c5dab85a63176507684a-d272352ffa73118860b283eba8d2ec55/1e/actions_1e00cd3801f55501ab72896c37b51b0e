@@ -1,0 +1,15 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.addCurrencyExchange = exports.loadRepoPage = exports.ADD_CURRENCY_EXCHANGE = exports.LOAD_REPO_PAGE = undefined;var _action = require('../../services/action');
+
+var LOAD_REPO_PAGE = 'LOAD_REPO_PAGE';
+var ADD_CURRENCY_EXCHANGE = 'ADD_CURRENCY_EXCHANGE';
+
+var loadRepoPage = function loadRepoPage(login, name) {var requiredFields = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];return (
+    (0, _action.action)(LOAD_REPO_PAGE, { login: login, name: name, requiredFields: requiredFields }));};
+var addCurrencyExchange = function addCurrencyExchange(currency, rate, banks) {return (
+    (0, _action.action)(ADD_CURRENCY_EXCHANGE, { currency: currency, rate: rate, banks: banks }));};exports.
+
+
+LOAD_REPO_PAGE = LOAD_REPO_PAGE;exports.
+ADD_CURRENCY_EXCHANGE = ADD_CURRENCY_EXCHANGE;exports.
+loadRepoPage = loadRepoPage;exports.
+addCurrencyExchange = addCurrencyExchange;

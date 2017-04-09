@@ -1,0 +1,17 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_vqm75lfyg = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/Theme.js',hash = '5f24033da176fa0441f164420bc619145009ae32',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/Theme.js', statementMap: { '0': { start: { line: 4, column: 0 }, end: { line: 7, column: 1 } }, '1': { start: { line: 10, column: 2 }, end: { line: 14, column: 3 } } }, fnMap: { '0': { name: 'Theme', decl: { start: { line: 9, column: 9 }, end: { line: 9, column: 14 } }, loc: { start: { line: 9, column: 41 }, end: { line: 15, column: 1 } } } }, branchMap: {}, s: { '0': 0, '1': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_vqm75lfyg.s[0];
+
+Theme.propTypes = {
+  children: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired,
+  setting: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired };
+
+
+function Theme( /* istanbul ignore next */_ref) {/* istanbul ignore next */var children = _ref.children,setting = _ref.setting; /* istanbul ignore next */++cov_vqm75lfyg.f[0];++cov_vqm75lfyg.s[1];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_styledComponents.ThemeProvider, /* istanbul ignore next */{ theme: setting },
+      children));
+
+
+} /* istanbul ignore next */exports.default =
+
+Theme;

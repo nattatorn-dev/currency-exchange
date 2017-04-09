@@ -1,0 +1,11 @@
+'use strict';var _number = require('../number');
+
+describe('services number', function () {
+  var number = 100000;
+  it('mathRound', function () {
+    var expectedNewNumber = '100000.0000';
+    var newNumber = (0, _number.mathRound)(number, 4);
+    expect(newNumber).toEqual(expectedNewNumber);
+    expect(newNumber).not.toBe(expectedNewNumber);
+  });
+});

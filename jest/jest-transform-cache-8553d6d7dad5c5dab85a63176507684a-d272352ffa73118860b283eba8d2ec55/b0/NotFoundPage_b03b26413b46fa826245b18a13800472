@@ -1,0 +1,12 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2jwlse9bl6 = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/notFound/NotFoundPage.js',hash = 'a71dcda50b4aab8f7bd988edc72bd969f4a53d72',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/notFound/NotFoundPage.js', statementMap: { '0': { start: { line: 4, column: 2 }, end: { line: 9, column: 3 } } }, fnMap: { '0': { name: 'NotFoundPage', decl: { start: { line: 3, column: 9 }, end: { line: 3, column: 21 } }, loc: { start: { line: 3, column: 25 }, end: { line: 10, column: 1 } } } }, branchMap: {}, s: { '0': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function NotFoundPage() {/* istanbul ignore next */++cov_2jwlse9bl6.f[0];++cov_2jwlse9bl6.s[0];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */null, /* istanbul ignore next */'Doh! 404!'),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null, /* istanbul ignore next */'These are ', /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'em', /* istanbul ignore next */null, /* istanbul ignore next */'not'), /* istanbul ignore next */' the droids you are looking for!')));
+
+
+} /* istanbul ignore next */exports.default =
+
+NotFoundPage;

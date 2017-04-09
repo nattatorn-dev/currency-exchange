@@ -1,0 +1,29 @@
+'use strict';var _number = require('../number');
+
+describe('services number', function () {
+  var number = 100000;
+  it('mathRound', function () {
+    var expectedNewNumber = '100,000.0000';
+    var newNumber = (0, _number.mathRound)(number, 4);
+    expect(newNumber).toEqual(expectedNewNumber);
+    expect(newNumber).not.toBe(expectedNewNumber);
+  });
+
+  it('isNumber', function () {
+    var expectedNotNumber = '-';
+    var expectedNewNumber = '100,000';
+    var newNumber = (0, _number.isNumber)(number);
+    var undefinedValue = (0, _number.isNumber)(undefined);
+    var nullValue = (0, _number.isNumber)(null);
+    var stringValue = (0, _number.isNumber)('123Foo');
+    var EmptyValue = (0, _number.isNumber)('');
+
+    expect(newNumber).toEqual(expectedNewNumber);
+    expect(newNumber).toBe(expectedNewNumber);
+
+    expect(undefinedValue).toEqual(undefinedValue);
+    expect(nullValue).toEqual(undefinedValue);
+    expect(stringValue).toEqual(undefinedValue);
+    expect(EmptyValue).toEqual(undefinedValue);
+  });
+});

@@ -1,0 +1,9 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2d1o5atbk6 = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/fontFamilys.js',hash = 'ec65fe0717bb1628fd454ba91ea70a7052581fbb',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/fontFamilys.js', statementMap: { '0': { start: { line: 1, column: 27 }, end: { line: 11, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var fontFamilys = /* istanbul ignore next */exports.fontFamilys = (++cov_2d1o5atbk6.s[0], {
+  arial: {
+    fontPrimary: 'Arial, sans-serif' },
+
+  kanit: {
+    fontPrimary: 'Kanit, sans-serif' },
+
+  athiti: {
+    fontPrimary: 'Athiti, sans-serif' } });

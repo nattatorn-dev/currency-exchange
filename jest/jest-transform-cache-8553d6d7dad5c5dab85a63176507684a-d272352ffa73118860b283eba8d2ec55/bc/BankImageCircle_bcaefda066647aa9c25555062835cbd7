@@ -1,0 +1,12 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  border-radius: 150px;\n  border: ', ';\n  box-shadow: ', ';\n  margin: 0;\n'], ['\n  border-radius: 150px;\n  border: ', ';\n  box-shadow: ', ';\n  margin: 0;\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);
+var _BankImage = require('./BankImage');var _BankImage2 = _interopRequireDefault(_BankImage);
+var _helpers = require('../helpers');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var BankImageCircle = (0, _styledComponents2.default)(_BankImage2.default)(_templateObject,
+
+function (props) {return '5px solid ' + _helpers.url.matchingBankColor(props.bank.toUpperCase());},
+function (props) {return '0 0 2px ' + props.theme.themes[props.theme.theme].shadowPrimary;});exports.default =
+
+
+
+BankImageCircle;

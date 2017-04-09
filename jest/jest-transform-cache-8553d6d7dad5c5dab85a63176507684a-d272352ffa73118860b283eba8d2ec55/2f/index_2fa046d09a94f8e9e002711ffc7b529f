@@ -1,0 +1,12 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_293y7o72lj = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/index.js',hash = '27fe0b839f5df5ed21178847ebc5597b9c582a4a',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/index.js', statementMap: {}, fnMap: {}, branchMap: {}, s: {}, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_Main = require('./Main'); /* istanbul ignore next */var _Main2 = _interopRequireDefault(_Main);
+var /* istanbul ignore next */_Theme = require('./Theme'); /* istanbul ignore next */var _Theme2 = _interopRequireDefault(_Theme);
+var /* istanbul ignore next */_Header = require('./Header'); /* istanbul ignore next */var _Header2 = _interopRequireDefault(_Header);
+var /* istanbul ignore next */_Nav = require('./Nav'); /* istanbul ignore next */var _Nav2 = _interopRequireDefault(_Nav);
+var /* istanbul ignore next */_Footer = require('./Footer'); /* istanbul ignore next */var _Footer2 = _interopRequireDefault(_Footer);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+{
+  Main: /* istanbul ignore next */_Main2.default,
+  Theme: /* istanbul ignore next */_Theme2.default,
+  Header: /* istanbul ignore next */_Header2.default,
+  Nav: /* istanbul ignore next */_Nav2.default,
+  Footer: /* istanbul ignore next */_Footer2.default };

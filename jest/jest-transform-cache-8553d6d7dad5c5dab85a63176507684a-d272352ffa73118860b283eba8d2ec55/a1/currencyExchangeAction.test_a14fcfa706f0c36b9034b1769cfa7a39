@@ -1,0 +1,40 @@
+'use strict';var _actions = require('../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+describe('currency exchange LOAD_REPO_PAGE', function () {
+  it('creates LOAD_REPO_PAGE action', function () {
+    var login = 'USD';
+    var name = '100';
+    var requiredFields = {};
+    var expectedAction = {
+      type: ActionTypes.LOAD_REPO_PAGE,
+      login: login,
+      name: name,
+      requiredFields: requiredFields };
+
+    expect(ActionTypes.loadRepoPage(login, name, requiredFields)).toEqual(
+    expectedAction);
+
+  });
+
+  it('creates ADD_CURRENCY_EXCHANGE action', function () {
+    var currency = 'USD';
+    var rate = '100';
+    var banks = [
+    {
+      bankNameThai: 'ธนาคารไทยพาณิชย์',
+      bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+      data: [],
+      isTotal: true }];
+
+
+    var expectedAction = {
+      type: ActionTypes.ADD_CURRENCY_EXCHANGE,
+      currency: currency,
+      rate: rate,
+      banks: banks };
+
+    expect(ActionTypes.addCurrencyExchange(currency, rate, banks)).toEqual(
+    expectedAction);
+
+  });
+});

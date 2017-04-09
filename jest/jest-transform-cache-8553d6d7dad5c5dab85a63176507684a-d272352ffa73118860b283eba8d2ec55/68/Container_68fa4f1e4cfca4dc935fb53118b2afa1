@@ -1,0 +1,35 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  /* Custom, iPhone Retina */\n  @media only screen and (min-width : 320px) {\n    margin-top: 5px;\n    padding-bottom: 5%;\n  }\n\n  /* Extra Small Devices, Phones */\n  @media only screen and (min-width : 480px) {\n    margin-top:: 5px;\n    padding-bottom: 5%;\n  }\n\n  /* Small Devices, Tablets */\n  @media only screen and (min-width : 768px) {\n    margin: ', ';\n    padding: ', ';\n  }\n\n  /* Medium Devices, Desktops */\n  @media only screen and (min-width : 992px) {\n    margin: ', ';\n    padding: ', ';\n  }\n\n  /* Large Devices, Wide Screens */\n  @media only screen and (min-width : 1200px) {\n    margin: ', ';\n    padding: ', ';\n  }\n'], ['\n  /* Custom, iPhone Retina */\n  @media only screen and (min-width : 320px) {\n    margin-top: 5px;\n    padding-bottom: 5%;\n  }\n\n  /* Extra Small Devices, Phones */\n  @media only screen and (min-width : 480px) {\n    margin-top:: 5px;\n    padding-bottom: 5%;\n  }\n\n  /* Small Devices, Tablets */\n  @media only screen and (min-width : 768px) {\n    margin: ', ';\n    padding: ', ';\n  }\n\n  /* Medium Devices, Desktops */\n  @media only screen and (min-width : 992px) {\n    margin: ', ';\n    padding: ', ';\n  }\n\n  /* Large Devices, Wide Screens */\n  @media only screen and (min-width : 1200px) {\n    margin: ', ';\n    padding: ', ';\n  }\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var Container = _styledComponents2.default.div(_templateObject,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function (props) {return props.margin || '5px 0 0 0';},
+function (props) {return props.padding || 0;},
+
+
+
+
+function (props) {return props.margin || '5px 0 0 0';},
+function (props) {return props.padding || 0;},
+
+
+
+
+function (props) {return props.margin || '5px 0 0 0';},
+function (props) {return props.padding || 0;});exports.default =
+
+
+
+Container;

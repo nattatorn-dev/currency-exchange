@@ -1,0 +1,22 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var cov_1dmnx2wbrn = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/shared/ButtonLoader.js',hash = '52140d98537ff78902feea2bb76b5493561d7dbb',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/shared/ButtonLoader.js', statementMap: { '0': { start: { line: 3, column: 13 }, end: { line: 10, column: 1 } }, '1': { start: { line: 12, column: 21 }, end: { line: 20, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0, '1': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  from {\n    transform: translateY(-2px);\n  }\n  to {\n    transform: translateY(2px);\n  }\n'], ['\n  from {\n    transform: translateY(-2px);\n  }\n  to {\n    transform: translateY(2px);\n  }\n']),_templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n  font-size: 16px;\n  animation: ', ' .85s linear infinite alternate;\n\n  &:after {\n    content: \'\u21E3\';\n    right: 10px;\n  }\n'], ['\n  font-size: 16px;\n  animation: ', ' .85s linear infinite alternate;\n\n  &:after {\n    content: \'\u21E3\';\n    right: 10px;\n  }\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var sudo = /* istanbul ignore next */(++cov_1dmnx2wbrn.s[0], (0, _styledComponents.keyframes)(_templateObject));
+
+
+
+
+
+
+
+
+var ButtonLoader = /* istanbul ignore next */(++cov_1dmnx2wbrn.s[1], /* istanbul ignore next */_styledComponents2.default.p(_templateObject2,
+
+sudo)); /* istanbul ignore next */exports.default =
+
+
+
+
+
+
+
+ButtonLoader;

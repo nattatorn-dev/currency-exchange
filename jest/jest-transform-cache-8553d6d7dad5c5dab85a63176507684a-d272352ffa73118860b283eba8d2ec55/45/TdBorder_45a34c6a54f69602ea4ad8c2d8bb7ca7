@@ -1,0 +1,13 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  border-top: ', ';\n  color: ', ';\n  line-height: 1.42;\n  padding: 8px;\n  text-align: ', ';\n  vertical-align: middle;\n'], ['\n  border-top: ', ';\n  color: ', ';\n  line-height: 1.42;\n  padding: 8px;\n  text-align: ', ';\n  vertical-align: middle;\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var TdBorder = _styledComponents2.default.td(_templateObject,
+function (props) {return '1px solid ' +
+  props.theme.themes[props.theme.theme].borderPrimary;},
+function (props) {return props.theme.themes[props.theme.theme].fontColorBold;},
+
+
+function (props) {return props.align || 'left';});exports.default =
+
+
+
+TdBorder;

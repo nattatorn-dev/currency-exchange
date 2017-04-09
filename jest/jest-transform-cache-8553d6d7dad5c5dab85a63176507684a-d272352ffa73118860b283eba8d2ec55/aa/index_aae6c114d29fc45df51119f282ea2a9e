@@ -1,0 +1,19 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.setting = undefined;var cov_26qxvxn2yv = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/index.js',hash = '0bcf26e8c5bd029f6e296ed40208e472c7b66843',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/index.js', statementMap: { '0': { start: { line: 6, column: 23 }, end: { line: 20, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_langs = require('./langs');
+var /* istanbul ignore next */_themes = require('./themes');
+var /* istanbul ignore next */_fontStyles = require('./fontStyles');
+var /* istanbul ignore next */_fontFamilys = require('./fontFamilys');
+
+var setting = /* istanbul ignore next */exports.setting = (++cov_26qxvxn2yv.s[0], {
+  layout: '', // bank dill down, bank column
+  popularCurrenciesLists: ['USD', 'GBP', 'EUR', 'JPY', 'CNY'], // relate dropdowncurrencies
+  popularBanksLists: ['KBANK'],
+  dropdownCurrencies: 'USD',
+  numberDigit: 5,
+  lang: 'th', // th, en
+  langs: /* istanbul ignore next */_langs.langs,
+  theme: 'white',
+  themes: /* istanbul ignore next */_themes.themes,
+  fontStyle: 'normal',
+  fontStyles: /* istanbul ignore next */_fontStyles.fontStyles,
+  fontFamily: 'arial',
+  fontFamilys: /* istanbul ignore next */_fontFamilys.fontFamilys });

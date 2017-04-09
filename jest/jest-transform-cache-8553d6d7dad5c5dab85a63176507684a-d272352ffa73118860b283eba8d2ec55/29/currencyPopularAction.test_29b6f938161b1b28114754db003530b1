@@ -1,0 +1,72 @@
+'use strict';var _actions = require('../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+describe('currency popular action', function () {
+  it('creates BANKS_REQUES action', function () {
+    var expectedAction = {
+      type: ActionTypes.BANKS.REQUEST };
+
+    expect(ActionTypes.banks.request()).toEqual(expectedAction);
+  });
+
+  it('creates BANKS_SUCCESS action', function () {
+    var response = {};
+    var expectedAction = {
+      type: ActionTypes.BANKS.SUCCESS,
+      response: response };
+
+    expect(ActionTypes.banks.success(response)).toEqual(expectedAction);
+  });
+
+  it('creates BANKS_FAILURE action', function () {
+    var error = {};
+    var expectedAction = {
+      type: ActionTypes.BANKS.FAILURE,
+      error: error };
+
+    expect(ActionTypes.banks.failure(error)).toEqual(expectedAction);
+  });
+
+  it('creates BANKS_REQUES action', function () {
+    var expectedAction = {
+      type: ActionTypes.BANKS.REQUEST };
+
+    expect(ActionTypes.banks.request()).toEqual(expectedAction);
+  });
+
+  it('creates LOAD_CURRENCY_POPULAR_PAGE action', function () {
+    var login = 0;
+    var requiredFields = [];
+    var expectedAction = {
+      type: ActionTypes.LOAD_CURRENCY_POPULAR_PAGE,
+      login: login,
+      requiredFields: requiredFields };
+
+    expect(ActionTypes.loadCurrencyPopularPage(login, requiredFields)).toEqual(
+    expectedAction);
+
+  });
+
+  it('creates UPDATE_CURRENCY_POPULAR action', function () {
+    var index = 0;
+    var data = [];
+    var expectedAction = {
+      type: ActionTypes.UPDATE_CURRENCY_POPULAR,
+      index: index,
+      data: data };
+
+    expect(ActionTypes.updateCurrencyPopular(index, data)).toEqual(
+    expectedAction);
+
+  });
+
+  it('creates TOGGLE_SHOW_CURRENCY_POPULAR action', function () {
+    var index = 0;
+    var expectedAction = {
+      type: ActionTypes.TOGGLE_SHOW_CURRENCY_POPULAR,
+      index: index };
+
+    expect(ActionTypes.toggleShowCurrencyPopular(index)).toEqual(
+    expectedAction);
+
+  });
+});

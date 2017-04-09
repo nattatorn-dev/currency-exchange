@@ -1,0 +1,38 @@
+'use strict';var _number = require('../number');
+
+describe('services number', function () {
+  var number = 100000;
+  it('mathRound', function () {
+    var expectedNewNumber = '100,000.0000';
+    var newNumber = (0, _number.mathRound)(number, 4);
+    // expect( newNumber ).not.toBe( expectedNewNumber )
+    expect(newNumber).toEqual(expectedNewNumber);
+  });
+
+  it('isNumber', function () {
+    var expectedNotNumber = '-';
+    var expectedNewNumber = 100000;
+    var newNumber = (0, _number.isNumber)(number);
+    var undefinedValue = (0, _number.isNumber)(undefined);
+    var nullValue = (0, _number.isNumber)(null);
+    var string1Value = (0, _number.isNumber)('Foo');
+    var string2Value = (0, _number.isNumber)('123');
+    var string3Value = (0, _number.isNumber)('Foo123');
+    var string4Value = (0, _number.isNumber)('123Foo');
+    var EmptySrtingValue = (0, _number.isNumber)('');
+    var arrayValue = (0, _number.isNumber)([]);
+    var objectValue = (0, _number.isNumber)({});
+    var func = (0, _number.isNumber)(function () {});
+
+    expect(newNumber).toBe(expectedNewNumber);
+    expect(newNumber).toEqual(expectedNewNumber);
+
+    expect(undefinedValue).toEqual(expectedNotNumber);
+    expect(nullValue).toEqual(expectedNotNumber);
+    expect(string1Value).toEqual(expectedNotNumber);
+    expect(string2Value).toEqual(expectedNotNumber);
+    expect(string3Value).toEqual(expectedNotNumber);
+    expect(string4Value).toEqual(expectedNotNumber);
+    expect(EmptySrtingValue).toEqual(expectedNotNumber);
+  });
+});

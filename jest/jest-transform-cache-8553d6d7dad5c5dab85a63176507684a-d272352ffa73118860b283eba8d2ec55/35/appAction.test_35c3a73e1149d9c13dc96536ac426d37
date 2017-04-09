@@ -1,0 +1,35 @@
+'use strict';var _actions = require('../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+describe('app action', function () {
+  it('creates NAVIGATE action', function () {
+    var expectedAction = {
+      type: ActionTypes.NAVIGATE };
+
+    expect(ActionTypes.navigate()).toEqual(expectedAction);
+  });
+
+  it('creates UPDATE_ROUTER_STATE action', function () {
+    var state = '/USD';
+    var expectedAction = {
+      type: ActionTypes.UPDATE_ROUTER_STATE,
+      state: state };
+
+    expect(ActionTypes.updateRouterState(state)).toEqual(expectedAction);
+  });
+
+  it('creates RESET_ERROR_MESSAGE action', function () {
+    var expectedAction = {
+      type: ActionTypes.RESET_ERROR_MESSAGE };
+
+    expect(ActionTypes.resetErrorMessage()).toEqual(expectedAction);
+  });
+
+  it('creates UPDATE_SETTING action', function () {
+    var setting = {};
+    var expectedAction = {
+      type: ActionTypes.UPDATE_SETTING,
+      setting: setting };
+
+    expect(ActionTypes.updateSetting(setting)).toEqual(expectedAction);
+  });
+});

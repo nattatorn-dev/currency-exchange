@@ -1,0 +1,22 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  background-color: transparent;\n  border: 0;\n  color: ', ';\n  cursor: pointer;\n  float: left;\n  font-size: 1em;\n  line-height: 30px;\n  outline: none;\n  padding: 8px 4px;\n  text-align: center;\n  text-transform: none;\n  width: ', ';\n\n  &:hover {\n    color: ', ';\n  }\n'], ['\n  background-color: transparent;\n  border: 0;\n  color: ', ';\n  cursor: pointer;\n  float: left;\n  font-size: 1em;\n  line-height: 30px;\n  outline: none;\n  padding: 8px 4px;\n  text-align: center;\n  text-transform: none;\n  width: ', ';\n\n  &:hover {\n    color: ', ';\n  }\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var ButtonHighlight = _styledComponents2.default.button(_templateObject,
+
+
+function (props) {return props.color || '#a6a6a6';},
+
+
+
+
+
+
+
+
+function (props) {return props.width || '50%';},
+
+
+function (props) {return props.hoverColor || '#444';});exports.default =
+
+
+
+ButtonHighlight;

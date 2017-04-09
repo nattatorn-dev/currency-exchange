@@ -1,0 +1,390 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = undefined;var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _createClass2 = require('babel-runtime/helpers/createClass');var _createClass3 = _interopRequireDefault(_createClass2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactHamburgerMenu = require('react-hamburger-menu');var _reactHamburgerMenu2 = _interopRequireDefault(_reactHamburgerMenu);
+var _reactSelect = require('react-select');var _reactSelect2 = _interopRequireDefault(_reactSelect);
+var _reactNumberInput = require('react-number-input');var _reactNumberInput2 = _interopRequireDefault(_reactNumberInput);
+var _shared = require('../../../shared');
+var _helpers = require('../../../helpers');
+var _Setting = require('./Setting');var _Setting2 = _interopRequireDefault(_Setting);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var styleImage = function styleImage(acronym) {return {
+    backgroundImage: _helpers.url.currency(acronym),
+    height: '25px',
+    width: '25px',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '145% 110%',
+    borderRadius: '150px',
+    marginTop: '-3.5px',
+    boxShadow: '0 0 1px rgba(0, 0, 0, .8)' };};
+
+
+var THB = [
+{
+  label: 'THB',
+  value: 'THB' }];
+
+
+
+var GravatarOption = _react2.default.createClass({ displayName: 'GravatarOption',
+  propTypes: {
+    children: _react2.default.PropTypes.node,
+    className: _react2.default.PropTypes.string,
+    isDisabled: _react2.default.PropTypes.bool,
+    isFocused: _react2.default.PropTypes.bool,
+    isSelected: _react2.default.PropTypes.bool,
+    onFocus: _react2.default.PropTypes.func,
+    onSelect: _react2.default.PropTypes.func,
+    option: _react2.default.PropTypes.object.isRequired },
+
+  handleMouseDown: function handleMouseDown(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.props.onSelect(this.props.option, event);
+  },
+  handleMouseEnter: function handleMouseEnter(event) {
+    this.props.onFocus(this.props.option, event);
+  },
+  handleMouseMove: function handleMouseMove(event) {
+    if (this.props.isFocused) return;
+    this.props.onFocus(this.props.option, event);
+  },
+  render: function render() {
+    return (
+      _react2.default.createElement('div', {
+          className: this.props.className,
+          onMouseDown: this.handleMouseDown,
+          onMouseEnter: this.handleMouseEnter,
+          onMouseMove: this.handleMouseMove,
+          title: this.props.option.label },
+
+        _react2.default.createElement('div', { style: styleImage(this.props.option.label) },
+          _react2.default.createElement('div', { style: { margin: '-5px 35px 0 40px' } },
+            this.props.option.label))));
+
+
+
+
+  } });
+
+
+var GravatarValue = _react2.default.createClass({ displayName: 'GravatarValue',
+  propTypes: {
+    children: _react2.default.PropTypes.node,
+    placeholder: _react2.default.PropTypes.string,
+    value: _react2.default.PropTypes.object },
+
+  render: function render() {
+    var styleDropdown = {
+      boxSizing: 'border-box',
+      // backgroundColor: this.props.setting.theme.inputBackgroundColorPrimary,
+      // border: `1px solid ${ this.props.setting.theme.inputBorderColorPrimary }`,
+      // color: this.props.setting.theme.fontColorPrimary,
+      left: '0',
+      padding: '8px 52px 8px 10px',
+      position: 'absolute',
+      right: '-15px',
+      top: '0',
+      maxWidth: '100%',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap' };
+
+    return (
+      _react2.default.createElement('div', { style: styleDropdown, title: this.props.value.title },
+        _react2.default.createElement('span', null,
+          _react2.default.createElement('div', { style: styleImage(this.props.value.label) }),
+          _react2.default.createElement('div', { style: { margin: '-20px 35px 0 40px' } },
+            _react2.default.createElement('span', null, this.props.value.label)))));
+
+
+
+
+  } });
+
+
+var CurrencyField = _react2.default.createClass({ displayName: 'CurrencyField',
+  propTypes: {
+    hint: _react2.default.PropTypes.string },
+
+  getInitialState: function getInitialState() {
+    return {
+      label: 'USD',
+      value: 'USD',
+      clearable: false,
+      disabled: false };
+
+  },
+  setValue: function setValue(value) {var _props =
+    this.props,name = _props.router.params.name,onChange = _props.onChange;
+    this.setState({ value: value });
+    onChange(value.value + '/' + name);
+  },
+  render: function render() {
+    var placeholder = _react2.default.createElement('span', null, 'Select Currency');
+
+    return (
+      _react2.default.createElement('div', { className: 'section' },
+        _react2.default.createElement(_reactSelect2.default, {
+          clearable: this.state.clearable,
+          arrowRenderer: arrowRenderer,
+          onChange: this.setValue,
+          optionComponent: GravatarOption,
+          options: this.props.data,
+          placeholder: placeholder,
+          value: this.state.value,
+          valueComponent: GravatarValue })));
+
+
+
+  } });
+
+
+var CurrencyFieldMaster = _react2.default.createClass({ displayName: 'CurrencyFieldMaster',
+  propTypes: {
+    hint: _react2.default.PropTypes.string },
+
+  getInitialState: function getInitialState() {
+    return {
+      label: 'THB',
+      value: 'THB',
+      clearable: false,
+      disabled: true };
+
+  },
+  setValue: function setValue(value) {
+    this.setState({ value: value });
+  },
+  render: function render() {
+    var placeholder = _react2.default.createElement('span', null, 'Select Currency');
+
+    return (
+      _react2.default.createElement('div', { className: 'section' },
+        _react2.default.createElement(_reactSelect2.default, {
+          clearable: this.state.clearable,
+          disabled: this.state.disabled,
+          arrowRenderer: arrowRenderer,
+          onChange: this.setValue,
+          optionComponent: GravatarOption,
+          options: this.props.data,
+          placeholder: placeholder,
+          value: this.state.value,
+          valueComponent: GravatarValue })));
+
+
+
+  } });
+
+
+function arrowRenderer() {
+  return _react2.default.createElement('span', null, '+');
+}var
+
+Header = function (_Component) {(0, _inherits3.default)(Header, _Component);
+  function Header(props) {(0, _classCallCheck3.default)(this, Header);var _this = (0, _possibleConstructorReturn3.default)(this, (Header.__proto__ || (0, _getPrototypeOf2.default)(Header)).call(this,
+    props));_this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    onPriceChange = function (e) {var _this$props =
+      _this.props,login = _this$props.router.params.login,onChange = _this$props.onChange;
+      onChange(login + '/' + e);
+    };_this.handleKeyUp = _this.handleKeyUp.bind(_this);_this.handleGoClick = _this.handleGoClick.bind(_this);return _this;}(0, _createClass3.default)(Header, [{ key: 'componentWillReceiveProps', value: function componentWillReceiveProps(nextProps) {if (nextProps.value !== this.props.value || nextProps.controller.dropdownMenuStyleOpen !== this.props.controller.dropdownMenuStyleOpen) {// this.setInputValue( nextProps.value )
+      }} }, { key: 'getInputValue', value: function getInputValue() {return this.refs.input.value;} }, { key: 'setInputValue', value: function setInputValue(val) {this.refs.input.value = val;} }, { key: 'handleKeyUp', value: function handleKeyUp(e) {if (e.keyCode === 13) {this.handleGoClick();}} }, { key: 'handleGoClick', value: function handleGoClick() {this.props.onChange(this.getInputValue());} }, { key: 'handleDropDownClick', value: function handleDropDownClick(
+    e) {
+      e.stopPropagation();
+      this.props.updateController((0, _extends3.default)({},
+      this.props.controller, {
+        dropdownMenuStyleOpen: !this.props.controller.dropdownMenuStyleOpen }));
+
+    } }, { key: 'render', value: function render()
+
+    {var _this2 = this;var _props2 =
+      this.props,router = _props2.router,onChange = _props2.onChange,setting = _props2.setting;
+      var currentTheme = setting.themes[setting.theme];
+      var styleHeader = function styleHeader() {return {
+          top: 0,
+          background: currentTheme.backgroundColorSecondary,
+          boxShadow: '0 0 10px ' + currentTheme.shadowPrimary,
+          width: '100%',
+          height: '55px',
+          fontFamily: 'Arial, sans-serif',
+          fontSize: '12px' };};
+
+
+      var stlyeDropDown = function stlyeDropDown() {return {
+          position: 'absolute',
+          top: '100%',
+          right: '10px',
+          zIndex: '100',
+          display: _this2.props.controller.dropdownMenuStyleOpen ? 'block' : 'none',
+          float: 'left',
+          minWidth: '160px',
+          padding: '0',
+          margin: '2px 0 0',
+          listStyle: 'none',
+          fontSize: '14px',
+          color: currentTheme.fontColorPrimary,
+          backgroundColor: currentTheme.backgroundColorPrimary,
+          border: '1px solid rgba(0,0,0,.07)',
+          borderRadius: '1px',
+          boxShadow: '0 6px 12px rgba(0,0,0,.175)',
+          backgroundClip: 'padding-box' };};
+
+      var value = this.props.router &&
+      this.props.router.params &&
+      this.props.router.params.name;
+      return (
+        _react2.default.createElement('header', { style: styleHeader() },
+          _react2.default.createElement('div', {
+              style: {
+                display: 'flex',
+                position: 'relative',
+                height: '67px',
+                width: '100%',
+                maxWidth: '1010px',
+                margin: '0 auto',
+                paddingTop: '10px',
+                paddingBottom: '10px',
+                boxSizing: 'border-box',
+                justifyContent: 'space-between' } },
+
+
+            _react2.default.createElement('div', {
+                style: {
+                  marginLeft: '25px' } },
+
+
+              _react2.default.createElement(_shared.LinkImage, { setting: setting })),
+
+            _react2.default.createElement('div', { style: { display: 'block', float: 'left' } },
+              _react2.default.createElement(_reactNumberInput2.default, {
+                style: {
+                  fontSize: '15px',
+                  display: 'block',
+                  height: '34px',
+                  padding: '0 10px',
+                  lineHeight: '1.42857143',
+                  backgroundColor: currentTheme.inputBackgroundColorPrimary,
+                  backgroundImage: 'none',
+                  border: '1px solid ' + currentTheme.inputBorderColorPrimary,
+                  borderRadius: '4px' },
+
+                onChange: this.onPriceChange,
+                placeholder: 'Enter some money',
+                format: '0,0[.]00',
+                value: value,
+                min: 0,
+                max: 100 })),
+
+
+
+
+            _react2.default.createElement('div', { style: { width: '30%', display: 'block' } },
+              _react2.default.createElement(CurrencyFieldMaster, {
+                router: router,
+                data: THB,
+                onChange: onChange,
+                setting: setting })),
+
+
+            _react2.default.createElement('div', { style: { width: '30%', display: 'block' } },
+              _react2.default.createElement(CurrencyField, {
+                router: router,
+                data: this.props.currencies,
+                onChange: onChange,
+                setting: setting })),
+
+
+            _react2.default.createElement('div', { style: { margin: '10px 15px', fontSize: '30px' } },
+              _react2.default.createElement(_reactHamburgerMenu2.default, {
+                isOpen: this.props.controller.dropdownMenuStyleOpen,
+                menuClicked: function menuClicked(e) {return _this2.handleDropDownClick(e);},
+                width: 25,
+                height: 15,
+                strokeWidth: 2,
+                rotate: 0,
+                color: currentTheme.fontColorPrimary,
+                borderRadius: 5,
+                animationDuration: 0.75 })),
+
+
+            _react2.default.createElement('div', { style: stlyeDropDown() },
+              _react2.default.createElement('div', {
+                  style: {
+                    position: 'absolute',
+                    top: '-8px',
+                    left: '135px',
+                    width: '18px',
+                    height: '10px',
+                    float: 'left',
+                    overflow: 'hidden' } },
+
+
+                _react2.default.createElement('span', {
+                  style: {
+                    position: 'absolute',
+                    borderLeft: '9px solid transparent',
+                    borderRight: '9px solid transparent',
+                    borderBottom: '9px solid rgba(0,0,0,.1)',
+                    height: 'auto',
+                    left: '0',
+                    top: '0',
+                    width: 'auto',
+                    display: 'inline-block',
+                    marginLeft: '-1px' } }),
+
+
+                _react2.default.createElement('span', {
+                  style: {
+                    position: 'absolute',
+                    display: 'inline-block',
+                    marginTop: '-1px',
+                    top: '1px',
+                    borderLeft: '9px solid transparent',
+                    borderRight: '9px solid transparent',
+                    borderBottom: '9px solid ' + currentTheme.backgroundColorPrimary } })),
+
+
+
+              _react2.default.createElement(_Setting2.default, this.props)))));
+
+
+
+
+    } }]);return Header;}(_react.Component);exports.default = Header;
+
+
+Header.propTypes = {
+  setting: _react.PropTypes.object.isRequired,
+  controller: _react.PropTypes.object.isRequired,
+  router: _react.PropTypes.object.isRequired,
+  currencies: _react.PropTypes.array.isRequired,
+  value: _react.PropTypes.string.isRequired,
+  onChange: _react.PropTypes.func.isRequired };

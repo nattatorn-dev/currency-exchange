@@ -1,0 +1,22 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var cov_dawue50gn = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/shared/ButtomHighlight.js',hash = 'eda0f6b324223352269e422f20d27940a760a966',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/shared/ButtomHighlight.js', statementMap: { '0': { start: { line: 3, column: 24 }, end: { line: 20, column: 1 } }, '1': { start: { line: 6, column: 21 }, end: { line: 6, column: 45 } }, '2': { start: { line: 15, column: 21 }, end: { line: 15, column: 41 } }, '3': { start: { line: 18, column: 23 }, end: { line: 18, column: 49 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 6, column: 12 }, end: { line: 6, column: 13 } }, loc: { start: { line: 6, column: 21 }, end: { line: 6, column: 45 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 15, column: 12 }, end: { line: 15, column: 13 } }, loc: { start: { line: 15, column: 21 }, end: { line: 15, column: 41 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 18, column: 14 }, end: { line: 18, column: 15 } }, loc: { start: { line: 18, column: 23 }, end: { line: 18, column: 49 } } } }, branchMap: { '0': { loc: { start: { line: 6, column: 21 }, end: { line: 6, column: 45 } }, type: 'binary-expr', locations: [{ start: { line: 6, column: 21 }, end: { line: 6, column: 32 } }, { start: { line: 6, column: 36 }, end: { line: 6, column: 45 } }] }, '1': { loc: { start: { line: 15, column: 21 }, end: { line: 15, column: 41 } }, type: 'binary-expr', locations: [{ start: { line: 15, column: 21 }, end: { line: 15, column: 32 } }, { start: { line: 15, column: 36 }, end: { line: 15, column: 41 } }] }, '2': { loc: { start: { line: 18, column: 23 }, end: { line: 18, column: 49 } }, type: 'binary-expr', locations: [{ start: { line: 18, column: 23 }, end: { line: 18, column: 39 } }, { start: { line: 18, column: 43 }, end: { line: 18, column: 49 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  background-color: transparent;\n  border: 0;\n  color: ', ';\n  cursor: pointer;\n  float: left;\n  font-size: 1em;\n  line-height: 30px;\n  outline: none;\n  padding: 8px 4px;\n  text-align: center;\n  text-transform: none;\n  width: ', ';\n\n  &:hover {\n    color: ', ';\n  }\n'], ['\n  background-color: transparent;\n  border: 0;\n  color: ', ';\n  cursor: pointer;\n  float: left;\n  font-size: 1em;\n  line-height: 30px;\n  outline: none;\n  padding: 8px 4px;\n  text-align: center;\n  text-transform: none;\n  width: ', ';\n\n  &:hover {\n    color: ', ';\n  }\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var ButtonHighlight = /* istanbul ignore next */(++cov_dawue50gn.s[0], /* istanbul ignore next */_styledComponents2.default.button(_templateObject,
+
+
+function (props) {/* istanbul ignore next */++cov_dawue50gn.f[0];++cov_dawue50gn.s[1];return (/* istanbul ignore next */(++cov_dawue50gn.b[0][0], props.color) || /* istanbul ignore next */(++cov_dawue50gn.b[0][1], '#a6a6a6'));},
+
+
+
+
+
+
+
+
+function (props) {/* istanbul ignore next */++cov_dawue50gn.f[1];++cov_dawue50gn.s[2];return (/* istanbul ignore next */(++cov_dawue50gn.b[1][0], props.width) || /* istanbul ignore next */(++cov_dawue50gn.b[1][1], '50%'));},
+
+
+function (props) {/* istanbul ignore next */++cov_dawue50gn.f[2];++cov_dawue50gn.s[3];return (/* istanbul ignore next */(++cov_dawue50gn.b[2][0], props.hoverColor) || /* istanbul ignore next */(++cov_dawue50gn.b[2][1], '#444'));})); /* istanbul ignore next */exports.default =
+
+
+
+ButtonHighlight;

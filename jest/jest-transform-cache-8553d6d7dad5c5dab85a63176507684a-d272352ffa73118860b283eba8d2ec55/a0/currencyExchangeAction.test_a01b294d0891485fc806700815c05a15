@@ -1,0 +1,36 @@
+'use strict';var _actions = require('../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+describe('currency exchange LOAD_CURRENCY_EXCHANGE', function () {
+  it('creates LOAD_CURRENCY_EXCHANGE action', function () {
+    var login = '';
+    var name = '';
+    var requiredFields = [];
+    var expectedAction = {
+      type: ActionTypes.LOAD_CURRENCY_EXCHANGE,
+      login: login,
+      name: name,
+      requiredFields: requiredFields };
+
+    expect(
+    ActionTypes.loadCurrencyExchange(login, name, requiredFields)).
+    toEqual(expectedAction);
+    expect(ActionTypes.loadCurrencyExchange(login, name)).toEqual(
+    expectedAction);
+
+  });
+
+  it('creates ADD_CURRENCY_EXCHANGE action', function () {
+    var currency = '';
+    var rate = '';
+    var banks = [];
+    var expectedAction = {
+      type: ActionTypes.ADD_CURRENCY_EXCHANGE,
+      currency: currency,
+      rate: rate,
+      banks: banks };
+
+    expect(ActionTypes.addCurrencyExchange(currency, rate, banks)).toEqual(
+    expectedAction);
+
+  });
+});

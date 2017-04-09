@@ -1,0 +1,15 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_208nhkrzgs = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/services/index.js',hash = 'bb3e0c10b5adc2ac18c512298a99ce8101688b09',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/services/index.js', statementMap: { '0': { start: { line: 8, column: 16 }, end: { line: 8, column: 44 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_reactRouter = require('react-router');
+var /* istanbul ignore next */_scrollBehavior = require('scroll-behavior'); /* istanbul ignore next */var _scrollBehavior2 = _interopRequireDefault(_scrollBehavior);
+var /* istanbul ignore next */_action = require('./action'); /* istanbul ignore next */var action = _interopRequireWildcard(_action);
+var /* istanbul ignore next */_array = require('./array'); /* istanbul ignore next */var array = _interopRequireWildcard(_array);
+var /* istanbul ignore next */_generator = require('./generator'); /* istanbul ignore next */var generator = _interopRequireWildcard(_generator);
+var /* istanbul ignore next */_number = require('./number'); /* istanbul ignore next */var number = _interopRequireWildcard(_number); /* istanbul ignore next */function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var history = /* istanbul ignore next */(++cov_208nhkrzgs.s[0], /* istanbul ignore next */(0, _scrollBehavior2.default)( /* istanbul ignore next */_reactRouter.browserHistory)); /* istanbul ignore next */exports.default =
+
+{
+  history: history,
+  action: action,
+  array: array,
+  generator: generator,
+  number: number };

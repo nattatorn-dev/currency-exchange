@@ -1,0 +1,23 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_22ay7qljfo = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/langs.js',hash = '4cc3b2b445022faff12667f7646fc08fa9af2daf',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/langs.js', statementMap: { '0': { start: { line: 1, column: 21 }, end: { line: 26, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var langs = /* istanbul ignore next */exports.langs = (++cov_22ay7qljfo.s[0], {
+  en: {
+    locale: 'en-US',
+    messages: {
+      BANK_TABLE_COL_CURRENCIES: 'CURRENCY',
+      BANK_TABLE_COL_DENOMINATION: 'DENOMINATION',
+      BANK_TABLE_COL_BUY: 'Bank Buying Rate',
+      BANK_TABLE_COL_SELL: 'Bank Selling Rate',
+      BANK_TABLE_COL_CALCULATION_LABEL: 'Currency Exchange Rates Calculator',
+      BANK_TABLE_COL_CALCULATION_SELL: 'want to sell',
+      BANK_TABLE_COL_CALCULATION_BUY: 'want to buy' } },
+
+
+  th: {
+    locale: 'th',
+    messages: {
+      BANK_TABLE_COL_CURRENCIES: 'สกุลเงิน',
+      BANK_TABLE_COL_DENOMINATION: 'หน่วยเงิน',
+      BANK_TABLE_COL_BUY: 'อัตราการขาย',
+      BANK_TABLE_COL_SELL: 'อัตราการซื้อ',
+      BANK_TABLE_COL_CALCULATION_LABEL: 'คำนวณอัตราแลกเปลี่ยน',
+      BANK_TABLE_COL_CALCULATION_SELL: 'ต้องการจะขาย',
+      BANK_TABLE_COL_CALCULATION_BUY: 'ต้องการจะซื้อ' } } });

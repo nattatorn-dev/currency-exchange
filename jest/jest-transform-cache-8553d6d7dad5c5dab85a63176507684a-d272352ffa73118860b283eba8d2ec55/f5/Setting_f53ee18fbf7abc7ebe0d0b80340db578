@@ -1,0 +1,82 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_vw8r1tn3e = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/Setting.js',hash = 'db0c26d70be8ee9e5c7da243eb311fdae1cbb588',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/Setting.js', statementMap: { '0': { start: { line: 11, column: 0 }, end: { line: 13, column: 1 } }, '1': { start: { line: 16, column: 22 }, end: { line: 19, column: 3 } }, '2': { start: { line: 17, column: 4 }, end: { line: 17, column: 22 } }, '3': { start: { line: 18, column: 4 }, end: { line: 18, column: 23 } }, '4': { start: { line: 21, column: 2 }, end: { line: 79, column: 3 } } }, fnMap: { '0': { name: 'Setting', decl: { start: { line: 15, column: 9 }, end: { line: 15, column: 16 } }, loc: { start: { line: 15, column: 39 }, end: { line: 80, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 16, column: 22 }, end: { line: 16, column: 23 } }, loc: { start: { line: 16, column: 27 }, end: { line: 19, column: 3 } } } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0 }, f: { '0': 0, '1': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+
+var /* istanbul ignore next */_ButtonSetting = require('./ButtonSetting');
+
+
+
+
+
+var /* istanbul ignore next */_shared = require('../../../shared'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_vw8r1tn3e.s[0];
+
+Setting.propTypes = {
+  updateSetting: /* istanbul ignore next */_react2.default.PropTypes.func.isRequired };
+
+
+function Setting( /* istanbul ignore next */_ref) {/* istanbul ignore next */var updateSetting = _ref.updateSetting; /* istanbul ignore next */++cov_vw8r1tn3e.f[0];++cov_vw8r1tn3e.s[1];
+  var handleClick = function handleClick(e) {/* istanbul ignore next */++cov_vw8r1tn3e.f[1];++cov_vw8r1tn3e.s[2];
+    e.preventDefault(); /* istanbul ignore next */++cov_vw8r1tn3e.s[3];
+    e.stopPropagation();
+  }; /* istanbul ignore next */++cov_vw8r1tn3e.s[4];
+
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+        style: {
+          minWidth: '160px',
+          fontSize: '13px' },
+
+        onClick: handleClick },
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.Popup, /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ButtonSetting.ButtonFontStyleSetting, /* istanbul ignore next */{
+            updateSetting: updateSetting,
+            fontStyle: 'normal',
+            style: { fontSize: '14px', verticalAlign: 'middle' } }, /* istanbul ignore next */'A'),
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ButtonSetting.ButtonFontStyleSetting, /* istanbul ignore next */{
+            updateSetting: updateSetting,
+            fontStyle: 'medium',
+            style: { fontSize: '20px', verticalAlign: 'middle' } }, /* istanbul ignore next */'A')),
+
+
+
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.Popup, /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ButtonSetting.ButtonColorThemeSetting, /* istanbul ignore next */{
+            updateSetting: updateSetting,
+            themeColor: 'white' }, /* istanbul ignore next */'White'),
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ButtonSetting.ButtonColorThemeSetting, /* istanbul ignore next */{
+            updateSetting: updateSetting,
+            themeColor: 'night' }, /* istanbul ignore next */'Night')),
+
+
+
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.Popup, /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ButtonSetting.ButtonFontSetting, /* istanbul ignore next */{ updateSetting: updateSetting, fontFamily: 'arial' }, /* istanbul ignore next */'Arial'),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ButtonSetting.ButtonFontSetting, /* istanbul ignore next */{ updateSetting: updateSetting, fontFamily: 'kanit' }, /* istanbul ignore next */'Kanit'),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ButtonSetting.ButtonFontSetting, /* istanbul ignore next */{ updateSetting: updateSetting, fontFamily: 'athiti' }, /* istanbul ignore next */'Athiti')),
+
+
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ButtonSetting.ButtonLangSetting, /* istanbul ignore next */{ updateSetting: updateSetting, lang: 'th' }, /* istanbul ignore next */'TH'),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_ButtonSetting.ButtonLangSetting, /* istanbul ignore next */{ updateSetting: updateSetting, lang: 'en' }, /* istanbul ignore next */'EN'))));
+
+
+
+
+
+} /* istanbul ignore next */exports.default =
+
+Setting;

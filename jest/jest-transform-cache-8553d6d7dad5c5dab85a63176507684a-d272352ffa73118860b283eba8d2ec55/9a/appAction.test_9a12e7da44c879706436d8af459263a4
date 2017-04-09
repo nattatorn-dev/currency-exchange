@@ -1,0 +1,18 @@
+'use strict';var _actions = require('../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+describe('app action', function () {
+  it('creates NAVIGATE action', function () {
+    var expectedAction = {
+      type: types.NAVIGATE };
+
+    expect(ActionTypes.navigate()).toEqual(expectedAction);
+  });
+  // it('creates NAVIGATE action', () => {
+  //   const text = 'Finish docs'
+  //   const expectedAction = {
+  //     type: types.ADD_TODO,
+  //     text
+  //   }
+  //   expect(actions.addTodo(text)).toEqual(expectedAction)
+  // })
+});

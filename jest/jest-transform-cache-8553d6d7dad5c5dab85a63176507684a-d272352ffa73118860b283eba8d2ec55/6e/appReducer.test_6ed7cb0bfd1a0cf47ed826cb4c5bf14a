@@ -1,0 +1,77 @@
+'use strict';var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _app = require('../app');var _app2 = _interopRequireDefault(_app);
+var _actions = require('../../actions');var ActionTypes = _interopRequireWildcard(_actions);
+var _constants = require('../../../../constants');function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('app reducer', function () {
+  it('returns correct initial state', function () {
+    expect((0, _app2.default)(undefined, {})).toEqual({
+      setting: _constants.setting,
+      controller: _constants.controller });
+
+  });
+
+  it('returns current state if no action matched', function () {
+    var curState = { setting: _constants.setting };
+    var action = {
+      type: 'test' };
+
+    var nextState = (0, _app2.default)(curState, action);
+    expect(nextState).toBe(curState); // compare pointers
+    expect(nextState).toEqual(curState); // compare values
+  });
+
+  it('update setting when receiving UPDATE_SETTING action', function () {
+    var curState = { setting: _constants.setting, controller: _constants.controller };
+    var action = {
+      type: ActionTypes.UPDATE_SETTING,
+      setting: (0, _extends3.default)({}, _constants.setting, { lang: 'en' }) };
+
+    var nextState = (0, _app2.default)(curState, action);
+    var expectedState = { setting: (0, _extends3.default)({}, _constants.setting, { lang: 'en' }), controller: _constants.controller };
+    expect(nextState).toEqual(expectedState);
+    expect(nextState).not.toBe(curState);
+  });
+
+  it('reset setting when receiving RESET_SETTING action', function () {
+    var curState = { setting: (0, _extends3.default)({}, _constants.setting, { theme: 'night' }), controller: _constants.controller };
+    var action = {
+      type: ActionTypes.RESET_SETTING };
+
+    var nextState = (0, _app2.default)(curState, action);
+    var expectedState = { setting: _constants.setting, controller: _constants.controller };
+    expect(nextState).toEqual(expectedState);
+    expect(nextState).not.toBe(curState);
+  });
+
+  it('update controller when receiving UPDATE_CONTROLLER action', function () {
+    var curState = { setting: _constants.setting, controller: _constants.controller };
+    var action = {
+      type: ActionTypes.UPDATE_CONTROLLER,
+      controller: (0, _extends3.default)({}, _constants.controller, { dropdownMenuStyleOpen: 'true' }) };
+
+    var nextState = (0, _app2.default)(curState, action);
+    var expectedState = {
+      controller: (0, _extends3.default)({}, _constants.controller, { dropdownMenuStyleOpen: 'true' }),
+      setting: _constants.setting };
+
+    expect(nextState).toEqual(expectedState);
+    expect(nextState).not.toBe(curState);
+  });
+
+  it('reset controller when receiving RESET_CONTROLLER action', function () {
+    var curState = {
+      setting: _constants.setting,
+      controller: (0, _extends3.default)({}, _constants.controller, { dropdownMenuStyleOpen: 'true' }) };
+
+    var action = {
+      type: ActionTypes.RESET_CONTROLLER };
+
+    var nextState = (0, _app2.default)(curState, action);
+    var expectedState = {
+      controller: _constants.controller,
+      setting: _constants.setting };
+
+    expect(nextState).toEqual(expectedState);
+    expect(nextState).not.toBe(curState);
+  });
+});

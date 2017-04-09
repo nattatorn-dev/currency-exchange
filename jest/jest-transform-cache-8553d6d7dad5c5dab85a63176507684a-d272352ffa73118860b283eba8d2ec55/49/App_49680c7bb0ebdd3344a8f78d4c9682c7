@@ -1,0 +1,142 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _createClass2 = require('babel-runtime/helpers/createClass');var _createClass3 = _interopRequireDefault(_createClass2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);var _class, _temp2;var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _redux = require('redux');
+var _reactRedux = require('react-redux');
+var _reactHelmet = require('react-helmet');var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+var _reactSticky = require('react-sticky');
+require('./global-styles');
+var _actions = require('./actions');
+
+
+
+
+
+
+var _selectors = require('./selectors');
+var _selectors2 = require('../currencyPopular/selectors');
+
+var _components = require('./components');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var
+
+App = (_temp2 = _class = function (_Component) {(0, _inherits3.default)(App, _Component);function App() {var _ref;var _temp, _this, _ret;(0, _classCallCheck3.default)(this, App);for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = App.__proto__ || (0, _getPrototypeOf2.default)(App)).call.apply(_ref, [this].concat(args))), _this), _this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    handleDismissClick = function (e) {
+      _this.props.actions.resetErrorMessage();
+      e.preventDefault();
+    }, _this.
+
+    handleChange = function (nextValue) {
+      _this.props.actions.navigate('/' + nextValue);
+    }, _this.
+
+    handleDropDownClick = function (e) {
+      e.preventDefault();
+      _this.props.actions.updateController((0, _extends3.default)({},
+      _this.props.controller, {
+        dropdownMenuStyleOpen: false }));
+
+    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);}(0, _createClass3.default)(App, [{ key: 'componentWillMount', value: function componentWillMount() {this.props.actions.updateRouterState({ pathname: this.props.location.pathname, params: this.props.params });} }, { key: 'componentWillReceiveProps', value: function componentWillReceiveProps(nextProps) {if (nextProps.errorMessage) {// handle error here
+      }if (this.props.location.pathname !== nextProps.location.pathname) {this.props.actions.updateRouterState({ pathname: nextProps.location.pathname, params: nextProps.params });}} }, { key: 'render', value: function render()
+    {var _props =
+
+
+
+
+
+
+
+
+      this.props,_props$actions = _props.actions,updateSetting = _props$actions.updateSetting,updateController = _props$actions.updateController,children = _props.children,controller = _props.controller,currencies = _props.currencies,inputValue = _props.inputValue,router = _props.router,setting = _props.setting;
+      return (
+        _react2.default.createElement('div', null,
+          _react2.default.createElement(_reactHelmet2.default, {
+            title: 'Currency Exchange Rates',
+            meta: [
+            { property: 'og:site_name', content: 'Currency Exchange Rates' }] }),
+
+
+          _react2.default.createElement(_reactSticky.StickyContainer, { style: { zIndex: 4 } },
+            _react2.default.createElement(_components.Main, { setting: setting, onClick: this.handleDropDownClick },
+              _react2.default.createElement(_reactSticky.Sticky, { style: { zIndex: 3 } },
+                _react2.default.createElement(_components.Theme, { setting: setting },
+                  _react2.default.createElement(_components.Header, {
+                    setting: setting,
+                    controller: controller,
+                    router: router,
+                    currencies: currencies,
+                    value: inputValue,
+                    updateSetting: updateSetting,
+                    updateController: updateController,
+                    onChange: this.handleChange })),
+
+
+                _react2.default.createElement(_components.Nav, null),
+                _react2.default.createElement(_components.Footer, null)),
+
+              _react2.default.createElement(_components.Theme, { setting: setting },
+                children)))));
+
+
+
+
+
+    } }]);return App;}(_react.Component), _class.propTypes = { actions: _react.PropTypes.shape({ navigate: _react.PropTypes.func.isRequired, updateRouterState: _react.PropTypes.func.isRequired, updateSetting: _react.PropTypes.func.isRequired, updateController: _react.PropTypes.func.isRequired, resetErrorMessage: _react.PropTypes.func.isRequired }), children: _react.PropTypes.node, controller: _react.PropTypes.object, currencies: _react.PropTypes.array, errorMessage: _react.PropTypes.string, inputValue: _react.PropTypes.string.isRequired, location: _react.PropTypes.shape({ pathname: _react.PropTypes.string }), router: _react.PropTypes.object, setting: _react.PropTypes.object }, _temp2);
+
+
+var mapStateToProps = function mapStateToProps(state) {return {
+    controller: (0, _selectors.getAppController)(state),
+    currencies: (0, _selectors2.getBankscurrenciesUniqToObj)(state),
+    errorMessage: state.errorMessage,
+    inputValue: state.router.pathname.substring(1),
+    router: state.router,
+    setting: (0, _selectors.getAppSetting)(state) };};
+
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {return {
+    actions: (0, _redux.bindActionCreators)(
+    {
+      navigate: _actions.navigate,
+      resetErrorMessage: _actions.resetErrorMessage,
+      updateController: _actions.updateController,
+      updateRouterState: _actions.updateRouterState,
+      updateSetting: _actions.updateSetting },
+
+    dispatch) };};exports.default =
+
+
+
+(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);

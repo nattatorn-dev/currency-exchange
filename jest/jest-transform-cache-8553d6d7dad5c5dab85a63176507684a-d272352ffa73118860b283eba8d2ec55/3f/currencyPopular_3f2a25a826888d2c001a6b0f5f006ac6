@@ -1,0 +1,29 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);exports.default =
+
+
+currencyPopular;var _actions = require('../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var initialState = {};function currencyPopular() {var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;var action = arguments[1];
+  switch (action.type) {
+    case ActionTypes.BANKS.SUCCESS:
+      return {
+        banks: action.response.entities.banks.reduce(
+        function (p, c, k) {return [].concat((0, _toConsumableArray3.default)(
+          p), [(0, _extends3.default)({},
+          c, { data: c.data.slice(0, 7), isTotal: false })]);},
+
+        []) };
+
+
+    case ActionTypes.UPDATE_CURRENCY_POPULAR:
+      return {
+        banks: state.banks.reduce(
+        function (p, c, k) {return (
+            k === action.index ? [].concat((0, _toConsumableArray3.default)(
+            p), [(0, _extends3.default)({}, c, { data: action.data, isTotal: !c.isTotal })]) : [].concat((0, _toConsumableArray3.default)(
+            p), [c]));},
+        []) };
+
+
+    default:
+      return state;}
+
+}

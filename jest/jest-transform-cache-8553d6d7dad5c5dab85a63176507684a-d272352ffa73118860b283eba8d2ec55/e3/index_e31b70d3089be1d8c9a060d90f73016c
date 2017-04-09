@@ -1,0 +1,41 @@
+'use strict';
+
+
+
+
+
+
+
+
+
+
+// jest.mock( App )
+// jest.mock( NotFoundPage )
+// jest.mock( CurrencyPopularPage )
+jest.mock('../../modules/currencyExchange/CurrencyExchangePage');var _react = require('react');var _react2 = _interopRequireDefault(_react);var _reactRouterDom = require('react-router-dom');var _enzyme = require('enzyme');var _routes = require('../../routes');var _routes2 = _interopRequireDefault(_routes);var _modules = require('../../modules');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+describe('Routes', function () {
+  // it( 'renders App if path is /', () => {
+  //   const component = mount(
+  //     <Router initialEntries={[ '/' ]}>
+  //       <Routes />
+  //     </Router>,
+  //   )
+  //   expect( component.text() ).toEqual( 'CurrencyPopularPage' )
+  // } )
+  // it( 'renders CurrencyPopularPage if path is /USD', () => {
+  //   const component = mount(
+  //     <Router initialEntries={[ '/' ]}>
+  //       <Routes />
+  //     </Router>,
+  //   )
+  //   expect( component.text() ).toEqual( 'CurrencyPopularPage' )
+  // } )
+  it('renders CurrencyExchangePage if path is /USD/100', function () {
+    var component = (0, _enzyme.mount)(
+    _react2.default.createElement(_reactRouterDom.MemoryRouter, { initialEntries: ['/USD/100'] },
+      _react2.default.createElement(_routes2.default, null)));
+
+
+    expect(component.text()).toEqual('CurrencyExchangePage');
+  });
+});

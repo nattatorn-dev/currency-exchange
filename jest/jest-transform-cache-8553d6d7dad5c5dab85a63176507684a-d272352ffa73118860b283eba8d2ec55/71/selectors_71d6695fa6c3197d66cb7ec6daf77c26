@@ -1,0 +1,359 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.getBankCurrencyPopularPropsDataByPopular = exports.getBanksSortByCurrency = exports.getBanksTopRateValue = exports.getBankCurrencyPopularByIndex = exports.getBanksByIndex = exports.getBankscurrenciesUniqToObj = exports.getBankscurrenciesUniq = exports.getBanksCurrencies = exports.getBanksName = exports.getBanksCurrencyPopular = exports.getBanks = undefined;var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);var _reselect = require('reselect');
+var _uniq = require('lodash/uniq');var _uniq2 = _interopRequireDefault(_uniq);
+var _services = require('../../services');
+var _helpers = require('../../helpers');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var getBanks = function getBanks(state) {return state.entities.banks;};
+var getBanksCurrencyPopular = function getBanksCurrencyPopular(state) {return state.feature.currencyPopular.banks;};
+
+var getBanksName = (0, _reselect.createSelector)(getBanks, function (banks) {return (
+    banks.reduce(function (p, c) {return [].concat((0, _toConsumableArray3.default)(p), [c.bankNameEng]);}, []));});
+
+var getBanksCurrencies = (0, _reselect.createSelector)(getBanks, function (banks) {return (
+    banks.reduce(
+    function (p, c) {return [].concat((0, _toConsumableArray3.default)(
+      p), (0, _toConsumableArray3.default)(
+      c.data.reduce(function (p, c) {return [].concat((0, _toConsumableArray3.default)(p), [c.currencyDetails.code]);}, [])));},
+
+    []));});
+
+
+var getBankscurrenciesUniq = (0, _reselect.createSelector)(getBanksCurrencies, function (currencies) {return (
+    (0, _uniq2.default)(currencies));});
+
+var getBankscurrenciesUniqToObj = (0, _reselect.createSelector)(
+getBankscurrenciesUniq,
+function (currencies) {return currencies.map(function (e) {return { label: e, value: e };});});
+
+
+// additional arguments
+/**
+   * @param  {[object]}      state                        |
+                                                            { [
+                                                                {
+                                                                  bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                },
+                                                                {
+                                                                  bankNameEng: 'KrungThai Public Company Limited.'
+                                                                }
+                                                            ] }
+                                                          | example state
+   * @param  {[number]}      index                        | 0 | index of banks
+   * @return {[object]}      banks                        |
+                                                            {
+                                                              bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                            },
+                                                          | return  bank by index
+   */
+var getBanksByIndex = function getBanksByIndex(state, index) {return getBanks(state)[index];};
+
+/**
+                                                                                                  * @param  {[object]}      state                        |
+                                                                                                                                                           { [
+                                                                                                                                                               {
+                                                                                                                                                                 bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                                                                                                               },
+                                                                                                                                                               {
+                                                                                                                                                                 bankNameEng: 'KrungThai Public Company Limited.'
+                                                                                                                                                               }
+                                                                                                                                                           ] }
+                                                                                                                                                         | example state
+                                                                                                  * @param  {[number]}      index                        | 0 | index of banks
+                                                                                                  * @return {[object]}      banks                        |
+                                                                                                                                                           {
+                                                                                                                                                             bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                                                                                                           },
+                                                                                                                                                         | return  bank by index
+                                                                                                  */
+var getBankCurrencyPopularByIndex = function getBankCurrencyPopularByIndex(state, index) {return (
+    getBanksCurrencyPopular(state)[index]);};
+
+/** TODO: specific function
+                                                 * @param  {[object]}      state                        |
+                                                                                                          { [
+                                                                                                              {
+                                                                                                                bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                                                                data: [
+                                                                                                                  {
+                                                                                                                    acronym: 'JPY',
+                                                                                                                    callSell: 1,
+                                                                                                                    callBuy: 1
+                                                                                                                  }
+                                                                                                                ]
+                                                                                                              },
+                                                                                                              {
+                                                                                                                bankNameEng: 'KrungThai Public Company Limited.'
+                                                                                                                data: [
+                                                                                                                  {
+                                                                                                                    acronym: 'JPY',
+                                                                                                                    callSell: 999999,
+                                                                                                                    callBuy: 1
+                                                                                                                  }
+                                                                                                                ]
+                                                                                                              }
+                                                                                                          ] }
+                                                                                                        | example state
+                                                * @param  {[object]}      currencyMaster                |
+                                                                                                          {
+                                                                                                            JPY: {
+                                                                                                              symbol: '¥',
+                                                                                                              name: 'Japanese Yen',
+                                                                                                              symbol_native: '￥',
+                                                                                                              decimal_digits: 0,
+                                                                                                              rounding: 0,
+                                                                                                              code: 'JPY',
+                                                                                                              name_plural: 'Japanese yen',
+                                                                                                            },
+                                                                                                          }
+                                                                                                        | currency master details
+                                                 * @param  {[string]}      currencyAcronym              | 'USD' |
+                                                 * @param  {[float]}       amountMoney                  | 1000.00 |
+                                                 * @return {[object]}      banks                        |
+                                                                                                          { [
+                                                                                                              {
+                                                                                                                bankNameEng: 'KrungThai Public Company Limited.'
+                                                                                                                data: [
+                                                                                                                  {
+                                                                                                                    acronym: 'JPY',
+                                                                                                                    callSell: 999999,
+                                                                                                                    callBuy: 1
+                                                                                                                  }
+                                                                                                                ]
+                                                                                                              },
+                                                                                                              {
+                                                                                                                bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                                                                data: [
+                                                                                                                  {
+                                                                                                                    acronym: 'JPY',
+                                                                                                                    callSell: 1,
+                                                                                                                    callBuy: 1
+                                                                                                                  }
+                                                                                                                ]
+                                                                                                              }
+                                                                                                          ] }
+                                                                                                        | return  bank by index
+                                                 */
+var getBanksTopRateValue = function getBanksTopRateValue(
+state,
+currenciesMaster,
+currencyAcronym,
+amountMoney) {return (
+
+    getBanks(state).
+    reduce(
+    function (p, c, k) {
+      // TODO [code fix]: USD case
+      var sortByCalSell = !c['' + currencyAcronym] &&
+      currencyAcronym !== 'USD' ?
+      [_helpers.currency.defaultCurrency(currenciesMaster, c, currencyAcronym)] :
+      c.data.
+      filter(
+      function (e) {return (
+          currencyAcronym.
+          toUpperCase().
+          indexOf(e.currencyDetails.code) !== -1 && e.sell !== 0);}).
+
+      map(function (e) {return (0, _extends3.default)({},
+        e, {
+          calSell: _services.number.isNumber(amountMoney / e.sell, 0),
+          calBuy: _services.number.isNumber(amountMoney / e.buy, 0) });}).
+
+      sort(function (a, b) {return b.calSell - a.calSell;});
+
+      var selectFirstSortByCalSell = !c['' + currencyAcronym] &&
+      currencyAcronym !== 'USD' ?
+      _helpers.currency.defaultCurrency(currenciesMaster, c, currencyAcronym) :
+      sortByCalSell[0];
+      return [].concat((0, _toConsumableArray3.default)(
+      p), [(0, _extends3.default)({},
+      c, { data: sortByCalSell }, selectFirstSortByCalSell)]);
+
+    },
+    []).
+
+    sort(function (a, b) {return b.calSell - a.calSell;}));};
+
+/**
+                                                                * @param  {[object]}   state                            |
+                                                                                                                          { [
+                                                                                                                              {
+                                                                                                                                bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                                                                                data: [
+                                                                                                                                  {
+                                                                                                                                    acronym: 'USD'
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                    acronym: 'JPY'
+                                                                                                                                  },
+                                                                                                                                  {
+                                                                                                                                    acronym: 'GBP'
+                                                                                                                                  },
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                          ] }
+                                                                                                                        | example state
+                                                                * @param  {[object]}      currencyMaster                |
+                                                                                                                          {
+                                                                                                                            USD: {
+                                                                                                                              symbol: '$',
+                                                                                                                              name: 'US Dollar',
+                                                                                                                              symbol_native: '$',
+                                                                                                                              decimal_digits: 2,
+                                                                                                                              rounding: 0,
+                                                                                                                              code: 'USD',
+                                                                                                                              name_plural: 'US dollars',
+                                                                                                                            },
+                                                                                                                            GBP: {
+                                                                                                                              symbol: '£',
+                                                                                                                              name: 'British Pound Sterling',
+                                                                                                                              symbol_native: '£',
+                                                                                                                              decimal_digits: 2,
+                                                                                                                              rounding: 0,
+                                                                                                                              code: 'GBP',
+                                                                                                                              name_plural: 'British pounds sterling',
+                                                                                                                            }
+                                                                                                                            JPY: {
+                                                                                                                              symbol: '¥',
+                                                                                                                              name: 'Japanese Yen',
+                                                                                                                              symbol_native: '￥',
+                                                                                                                              decimal_digits: 0,
+                                                                                                                              rounding: 0,
+                                                                                                                              code: 'JPY',
+                                                                                                                              name_plural: 'Japanese yen',
+                                                                                                                            },
+                                                                                                                          }
+                                                                                                                        | currency master details
+                                                                 * @param  {[array]}       popularCurrencies            | ['USD', 'GBP'] |
+                                                                 * @return {[object]}      object                       |
+                                                                                                                          {
+                                                                                                                            bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                                                                            data: [
+                                                                                                                              {
+                                                                                                                                acronym: 'USD',
+                                                                                                                                currencyDetails: {
+                                                                                                                                  symbol: '$',
+                                                                                                                                  name: 'US Dollar',
+                                                                                                                                  symbol_native: '$',
+                                                                                                                                  decimal_digits: 2,
+                                                                                                                                  rounding: 0,
+                                                                                                                                  code: 'USD',
+                                                                                                                                  name_plural: 'US dollars',
+                                                                                                                                }
+                                                                                                                              },
+                                                                                                                              {
+                                                                                                                                acronym: 'GBP',
+                                                                                                                                currencyDetails: {
+                                                                                                                                  symbol: '£',
+                                                                                                                                  name: 'British Pound Sterling',
+                                                                                                                                  symbol_native: '£',
+                                                                                                                                  decimal_digits: 2,
+                                                                                                                                  rounding: 0,
+                                                                                                                                  code: 'GBP',
+                                                                                                                                  name_plural: 'British pounds sterling',
+                                                                                                                                }
+                                                                                                                              },
+                                                                                                                              {
+                                                                                                                                acronym: 'JPY',
+                                                                                                                                currencyDetails: {
+                                                                                                                                  symbol: '¥',
+                                                                                                                                  name: 'Japanese Yen',
+                                                                                                                                  symbol_native: '￥',
+                                                                                                                                  decimal_digits: 0,
+                                                                                                                                  rounding: 0,
+                                                                                                                                  code: 'JPY',
+                                                                                                                                  name_plural: 'Japanese yen',
+                                                                                                                                }
+                                                                                                                              },
+                                                                                                                            ]
+                                                                                                                          }
+                                                                                                                        | return banks sorted by popular currencies first
+                                                                 */
+var getBanksSortByCurrency = function getBanksSortByCurrency(state, currenciesMaster, popularCurrencies) {return (
+    getBanks(state).reduce(
+    function (p, c) {
+      var popularCurrenciesOnBank = popularCurrencies.map(
+      function (e, k) {return (
+          !c[e] ?
+          _helpers.currency.defaultCurrency(currenciesMaster, c, e, k) : (0, _extends3.default)({},
+          c[e], { index: k }));});
+
+
+      var currenciesOnBank = c.data.reduce(
+      function (p, c, k) {return (
+          popularCurrencies.every(function (e) {return c.acronym.indexOf(e) === -1;}) ? [].concat((0, _toConsumableArray3.default)(
+          p), [(0, _extends3.default)({}, c, { index: popularCurrenciesOnBank.length + p.length })]) :
+          p);},
+      []);
+
+
+      return [].concat((0, _toConsumableArray3.default)(
+      p), [(0, _extends3.default)({},
+      c, { data: [].concat((0, _toConsumableArray3.default)(popularCurrenciesOnBank), (0, _toConsumableArray3.default)(currenciesOnBank)) })]);
+
+    },
+    []));};
+
+
+/**
+               * @param  {[object]}   state                     |
+                                                                  { [
+                                                                      {
+                                                                        bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                        data: [
+                                                                          {
+                                                                            acronym: 'USD'
+                                                                          },
+                                                                          {
+                                                                            acronym: 'JPY'
+                                                                          },
+                                                                          {
+                                                                            acronym: 'GBP'
+                                                                          },
+                                                                          {
+                                                                            acronym: 'IDR'
+                                                                          },
+                                                                        ]
+                                                                      }
+                                                                  ] }
+                                                                | example state
+               * @param  {[number]}   index                     | 0 | index of banks
+               * @param  {[array]}    popularcurrenciesLists    | ['USD', 'JPY', 'GBP'] |
+               * @return {[array]}    banks                     |
+                                                                  {
+                                                                    bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                    data: [
+                                                                      {
+                                                                        acronym: 'USD'
+                                                                      },
+                                                                      {
+                                                                        acronym: 'JPY'
+                                                                      },
+                                                                      {
+                                                                        acronym: 'GBP'
+                                                                      },
+                                                                    ]
+                                                                  }
+                                                                | return banks slice by popular currencies
+               */
+var getBankCurrencyPopularPropsDataByPopular = function getBankCurrencyPopularPropsDataByPopular(
+state,
+index,
+popularcurrenciesLists) {return (
+
+    getBankCurrencyPopularByIndex(state, index).data.slice(
+    0,
+    popularcurrenciesLists.length));};exports.
+
+
+
+getBanks = getBanks;exports.
+getBanksCurrencyPopular = getBanksCurrencyPopular;exports.
+getBanksName = getBanksName;exports.
+getBanksCurrencies = getBanksCurrencies;exports.
+getBankscurrenciesUniq = getBankscurrenciesUniq;exports.
+getBankscurrenciesUniqToObj = getBankscurrenciesUniqToObj;exports.
+getBanksByIndex = getBanksByIndex;exports.
+getBankCurrencyPopularByIndex = getBankCurrencyPopularByIndex;exports.
+getBanksTopRateValue = getBanksTopRateValue;exports.
+getBanksSortByCurrency = getBanksSortByCurrency;exports.
+getBankCurrencyPopularPropsDataByPopular = getBankCurrencyPopularPropsDataByPopular;

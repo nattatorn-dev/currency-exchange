@@ -1,0 +1,19 @@
+'use strict';var _actions = require('../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+describe('app action', function () {
+  it('creates NAVIGATE action', function () {
+    var expectedAction = {
+      type: ActionTypes.NAVIGATE };
+
+    expect(ActionTypes.navigate()).toEqual(expectedAction);
+  });
+
+  it('creates UPDATE_ROUTER_STATE action', function () {
+    var path = '/USD';
+    var expectedAction = {
+      type: types.UPDATE_ROUTER_STATE,
+      path: path };
+
+    expect(actions.updateRouterState(path)).toEqual(expectedAction);
+  });
+});

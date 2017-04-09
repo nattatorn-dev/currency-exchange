@@ -1,0 +1,24 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.fetchEntity = undefined;var _regenerator = require('babel-runtime/regenerator');var _regenerator2 = _interopRequireDefault(_regenerator);var cov_2m2yv572er = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/services/generator.js',hash = '852eb227eca132bc5c0a80aee08743cfe6068643',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/services/generator.js', statementMap: { '0': { start: { line: 15, column: 2 }, end: { line: 15, column: 31 } }, '1': { start: { line: 16, column: 30 }, end: { line: 16, column: 49 } }, '2': { start: { line: 17, column: 2 }, end: { line: 21, column: 3 } }, '3': { start: { line: 18, column: 4 }, end: { line: 18, column: 43 } }, '4': { start: { line: 20, column: 4 }, end: { line: 20, column: 40 } } }, fnMap: { '0': { name: 'fetchEntity', decl: { start: { line: 14, column: 10 }, end: { line: 14, column: 21 } }, loc: { start: { line: 14, column: 40 }, end: { line: 22, column: 1 } } } }, branchMap: { '0': { loc: { start: { line: 17, column: 2 }, end: { line: 21, column: 3 } }, type: 'if', locations: [{ start: { line: 17, column: 2 }, end: { line: 21, column: 3 } }, { start: { line: 17, column: 2 }, end: { line: 21, column: 3 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0 }, f: { '0': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_effects = require('redux-saga/effects'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _marked = [
+
+
+
+
+
+
+
+
+
+
+
+
+fetchEntity].map(_regenerator2.default.mark); /**
+                                                 * @param {[object]}    entity     |
+                                                                                     {
+                                                                                        "FAILURE": "VIDEOS_FAILURE",
+                                                                                        "REQUEST": "VIDEOS_REQUEST",
+                                                                                        "SUCCESS": "VIDEOS_SUCCESS"
+                                                                                     }
+                                                                                   | actions
+                                                 * @param  {[func]}    apiFn       | function() | fetch api function
+                                                 * @return {[func]}    action      | request(), success() or failure()  | watch callback action then return action
+                                                 */function fetchEntity(entity, apiFn) /* istanbul ignore next */{var _ref, response, error;return _regenerator2.default.wrap(function fetchEntity$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:++cov_2m2yv572er.f[0];++cov_2m2yv572er.s[0];_context.next = 4;return (/* istanbul ignore next */(0, _effects.put)(entity.request()));case 4:++cov_2m2yv572er.s[1];_context.next = 7;return (/* istanbul ignore next */(0, _effects.call)(apiFn));case 7:_ref = _context.sent;response = _ref.response;error = _ref.error;++cov_2m2yv572er.s[2];if (!response) {_context.next = 18;break;}++cov_2m2yv572er.b[0][0];++cov_2m2yv572er.s[3];_context.next = 16;return (/* istanbul ignore next */(0, _effects.put)(entity.success(response)));case 16:_context.next = 22;break;case 18:++cov_2m2yv572er.b[0][1];++cov_2m2yv572er.s[4];_context.next = 22;return (/* istanbul ignore next */(0, _effects.put)(entity.failure(error)));case 22:case 'end':return _context.stop();}}}, _marked[0], this);} /* istanbul ignore next */exports.fetchEntity = fetchEntity;

@@ -1,0 +1,70 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _keys = require('babel-runtime/core-js/object/keys');var _keys2 = _interopRequireDefault(_keys);var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _createClass2 = require('babel-runtime/helpers/createClass');var _createClass3 = _interopRequireDefault(_createClass2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);var cov_2c66os8vec = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/helpers/Html.js',hash = '22097ce40ff1ef6760a954372b4e25329862df70',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/helpers/Html.js', statementMap: { '0': { start: { line: 16, column: 41 }, end: { line: 16, column: 51 } }, '1': { start: { line: 17, column: 20 }, end: { line: 17, column: 79 } }, '2': { start: { line: 18, column: 17 }, end: { line: 18, column: 32 } }, '3': { start: { line: 19, column: 19 }, end: { line: 19, column: 78 } }, '4': { start: { line: 19, column: 51 }, end: { line: 19, column: 63 } }, '5': { start: { line: 20, column: 4 }, end: { line: 66, column: 5 } }, '6': { start: { line: 43, column: 12 }, end: { line: 50, column: 14 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 15, column: 2 }, end: { line: 15, column: 3 } }, loc: { start: { line: 15, column: 12 }, end: { line: 67, column: 3 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 19, column: 43 }, end: { line: 19, column: 44 } }, loc: { start: { line: 19, column: 51 }, end: { line: 19, column: 63 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 42, column: 45 }, end: { line: 42, column: 46 } }, loc: { start: { line: 43, column: 12 }, end: { line: 50, column: 14 } } } }, branchMap: { '0': { loc: { start: { line: 17, column: 20 }, end: { line: 17, column: 79 } }, type: 'cond-expr', locations: [{ start: { line: 17, column: 32 }, end: { line: 17, column: 74 } }, { start: { line: 17, column: 77 }, end: { line: 17, column: 79 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _class, _temp;var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_server = require('react-dom/server'); /* istanbul ignore next */var _server2 = _interopRequireDefault(_server);
+var /* istanbul ignore next */_serializeJavascript = require('serialize-javascript'); /* istanbul ignore next */var _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);
+var /* istanbul ignore next */_reactHelmet = require('react-helmet'); /* istanbul ignore next */var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+var /* istanbul ignore next */_config = require('../config'); /* istanbul ignore next */var _config2 = _interopRequireDefault(_config);
+var /* istanbul ignore next */_StyleSheet = require('styled-components/lib/models/StyleSheet'); /* istanbul ignore next */var _StyleSheet2 = _interopRequireDefault(_StyleSheet);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var
+
+Html = (_temp = _class = function (_Component) {(0, _inherits3.default)(Html, _Component);function Html() {(0, _classCallCheck3.default)(this, Html);return (0, _possibleConstructorReturn3.default)(this, (Html.__proto__ || (0, _getPrototypeOf2.default)(Html)).apply(this, arguments));}(0, _createClass3.default)(Html, [{ key: 'render', value: function render()
+
+
+
+
+
+
+    {/* istanbul ignore next */++cov_2c66os8vec.f[0];var _ref = (++cov_2c66os8vec.s[0],
+      this.props),assets = _ref.assets,component = _ref.component,store = _ref.store;
+      var content = /* istanbul ignore next */(++cov_2c66os8vec.s[1], component ? /* istanbul ignore next */(++cov_2c66os8vec.b[0][0], /* istanbul ignore next */_server2.default.renderToStaticMarkup(component)) : /* istanbul ignore next */(++cov_2c66os8vec.b[0][1], ''));
+      var head = /* istanbul ignore next */(++cov_2c66os8vec.s[2], /* istanbul ignore next */_reactHelmet2.default.rewind());
+      var styles = /* istanbul ignore next */(++cov_2c66os8vec.s[3], /* istanbul ignore next */_StyleSheet2.default.rules().map(function (rule) {/* istanbul ignore next */++cov_2c66os8vec.f[1];++cov_2c66os8vec.s[4];return rule.cssText;}).join('\n')); /* istanbul ignore next */++cov_2c66os8vec.s[5];
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'html', /* istanbul ignore next */{ lang: 'en-us' },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'head', /* istanbul ignore next */null,
+            head.base.toComponent(),
+            head.title.toComponent(),
+            head.meta.toComponent(),
+            head.link.toComponent(),
+            head.script.toComponent(),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'style', /* istanbul ignore next */null,
+              styles),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'link', /* istanbul ignore next */{ rel: 'shortcut icon', href: '/favicon.ico' }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'link', /* istanbul ignore next */{
+              href: 'https://fonts.googleapis.com/css?family=Athiti|Kanit',
+              rel: 'stylesheet' }),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'link', /* istanbul ignore next */{
+              rel: 'stylesheet',
+              href: 'https://cdnjs.cloudflare.com/ajax/libs/react-select/0.9.1/react-select.min.css' }),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'meta', /* istanbul ignore next */{ name: 'viewport', content: 'width=device-width, initial-scale=1' }),
+
+            /* istanbul ignore next */(0, _keys2.default)(assets.styles).map(function (style, key)
+            {/* istanbul ignore next */++cov_2c66os8vec.f[2];++cov_2c66os8vec.s[6];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'link', /* istanbul ignore next */{
+                  href: assets.styles[style],
+                  key: key,
+                  media: 'screen, projection',
+                  rel: 'stylesheet',
+                  type: 'text/css',
+                  charSet: 'UTF-8' }));
+            })),
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'body', /* istanbul ignore next */null,
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ id: 'content', dangerouslySetInnerHTML: { __html: content } }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'script', /* istanbul ignore next */{ src: 'https://cdn.polyfill.io/v2/polyfill.min.js' }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'script', /* istanbul ignore next */{
+              dangerouslySetInnerHTML: {
+                __html: /* istanbul ignore next */'window.__data=' + /* istanbul ignore next */(0, _serializeJavascript2.default)(store.getState()) + ';' },
+
+              charSet: 'UTF-8' }),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'script', /* istanbul ignore next */{ src: assets.javascript.main, charSet: 'UTF-8' }))));
+
+
+
+    } }]);return Html;}(_react.Component), _class.propTypes = { assets: /* istanbul ignore next */_react.PropTypes.object, component: /* istanbul ignore next */_react.PropTypes.node, store: /* istanbul ignore next */_react.PropTypes.object }, _temp); /* istanbul ignore next */exports.default =
+
+
+Html;

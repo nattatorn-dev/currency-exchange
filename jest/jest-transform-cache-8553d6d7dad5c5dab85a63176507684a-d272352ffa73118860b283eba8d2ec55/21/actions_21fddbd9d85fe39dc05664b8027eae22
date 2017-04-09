@@ -1,0 +1,15 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.addCurrencyExchange = exports.loadCurrencyExchange = exports.ADD_CURRENCY_EXCHANGE = exports.LOAD_CURRENCY_EXCHANGE = undefined;var cov_spuciu7c3 = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/actions.js',hash = 'b28b7fd7a77d064acbf3e8e37c9e9debc3189ba1',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/actions.js', statementMap: { '0': { start: { line: 3, column: 31 }, end: { line: 3, column: 55 } }, '1': { start: { line: 4, column: 30 }, end: { line: 4, column: 53 } }, '2': { start: { line: 6, column: 29 }, end: { line: 7, column: 67 } }, '3': { start: { line: 7, column: 2 }, end: { line: 7, column: 67 } }, '4': { start: { line: 8, column: 28 }, end: { line: 9, column: 60 } }, '5': { start: { line: 9, column: 2 }, end: { line: 9, column: 60 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 6, column: 29 }, end: { line: 6, column: 30 } }, loc: { start: { line: 7, column: 2 }, end: { line: 7, column: 67 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 8, column: 28 }, end: { line: 8, column: 29 } }, loc: { start: { line: 9, column: 2 }, end: { line: 9, column: 60 } } } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, f: { '0': 0, '1': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_action = require('../../services/action');
+
+var LOAD_CURRENCY_EXCHANGE = /* istanbul ignore next */(++cov_spuciu7c3.s[0], 'LOAD_CURRENCY_EXCHANGE');
+var ADD_CURRENCY_EXCHANGE = /* istanbul ignore next */(++cov_spuciu7c3.s[1], 'ADD_CURRENCY_EXCHANGE'); /* istanbul ignore next */++cov_spuciu7c3.s[2];
+
+var loadCurrencyExchange = function loadCurrencyExchange(login, name, requiredFields)
+{/* istanbul ignore next */++cov_spuciu7c3.f[0];++cov_spuciu7c3.s[3];return (/* istanbul ignore next */(0, _action.action)(LOAD_CURRENCY_EXCHANGE, { login: login, name: name, requiredFields: requiredFields }));}; /* istanbul ignore next */++cov_spuciu7c3.s[4];
+var addCurrencyExchange = function addCurrencyExchange(currency, rate, banks)
+{/* istanbul ignore next */++cov_spuciu7c3.f[1];++cov_spuciu7c3.s[5];return (/* istanbul ignore next */(0, _action.action)(ADD_CURRENCY_EXCHANGE, { currency: currency, rate: rate, banks: banks }));}; /* istanbul ignore next */exports.
+
+
+LOAD_CURRENCY_EXCHANGE = LOAD_CURRENCY_EXCHANGE; /* istanbul ignore next */exports.
+ADD_CURRENCY_EXCHANGE = ADD_CURRENCY_EXCHANGE; /* istanbul ignore next */exports.
+loadCurrencyExchange = loadCurrencyExchange; /* istanbul ignore next */exports.
+addCurrencyExchange = addCurrencyExchange;

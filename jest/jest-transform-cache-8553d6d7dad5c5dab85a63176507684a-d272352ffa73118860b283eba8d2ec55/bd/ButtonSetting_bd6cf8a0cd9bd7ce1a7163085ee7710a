@@ -1,0 +1,118 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _styledComponents = require('styled-components');
+
+var _shared = require('../../../shared');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+ButtonFontSetting.propTypes = {
+  children: _react2.default.PropTypes.string.isRequired,
+  fontFamily: _react2.default.PropTypes.string.isRequired,
+  theme: _react2.default.PropTypes.object.isRequired,
+  updateSetting: _react2.default.PropTypes.func.isRequired };
+
+
+function ButtonFontSetting(_ref) {var children = _ref.children,theme = _ref.theme,updateSetting = _ref.updateSetting,fontFamily = _ref.fontFamily;
+  var updateFont = function updateFont() {return (
+      updateSetting((0, _extends3.default)({},
+      theme, {
+        fontFamily: fontFamily })));};
+
+  return (
+    _react2.default.createElement(_shared.ButtonHighlight, {
+        key: 'button-font-setting-' + fontFamily,
+        color: '#a6a6a6',
+        hoverColor: '#444',
+        width: '33%',
+        onClick: updateFont },
+
+      children));
+
+
+}
+
+ButtonFontStyleSetting.propTypes = {
+  children: _react2.default.PropTypes.string.isRequired,
+  fontStyle: _react2.default.PropTypes.string.isRequired,
+  style: _react2.default.PropTypes.object,
+  theme: _react2.default.PropTypes.object.isRequired,
+  updateSetting: _react2.default.PropTypes.func.isRequired };
+
+
+function ButtonFontStyleSetting(_ref2)
+
+{var children = _ref2.children,style = _ref2.style,theme = _ref2.theme,updateSetting = _ref2.updateSetting,fontStyle = _ref2.fontStyle;
+  var updateFontSize = function updateFontSize() {return (
+      updateSetting((0, _extends3.default)({},
+      theme, {
+        fontStyle: fontStyle })));};
+
+  return (
+    _react2.default.createElement(_shared.ButtonHighlight, {
+        key: 'button-fontstyle-setting-' + fontStyle,
+        color: '#a6a6a6',
+        hoverColor: '#444',
+        onClick: updateFontSize },
+
+      _react2.default.createElement('span', { style: style },
+        children)));
+
+
+
+}
+
+ButtonColorThemeSetting.propTypes = {
+  children: _react2.default.PropTypes.string.isRequired,
+  theme: _react2.default.PropTypes.object.isRequired,
+  themeColor: _react2.default.PropTypes.string.isRequired,
+  updateSetting: _react2.default.PropTypes.func.isRequired };
+
+
+function ButtonColorThemeSetting(_ref3)
+
+{var children = _ref3.children,theme = _ref3.theme,updateSetting = _ref3.updateSetting,themeColor = _ref3.themeColor;
+  var updateColorTheme = function updateColorTheme() {return (
+      updateSetting((0, _extends3.default)({},
+      theme, {
+        theme: themeColor })));};
+
+  return (
+    _react2.default.createElement(_shared.ButtonHighlight, {
+        key: 'button-theme-setting-' + themeColor,
+        color: '#a6a6a6',
+        hoverColor: '#444',
+        onClick: updateColorTheme },
+
+      children));
+
+
+}
+
+ButtonLangSetting.propTypes = {
+  children: _react2.default.PropTypes.string.isRequired,
+  lang: _react2.default.PropTypes.string.isRequired,
+  theme: _react2.default.PropTypes.object.isRequired,
+  updateSetting: _react2.default.PropTypes.func.isRequired };
+
+
+function ButtonLangSetting(_ref4) {var children = _ref4.children,theme = _ref4.theme,updateSetting = _ref4.updateSetting,lang = _ref4.lang;
+  var updateLang = function updateLang() {return (
+      updateSetting((0, _extends3.default)({},
+      theme, {
+        lang: lang })));};
+
+  return (
+    _react2.default.createElement(_shared.ButtonHighlight, {
+        key: 'button-lang-setting-' + lang,
+        color: '#a6a6a6',
+        hoverColor: '#444',
+        onClick: updateLang },
+
+      children));
+
+
+}exports.default =
+
+{
+  ButtonFontSetting: (0, _styledComponents.withTheme)(ButtonFontSetting),
+  ButtonFontStyleSetting: (0, _styledComponents.withTheme)(ButtonFontStyleSetting),
+  ButtonColorThemeSetting: (0, _styledComponents.withTheme)(ButtonColorThemeSetting),
+  ButtonLangSetting: (0, _styledComponents.withTheme)(ButtonLangSetting) };

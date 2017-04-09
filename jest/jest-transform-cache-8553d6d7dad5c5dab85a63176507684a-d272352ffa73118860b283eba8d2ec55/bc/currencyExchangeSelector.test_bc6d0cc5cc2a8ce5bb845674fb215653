@@ -1,0 +1,26 @@
+'use strict';var _selectors = require('../selectors');
+
+describe('currency exchange selector', function () {
+  var state = {
+    banks: [
+    {
+      bankNameThai: 'ธนาคารไทยพาณิชย์',
+      bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+      data: [],
+      isTotal: true }],
+
+
+    currency: 'USD',
+    rate: '100' };
+
+  it('selects bank currency exchange', function () {
+    expect((0, _selectors.getBankCurrencyExchange)(state)).toEqual([
+    {
+      bankNameThai: 'ธนาคารไทยพาณิชย์',
+      bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+      data: [],
+      isTotal: true }]);
+
+
+  });
+});

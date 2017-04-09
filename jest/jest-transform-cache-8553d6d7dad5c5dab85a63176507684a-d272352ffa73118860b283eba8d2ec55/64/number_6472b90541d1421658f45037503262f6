@@ -1,0 +1,25 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.isNumber = exports.mathRound = undefined;var _numbro = require('numbro');var _numbro2 = _interopRequireDefault(_numbro);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+/**
+                                                                                                                                                                                                                                                                                                            * @param  {[float]}    number       | 100000 |
+                                                                                                                                                                                                                                                                                                            * @param  {[number]}   digit        | 5 |
+                                                                                                                                                                                                                                                                                                            * @return {[float]}    number       | 100000.00000 | return new number with format
+                                                                                                                                                                                                                                                                                                            */
+var mathRound = function mathRound(number) {var digit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;return (
+      (0, _numbro2.default)(number).format('0,0.' + '0'.repeat(digit)));};
+
+/**
+                                                                              * @param  {[float]}    number       | 100000 |
+                                                                              * @param  {[any]}      replace      | '-' |
+                                                                              * @return {[float]}    number       | 100000 or '-' | return number check param is type number
+                                                                              */
+var isNumber = function isNumber(number) {var replace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '-';return (
+      number &&
+      typeof +number === 'number' &&
+      typeof number !== 'string' &&
+      !isNaN(Number((0, _numbro2.default)().unformat(number))) &&
+      (0, _numbro2.default)().unformat(number) !== 0 ?
+      number :
+      replace);};exports.
+
+mathRound = mathRound;exports.isNumber = isNumber;

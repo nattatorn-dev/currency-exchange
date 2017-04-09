@@ -1,0 +1,13 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  background-color: white;\n  border-radius: 150px;\n  box-shadow: ', ';\n  color: ', ';\n  margin: -25px 0 0 18px;\n'], ['\n  background-color: white;\n  border-radius: 150px;\n  box-shadow: ', ';\n  color: ', ';\n  margin: -25px 0 0 18px;\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);
+var _NumberImage = require('./NumberImage');var _NumberImage2 = _interopRequireDefault(_NumberImage);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var NumberImageCircle = (0, _styledComponents2.default)(_NumberImage2.default)(_templateObject,
+
+
+function (props) {return '0 0 2px ' +
+  props.theme.themes[props.theme.theme].shadowPrimary;},
+function (props) {return props.theme.themes[props.theme.theme].textPrimary;});exports.default =
+
+
+
+NumberImageCircle;

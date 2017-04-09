@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1491219790388" clover="3.2.0">
+  <project timestamp="1491219790388" name="All files">
+    <metrics statements="194" coveredstatements="125" conditionals="102" coveredconditionals="42" methods="83" coveredmethods="53" elements="379" coveredelements="220" complexity="0" loc="194" ncloc="194" packages="11" files="30" classes="30">
+      <package name="src">
+        <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="7" methods="0" coveredmethods="0"/>
+        <file name="config.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/config.js">
+          <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="7" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.constants">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="controller.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/constants/controller.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/constants/index.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="src.constants.setting">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="fontFamilies.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/fontFamilies.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+        </file>
+        <file name="fontStyles.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/fontStyles.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="6" count="2" type="stmt"/>
+        </file>
+        <file name="langs.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/langs.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+        </file>
+        <file name="themes.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/themes.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.helpers">
+        <metrics statements="56" coveredstatements="12" conditionals="33" coveredconditionals="0" methods="14" coveredmethods="0"/>
+        <file name="Html.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/helpers/Html.js">
+          <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+        </file>
+        <file name="currency.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/helpers/currency.js">
+          <metrics statements="9" coveredstatements="6" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="121" count="1" type="stmt"/>
+          <line num="122" count="0" type="stmt"/>
+          <line num="149" count="1" type="stmt"/>
+          <line num="150" count="0" type="stmt"/>
+        </file>
+        <file name="httpResponse.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/helpers/httpResponse.js">
+          <metrics statements="8" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/helpers/index.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+        <file name="url.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/helpers/url.js">
+          <metrics statements="33" coveredstatements="5" conditionals="24" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="39" count="1" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.modules.app">
+        <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
+        <file name="actions.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/actions.js">
+          <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+          <line num="3" count="6" type="stmt"/>
+          <line num="4" count="6" type="stmt"/>
+          <line num="5" count="6" type="stmt"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="7" count="6" type="stmt"/>
+          <line num="8" count="6" type="stmt"/>
+          <line num="9" count="6" type="stmt"/>
+          <line num="11" count="6" type="stmt"/>
+          <line num="12" count="6" type="stmt"/>
+          <line num="13" count="6" type="stmt"/>
+          <line num="14" count="6" type="stmt"/>
+          <line num="15" count="6" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="6" type="stmt"/>
+        </file>
+        <file name="selectors.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/selectors.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.modules.app.reducers">
+        <metrics statements="22" coveredstatements="22" conditionals="23" coveredconditionals="19" methods="8" coveredmethods="8"/>
+        <file name="app.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/reducers/app.js">
+          <metrics statements="7" coveredstatements="7" conditionals="7" coveredconditionals="6" methods="2" coveredmethods="2"/>
+          <line num="5" count="3" type="stmt"/>
+          <line num="12" count="6" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+        </file>
+        <file name="entities.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/reducers/entities.js">
+          <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="8" count="5" type="stmt"/>
+          <line num="9" count="3" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+        </file>
+        <file name="errorMessage.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/reducers/errorMessage.js">
+          <metrics statements="7" coveredstatements="7" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="7" count="4" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="3" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+        </file>
+        <file name="router.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/reducers/router.js">
+          <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.modules.currencyExchange">
+        <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <file name="actions.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/actions.js">
+          <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+        </file>
+        <file name="selectors.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/selectors.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.modules.currencyExchange.reducers">
+        <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <file name="currencyExchange.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/reducers/currencyExchange.js">
+          <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="3" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.modules.currencyPopular">
+        <metrics statements="47" coveredstatements="31" conditionals="15" coveredconditionals="1" methods="30" coveredmethods="17"/>
+        <file name="actions.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyPopular/actions.js">
+          <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="6" coveredmethods="6"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+        </file>
+        <file name="selectors.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyPopular/selectors.js">
+          <metrics statements="33" coveredstatements="17" conditionals="14" coveredconditionals="0" methods="24" coveredmethods="11"/>
+          <line num="6" count="6" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="16" count="4" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="26" count="3" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+          <line num="66" count="0" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="76" count="0" type="stmt"/>
+          <line num="83" count="1" type="stmt"/>
+          <line num="84" count="0" type="stmt"/>
+          <line num="86" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="92" count="0" type="stmt"/>
+          <line num="94" count="0" type="stmt"/>
+          <line num="100" count="0" type="stmt"/>
+          <line num="110" count="1" type="stmt"/>
+          <line num="115" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.modules.currencyPopular.reducers">
+        <metrics statements="7" coveredstatements="3" conditionals="7" coveredconditionals="2" methods="4" coveredmethods="2"/>
+        <file name="currencyPopular.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyPopular/reducers/currencyPopular.js">
+          <metrics statements="7" coveredstatements="3" conditionals="7" coveredconditionals="2" methods="4" coveredmethods="2"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.services">
+        <metrics statements="25" coveredstatements="20" conditionals="11" coveredconditionals="9" methods="12" coveredmethods="11"/>
+        <file name="action.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/services/action.js">
+          <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+          <line num="1" count="11" type="stmt"/>
+          <line num="2" count="11" type="stmt"/>
+          <line num="3" count="11" type="stmt"/>
+          <line num="5" count="11" type="stmt"/>
+          <line num="12" count="19" type="stmt"/>
+          <line num="24" count="11" type="stmt"/>
+          <line num="25" count="9" type="stmt"/>
+        </file>
+        <file name="array.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/services/array.js">
+          <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="32" count="2" type="stmt"/>
+          <line num="41" count="2" type="stmt"/>
+        </file>
+        <file name="generator.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/services/generator.js">
+          <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/services/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="8" count="1" type="stmt"/>
+        </file>
+        <file name="number.js" path="/Users/nattatorn.dev/projects/currency-exchange/src/services/number.js">
+          <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="17" count="18" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

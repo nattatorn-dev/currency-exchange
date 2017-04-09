@@ -1,0 +1,12 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default =
+
+
+
+
+entities;var _merge = require('lodash/merge');var _merge2 = _interopRequireDefault(_merge);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var initialState = function initialState() {return { banks: [] };};function entities() {var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState();var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  if (action.response && action.response.entities) {
+    return (0, _merge2.default)({}, state, action.response.entities);
+  }
+
+  return state;
+}

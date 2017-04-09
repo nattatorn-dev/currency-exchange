@@ -1,0 +1,37 @@
+'use strict';var _entities = require('../entities');var _entities2 = _interopRequireDefault(_entities);
+var _actions = require('../../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('entities reducer', function () {
+  it('returns correct initial state', function () {
+    expect((0, _entities2.default)(undefined, {})).toEqual({ banks: [] });
+  });
+
+  it('returns current state if no action matched', function () {
+    var curState = { banks: [] };
+    var action = {
+      type: 'test' };
+
+    var nextState = (0, _entities2.default)(curState, action);
+    expect(nextState).toBe(curState);
+    expect(nextState).toEqual(curState);
+  });
+
+  it('update entities when receiving data after fecthed', function () {
+    var curState = { banks: [] };
+    var action = {
+      response: {
+        entities: {
+          banks: [[Object], [Object], [Object], [Object], [Object], [Object]] } } };
+
+
+
+    var nextState = router(curState, action);
+    var expectedState = {
+      entities: {
+        banks: [[Object], [Object], [Object], [Object], [Object], [Object]] } };
+
+
+    expect(nextState).toEqual(expectedState);
+    expect(nextState).not.toBe(curState);
+  });
+});

@@ -1,0 +1,15 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1iiaoco5gk = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/reducers/currencyExchange.js',hash = 'a64860be7b5e1a34b7ee8d6705bc0ef43ca188d4',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/reducers/currencyExchange.js', statementMap: { '0': { start: { line: 3, column: 21 }, end: { line: 3, column: 23 } }, '1': { start: { line: 5, column: 2 }, end: { line: 14, column: 3 } }, '2': { start: { line: 7, column: 4 }, end: { line: 11, column: 5 } }, '3': { start: { line: 13, column: 4 }, end: { line: 13, column: 16 } } }, fnMap: { '0': { name: 'currencyExchange', decl: { start: { line: 4, column: 24 }, end: { line: 4, column: 40 } }, loc: { start: { line: 4, column: 74 }, end: { line: 15, column: 1 } } } }, branchMap: { '0': { loc: { start: { line: 4, column: 43 }, end: { line: 4, column: 63 } }, type: 'default-arg', locations: [{ start: { line: 4, column: 51 }, end: { line: 4, column: 63 } }] }, '1': { loc: { start: { line: 5, column: 2 }, end: { line: 14, column: 3 } }, type: 'switch', locations: [{ start: { line: 6, column: 2 }, end: { line: 11, column: 5 } }, { start: { line: 12, column: 2 }, end: { line: 13, column: 16 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0 }, f: { '0': 0 }, b: { '0': [0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();exports.default =
+
+
+currencyExchange;var /* istanbul ignore next */_actions = require('../actions'); /* istanbul ignore next */var ActionTypes = _interopRequireWildcard(_actions); /* istanbul ignore next */function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}var initialState = /* istanbul ignore next */(++cov_1iiaoco5gk.s[0], {});function currencyExchange() {/* istanbul ignore next */var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (++cov_1iiaoco5gk.b[0][0], initialState); /* istanbul ignore next */var action = arguments[1]; /* istanbul ignore next */++cov_1iiaoco5gk.f[0];++cov_1iiaoco5gk.s[1];
+  switch (action.type) {
+    case ActionTypes.ADD_CURRENCY_EXCHANGE: /* istanbul ignore next */++cov_1iiaoco5gk.b[1][0];++cov_1iiaoco5gk.s[2];
+      return {
+        banks: action.banks,
+        currency: action.currency,
+        rate: action.rate };
+
+    default: /* istanbul ignore next */++cov_1iiaoco5gk.b[1][1];++cov_1iiaoco5gk.s[3];
+      return state;}
+
+}

@@ -1,0 +1,116 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.fetchBanks = undefined;var _regenerator = require('babel-runtime/regenerator');var _regenerator2 = _interopRequireDefault(_regenerator);var _defineProperty2 = require('babel-runtime/helpers/defineProperty');var _defineProperty3 = _interopRequireDefault(_defineProperty2);var _extends4 = require('babel-runtime/helpers/extends');var _extends5 = _interopRequireDefault(_extends4);var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);var _promise = require('babel-runtime/core-js/promise');var _promise2 = _interopRequireDefault(_promise);var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);var cov_7zo5s8neo = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/services/api/bank.js',hash = '3985b736592837d98e942d144d3ff0cdb964791e',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/services/api/bank.js', statementMap: { '0': { start: { line: 14, column: 16 }, end: { line: 16, column: 14 } }, '1': { start: { line: 18, column: 2 }, end: { line: 22, column: 3 } }, '2': { start: { line: 19, column: 4 }, end: { line: 21, column: 16 } }, '3': { start: { line: 23, column: 2 }, end: { line: 111, column: 5 } }, '4': { start: { line: 24, column: 23 }, end: { line: 24, column: 77 } }, '5': { start: { line: 24, column: 55 }, end: { line: 24, column: 73 } }, '6': { start: { line: 26, column: 6 }, end: { line: 28, column: 7 } }, '7': { start: { line: 27, column: 8 }, end: { line: 27, column: 37 } }, '8': { start: { line: 29, column: 6 }, end: { line: 29, column: 33 } }, '9': { start: { line: 32, column: 6 }, end: { line: 88, column: 7 } }, '10': { start: { line: 34, column: 27 }, end: { line: 57, column: 11 } }, '11': { start: { line: 36, column: 14 }, end: { line: 54, column: 15 } }, '12': { start: { line: 37, column: 16 }, end: { line: 37, column: 73 } }, '13': { start: { line: 38, column: 21 }, end: { line: 54, column: 15 } }, '14': { start: { line: 39, column: 16 }, end: { line: 39, column: 73 } }, '15': { start: { line: 40, column: 21 }, end: { line: 54, column: 15 } }, '16': { start: { line: 41, column: 16 }, end: { line: 41, column: 73 } }, '17': { start: { line: 43, column: 16 }, end: { line: 53, column: 17 } }, '18': { start: { line: 58, column: 26 }, end: { line: 69, column: 17 } }, '19': { start: { line: 59, column: 26 }, end: { line: 59, column: 59 } }, '20': { start: { line: 60, column: 31 }, end: { line: 60, column: 46 } }, '21': { start: { line: 61, column: 32 }, end: { line: 69, column: 13 } }, '22': { start: { line: 71, column: 10 }, end: { line: 85, column: 11 } }, '23': { start: { line: 81, column: 16 }, end: { line: 83, column: 46 } }, '24': { start: { line: 90, column: 40 }, end: { line: 93, column: 7 } }, '25': { start: { line: 94, column: 22 }, end: { line: 100, column: 7 } }, '26': { start: { line: 102, column: 6 }, end: { line: 104, column: 7 } }, '27': { start: { line: 107, column: 18 }, end: { line: 107, column: 26 } }, '28': { start: { line: 108, column: 17 }, end: { line: 110, column: 7 } }, '29': { start: { line: 114, column: 19 }, end: { line: 114, column: 46 } }, '30': { start: { line: 114, column: 25 }, end: { line: 114, column: 46 } } }, fnMap: { '0': { name: 'callBankApi', decl: { start: { line: 13, column: 15 }, end: { line: 13, column: 26 } }, loc: { start: { line: 13, column: 40 }, end: { line: 112, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 24, column: 11 }, end: { line: 24, column: 12 } }, loc: { start: { line: 24, column: 23 }, end: { line: 24, column: 77 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 24, column: 45 }, end: { line: 24, column: 46 } }, loc: { start: { line: 24, column: 55 }, end: { line: 24, column: 73 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 25, column: 11 }, end: { line: 25, column: 12 } }, loc: { start: { line: 25, column: 37 }, end: { line: 30, column: 5 } } }, '4': { name: '(anonymous_4)', decl: { start: { line: 31, column: 11 }, end: { line: 31, column: 12 } }, loc: { start: { line: 32, column: 6 }, end: { line: 88, column: 7 } } }, '5': { name: '(anonymous_5)', decl: { start: { line: 33, column: 8 }, end: { line: 33, column: 9 } }, loc: { start: { line: 33, column: 20 }, end: { line: 86, column: 9 } } }, '6': { name: '(anonymous_6)', decl: { start: { line: 35, column: 12 }, end: { line: 35, column: 13 } }, loc: { start: { line: 35, column: 24 }, end: { line: 55, column: 13 } } }, '7': { name: '(anonymous_7)', decl: { start: { line: 59, column: 21 }, end: { line: 59, column: 22 } }, loc: { start: { line: 59, column: 26 }, end: { line: 59, column: 59 } } }, '8': { name: '(anonymous_8)', decl: { start: { line: 60, column: 19 }, end: { line: 60, column: 20 } }, loc: { start: { line: 60, column: 31 }, end: { line: 60, column: 46 } } }, '9': { name: '(anonymous_9)', decl: { start: { line: 61, column: 18 }, end: { line: 61, column: 19 } }, loc: { start: { line: 61, column: 32 }, end: { line: 69, column: 13 } } }, '10': { name: '(anonymous_10)', decl: { start: { line: 77, column: 53 }, end: { line: 77, column: 54 } }, loc: { start: { line: 81, column: 16 }, end: { line: 83, column: 46 } } }, '11': { name: '(anonymous_11)', decl: { start: { line: 89, column: 11 }, end: { line: 89, column: 12 } }, loc: { start: { line: 89, column: 28 }, end: { line: 105, column: 5 } } }, '12': { name: '(anonymous_12)', decl: { start: { line: 107, column: 6 }, end: { line: 107, column: 7 } }, loc: { start: { line: 107, column: 18 }, end: { line: 107, column: 26 } } }, '13': { name: '(anonymous_13)', decl: { start: { line: 108, column: 6 }, end: { line: 108, column: 7 } }, loc: { start: { line: 108, column: 17 }, end: { line: 110, column: 7 } } }, '14': { name: '(anonymous_14)', decl: { start: { line: 114, column: 19 }, end: { line: 114, column: 20 } }, loc: { start: { line: 114, column: 25 }, end: { line: 114, column: 46 } } } }, branchMap: { '0': { loc: { start: { line: 14, column: 16 }, end: { line: 16, column: 14 } }, type: 'cond-expr', locations: [{ start: { line: 15, column: 6 }, end: { line: 15, column: 47 } }, { start: { line: 16, column: 6 }, end: { line: 16, column: 14 } }] }, '1': { loc: { start: { line: 18, column: 2 }, end: { line: 22, column: 3 } }, type: 'if', locations: [{ start: { line: 18, column: 2 }, end: { line: 22, column: 3 } }, { start: { line: 18, column: 2 }, end: { line: 22, column: 3 } }] }, '2': { loc: { start: { line: 19, column: 14 }, end: { line: 21, column: 16 } }, type: 'cond-expr', locations: [{ start: { line: 20, column: 8 }, end: { line: 20, column: 52 } }, { start: { line: 21, column: 8 }, end: { line: 21, column: 16 } }] }, '3': { loc: { start: { line: 26, column: 6 }, end: { line: 28, column: 7 } }, type: 'if', locations: [{ start: { line: 26, column: 6 }, end: { line: 28, column: 7 } }, { start: { line: 26, column: 6 }, end: { line: 28, column: 7 } }] }, '4': { loc: { start: { line: 36, column: 14 }, end: { line: 54, column: 15 } }, type: 'if', locations: [{ start: { line: 36, column: 14 }, end: { line: 54, column: 15 } }, { start: { line: 36, column: 14 }, end: { line: 54, column: 15 } }] }, '5': { loc: { start: { line: 38, column: 21 }, end: { line: 54, column: 15 } }, type: 'if', locations: [{ start: { line: 38, column: 21 }, end: { line: 54, column: 15 } }, { start: { line: 38, column: 21 }, end: { line: 54, column: 15 } }] }, '6': { loc: { start: { line: 40, column: 21 }, end: { line: 54, column: 15 } }, type: 'if', locations: [{ start: { line: 40, column: 21 }, end: { line: 54, column: 15 } }, { start: { line: 40, column: 21 }, end: { line: 54, column: 15 } }] }, '7': { loc: { start: { line: 81, column: 16 }, end: { line: 83, column: 46 } }, type: 'cond-expr', locations: [{ start: { line: 82, column: 20 }, end: { line: 82, column: 59 } }, { start: { line: 83, column: 20 }, end: { line: 83, column: 46 } }] }, '8': { loc: { start: { line: 109, column: 15 }, end: { line: 109, column: 57 } }, type: 'binary-expr', locations: [{ start: { line: 109, column: 15 }, end: { line: 109, column: 28 } }, { start: { line: 109, column: 32 }, end: { line: 109, column: 57 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0, '22': 0, '23': 0, '24': 0, '25': 0, '26': 0, '27': 0, '28': 0, '29': 0, '30': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0], '4': [0, 0], '5': [0, 0], '6': [0, 0], '7': [0, 0], '8': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var callBankApi = function () {var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(
+
+
+
+
+
+
+
+
+
+
+
+  function /* istanbul ignore next */_callee(endpoint) /* istanbul ignore next */{var fullUrl;return _regenerator2.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:++cov_7zo5s8neo.f[0];
+            fullUrl = (++cov_7zo5s8neo.s[0], endpoint.indexOf( /* istanbul ignore next */_config2.default.apiBank.proxy) === -1 ? /* istanbul ignore next */(++cov_7zo5s8neo.b[0][0],
+            /* istanbul ignore next */_config2.default.apiBank.proxy + '/' + endpoint) : /* istanbul ignore next */(++cov_7zo5s8neo.b[0][1],
+            endpoint));++cov_7zo5s8neo.s[1];
+
+            if (__SERVER__) {/* istanbul ignore next */++cov_7zo5s8neo.b[1][0];++cov_7zo5s8neo.s[2];
+              fullUrl = endpoint.indexOf( /* istanbul ignore next */_config2.default.apiBank.endpoint) === -1 ? /* istanbul ignore next */(++cov_7zo5s8neo.b[2][0],
+              /* istanbul ignore next */_config2.default.apiBank.endpoint + '/' + endpoint) : /* istanbul ignore next */(++cov_7zo5s8neo.b[2][1],
+              endpoint);
+            } else /* istanbul ignore next */{++cov_7zo5s8neo.b[1][1];}++cov_7zo5s8neo.s[3];return _context.abrupt('return',
+            fetch(fullUrl).
+            then(function (response) {/* istanbul ignore next */++cov_7zo5s8neo.f[1];++cov_7zo5s8neo.s[4];return response.json().then(function (json) {/* istanbul ignore next */++cov_7zo5s8neo.f[2];++cov_7zo5s8neo.s[5];return { json: json, response: response };});}).
+            then(function ( /* istanbul ignore next */_ref2) {/* istanbul ignore next */var json = _ref2.json,response = _ref2.response; /* istanbul ignore next */++cov_7zo5s8neo.f[3];++cov_7zo5s8neo.s[6];
+              if (!response.ok) {/* istanbul ignore next */++cov_7zo5s8neo.b[3][0];++cov_7zo5s8neo.s[7];
+                return (/* istanbul ignore next */_promise2.default.reject(json));
+              } else /* istanbul ignore next */{++cov_7zo5s8neo.b[3][1];}++cov_7zo5s8neo.s[8];
+              return (/* istanbul ignore next */(0, _humps.camelizeKeys)(json));
+            }).
+            then(function (camelizedJson)
+            {/* istanbul ignore next */++cov_7zo5s8neo.f[4];++cov_7zo5s8neo.s[9];return camelizedJson.reduce(
+              function (p, c) {/* istanbul ignore next */++cov_7zo5s8neo.f[5];
+                var specific = /* istanbul ignore next */(++cov_7zo5s8neo.s[10], c.data.reduce(
+                function (p, c) {/* istanbul ignore next */++cov_7zo5s8neo.f[6];++cov_7zo5s8neo.s[11];
+                  if (c.acronym.indexOf('JPY') !== -1) {/* istanbul ignore next */++cov_7zo5s8neo.b[4][0];++cov_7zo5s8neo.s[12];
+                    return (/* istanbul ignore next */_helpers.currency.currencyDivide( /* istanbul ignore next */_currenciesMaster.currencies, p, c, 'JPY'));
+                  } else {/* istanbul ignore next */++cov_7zo5s8neo.b[4][1];++cov_7zo5s8neo.s[13];if (c.acronym.indexOf('KRW') !== -1) {/* istanbul ignore next */++cov_7zo5s8neo.b[5][0];++cov_7zo5s8neo.s[14];
+                        return (/* istanbul ignore next */_helpers.currency.currencyDivide( /* istanbul ignore next */_currenciesMaster.currencies, p, c, 'KRW'));
+                      } else {/* istanbul ignore next */++cov_7zo5s8neo.b[5][1];++cov_7zo5s8neo.s[15];if (c.acronym.indexOf('IDR') !== -1) {/* istanbul ignore next */++cov_7zo5s8neo.b[6][0];++cov_7zo5s8neo.s[16];
+                            return (/* istanbul ignore next */_helpers.currency.currencyDivide( /* istanbul ignore next */_currenciesMaster.currencies, p, c, 'IDR'));
+                          } else {/* istanbul ignore next */++cov_7zo5s8neo.b[6][1];++cov_7zo5s8neo.s[17];
+                            return (/* istanbul ignore next */[].concat((0, _toConsumableArray3.default)(
+                              p), [(0, _extends5.default)({},
+
+                              c, {
+                                extendName: null,
+                                currencyDetails: /* istanbul ignore next */_currenciesMaster.currencies[c.acronym.substr(0, 3)],
+                                indexGroup: 0,
+                                sell: +c.sell,
+                                buy: +c.buy })]));
+
+
+                          }}}
+                },
+                []));
+
+                var usdCase = /* istanbul ignore next */(++cov_7zo5s8neo.s[18], c.data.
+                filter(function (e) {/* istanbul ignore next */++cov_7zo5s8neo.f[7];++cov_7zo5s8neo.s[19];return e.acronym.indexOf('USD') !== -1;}).
+                sort(function (a, b) {/* istanbul ignore next */++cov_7zo5s8neo.f[8];++cov_7zo5s8neo.s[20];return a.sell - b.sell;}).
+                map(function (e, k) {/* istanbul ignore next */++cov_7zo5s8neo.f[9];++cov_7zo5s8neo.s[21];return (/* istanbul ignore next */(0, _extends5.default)({},
+                    e, {
+                      acronym: /* istanbul ignore next */'USD' + (k + 1),
+                      extendName: /* istanbul ignore next */_helpers.currency.usdExtendName[k].text,
+                      currencyDetails: /* istanbul ignore next */_currenciesMaster.currencies['USD'],
+                      indexGroup: k,
+                      sell: +e.sell,
+                      buy: +e.buy }));
+                })); /* istanbul ignore next */++cov_7zo5s8neo.s[22];
+
+                return (/* istanbul ignore next */[].concat((0, _toConsumableArray3.default)(
+                  p), [(0, _extends5.default)({},
+
+                  c, {
+                    data: /* istanbul ignore next */[].concat((0, _toConsumableArray3.default)(specific), (0, _toConsumableArray3.default)(usdCase)),
+                    isTotal: true },
+                  /* istanbul ignore next */[].concat((0, _toConsumableArray3.default)(specific), (0, _toConsumableArray3.default)(usdCase)).reduce(function (
+                  p,
+                  c)
+
+                  {/* istanbul ignore next */++cov_7zo5s8neo.f[10];++cov_7zo5s8neo.s[23];return (// TODO: case usd fix
+                      c.acronym.indexOf('USD') === -1 ? /* istanbul ignore next */(++cov_7zo5s8neo.b[7][0], (0, _extends5.default)({}, p, (0, _defineProperty3.default)({}, c.currencyDetails.code, c))) : /* istanbul ignore next */(++cov_7zo5s8neo.b[7][1], (0, _extends5.default)({},
+                      p, (0, _defineProperty3.default)({}, c.acronym, c))));}, {}))]));
+
+
+              },
+              []);
+            }).
+            then(function (complutedData) {/* istanbul ignore next */++cov_7zo5s8neo.f[11];
+              var popularCurrenciesComputed = /* istanbul ignore next */(++cov_7zo5s8neo.s[24], /* istanbul ignore next */_helpers.currency.injectCurrency(
+              /* istanbul ignore next */_helpers.currency.defaultCurrenciesPopular(),
+              'USD'));
+
+              var popular = /* istanbul ignore next */(++cov_7zo5s8neo.s[25], /* istanbul ignore next */(0, _selectors.getBanksSortByCurrency)(
+              {
+                entities: { banks: complutedData } }, /* istanbul ignore next */_currenciesMaster.currencies,
+
+
+              popularCurrenciesComputed)); /* istanbul ignore next */++cov_7zo5s8neo.s[26];
+
+
+              return {
+                response: { entities: { banks: popular } } };
+
+            }).
+            then(
+            function (response) {/* istanbul ignore next */++cov_7zo5s8neo.f[12];++cov_7zo5s8neo.s[27];return response;},
+            function (error) {/* istanbul ignore next */++cov_7zo5s8neo.f[13];++cov_7zo5s8neo.s[28];return {
+                error: /* istanbul ignore next */(++cov_7zo5s8neo.b[8][0], error.message) || /* istanbul ignore next */(++cov_7zo5s8neo.b[8][1], 'Something bad happened.') };
+            }));case 6:case 'end':return _context.stop();}}}, _callee, this);}));return function callBankApi(_x) {return _ref.apply(this, arguments);};}();var /* istanbul ignore next */_normalizr = require('normalizr');var /* istanbul ignore next */_humps = require('humps'); /* istanbul ignore next */require('isomorphic-fetch');var /* istanbul ignore next */_config = require('../../config'); /* istanbul ignore next */var _config2 = _interopRequireDefault(_config);var /* istanbul ignore next */_currenciesMaster = require('../../../assets/data/currenciesMaster');var /* istanbul ignore next */_selectors = require('../../modules/currencyPopular/selectors');var /* istanbul ignore next */_services = require('../../services');var /* istanbul ignore next */_helpers = require('../../helpers'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_7zo5s8neo.s[29];
+
+
+
+var fetchBanks = function fetchBanks() {/* istanbul ignore next */++cov_7zo5s8neo.f[14];++cov_7zo5s8neo.s[30];return callBankApi('bank');}; /* istanbul ignore next */exports.
+
+fetchBanks = fetchBanks;

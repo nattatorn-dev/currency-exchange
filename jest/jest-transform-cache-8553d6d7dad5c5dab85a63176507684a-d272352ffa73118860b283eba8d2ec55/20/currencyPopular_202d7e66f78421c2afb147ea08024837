@@ -1,0 +1,29 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);var cov_728eiqwvb = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyPopular/reducers/currencyPopular.js',hash = '76ea894afa0a133eecadffeb53acf223bfe462b2',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyPopular/reducers/currencyPopular.js', statementMap: { '0': { start: { line: 3, column: 21 }, end: { line: 3, column: 23 } }, '1': { start: { line: 5, column: 2 }, end: { line: 28, column: 3 } }, '2': { start: { line: 7, column: 4 }, end: { line: 15, column: 5 } }, '3': { start: { line: 9, column: 25 }, end: { line: 12, column: 11 } }, '4': { start: { line: 17, column: 4 }, end: { line: 25, column: 5 } }, '5': { start: { line: 20, column: 12 }, end: { line: 22, column: 27 } }, '6': { start: { line: 27, column: 4 }, end: { line: 27, column: 16 } } }, fnMap: { '0': { name: 'currencyPopular', decl: { start: { line: 4, column: 24 }, end: { line: 4, column: 39 } }, loc: { start: { line: 4, column: 73 }, end: { line: 29, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 9, column: 10 }, end: { line: 9, column: 11 } }, loc: { start: { line: 9, column: 25 }, end: { line: 12, column: 11 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 19, column: 10 }, end: { line: 19, column: 11 } }, loc: { start: { line: 20, column: 12 }, end: { line: 22, column: 27 } } } }, branchMap: { '0': { loc: { start: { line: 4, column: 42 }, end: { line: 4, column: 62 } }, type: 'default-arg', locations: [{ start: { line: 4, column: 50 }, end: { line: 4, column: 62 } }] }, '1': { loc: { start: { line: 5, column: 2 }, end: { line: 28, column: 3 } }, type: 'switch', locations: [{ start: { line: 6, column: 2 }, end: { line: 15, column: 5 } }, { start: { line: 16, column: 2 }, end: { line: 25, column: 5 } }, { start: { line: 26, column: 2 }, end: { line: 27, column: 16 } }] }, '2': { loc: { start: { line: 20, column: 12 }, end: { line: 22, column: 27 } }, type: 'cond-expr', locations: [{ start: { line: 21, column: 16 }, end: { line: 21, column: 74 } }, { start: { line: 22, column: 16 }, end: { line: 22, column: 27 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0], '1': [0, 0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();exports.default =
+
+
+currencyPopular;var /* istanbul ignore next */_actions = require('../actions'); /* istanbul ignore next */var ActionTypes = _interopRequireWildcard(_actions); /* istanbul ignore next */function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var initialState = /* istanbul ignore next */(++cov_728eiqwvb.s[0], {});function currencyPopular() {/* istanbul ignore next */var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (++cov_728eiqwvb.b[0][0], initialState); /* istanbul ignore next */var action = arguments[1]; /* istanbul ignore next */++cov_728eiqwvb.f[0];++cov_728eiqwvb.s[1];
+  switch (action.type) {
+    case ActionTypes.BANKS.SUCCESS: /* istanbul ignore next */++cov_728eiqwvb.b[1][0];++cov_728eiqwvb.s[2];
+      return {
+        banks: action.response.entities.banks.reduce(
+        function (p, c, k) {/* istanbul ignore next */++cov_728eiqwvb.f[1];++cov_728eiqwvb.s[3];return (/* istanbul ignore next */[].concat((0, _toConsumableArray3.default)(
+            p), [(0, _extends3.default)({},
+            c, { data: c.data.slice(0, 7), isTotal: false })]));
+        },
+        []) };
+
+
+    case ActionTypes.UPDATE_CURRENCY_POPULAR: /* istanbul ignore next */++cov_728eiqwvb.b[1][1];++cov_728eiqwvb.s[4];
+      return {
+        banks: state.banks.reduce(
+        function (p, c, k)
+        {/* istanbul ignore next */++cov_728eiqwvb.f[2];++cov_728eiqwvb.s[5];return k === action.index ? /* istanbul ignore next */(++cov_728eiqwvb.b[2][0], [].concat((0, _toConsumableArray3.default)(
+          p), [(0, _extends3.default)({}, c, { data: action.data, isTotal: !c.isTotal })])) : /* istanbul ignore next */(++cov_728eiqwvb.b[2][1], [].concat((0, _toConsumableArray3.default)(
+          p), [c]));},
+        []) };
+
+
+    default: /* istanbul ignore next */++cov_728eiqwvb.b[1][2];++cov_728eiqwvb.s[6];
+      return state;}
+
+}

@@ -1,0 +1,58 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.watchToggleShowCurrencyPopular = exports.watchLoadCurrencyPopularPage = exports.loadBanks = undefined;var _regenerator = require('babel-runtime/regenerator');var _regenerator2 = _interopRequireDefault(_regenerator);var cov_f1jhq2583 = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyPopular/sagas.js',hash = 'acf839e69fcd3c8005a69ccd597ed9020230cbef',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyPopular/sagas.js', statementMap: { '0': { start: { line: 18, column: 4 }, end: { line: 18, column: 11 } }, '1': { start: { line: 21, column: 16 }, end: { line: 21, column: 40 } }, '2': { start: { line: 22, column: 2 }, end: { line: 24, column: 3 } }, '3': { start: { line: 23, column: 4 }, end: { line: 23, column: 28 } }, '4': { start: { line: 28, column: 2 }, end: { line: 33, column: 3 } }, '5': { start: { line: 29, column: 43 }, end: { line: 31, column: 5 } }, '6': { start: { line: 32, column: 4 }, end: { line: 32, column: 27 } }, '7': { start: { line: 37, column: 2 }, end: { line: 52, column: 3 } }, '8': { start: { line: 38, column: 22 }, end: { line: 38, column: 64 } }, '9': { start: { line: 39, column: 24 }, end: { line: 39, column: 76 } }, '10': { start: { line: 40, column: 4 }, end: { line: 51, column: 5 } }, '11': { start: { line: 41, column: 41 }, end: { line: 41, column: 70 } }, '12': { start: { line: 42, column: 19 }, end: { line: 46, column: 7 } }, '13': { start: { line: 47, column: 6 }, end: { line: 47, column: 55 } }, '14': { start: { line: 49, column: 23 }, end: { line: 49, column: 61 } }, '15': { start: { line: 50, column: 6 }, end: { line: 50, column: 55 } } }, fnMap: { '0': { name: 'loadBanks', decl: { start: { line: 20, column: 10 }, end: { line: 20, column: 19 } }, loc: { start: { line: 20, column: 39 }, end: { line: 25, column: 1 } } }, '1': { name: 'watchLoadCurrencyPopularPage', decl: { start: { line: 27, column: 10 }, end: { line: 27, column: 38 } }, loc: { start: { line: 27, column: 42 }, end: { line: 34, column: 1 } } }, '2': { name: 'watchToggleShowCurrencyPopular', decl: { start: { line: 36, column: 10 }, end: { line: 36, column: 40 } }, loc: { start: { line: 36, column: 44 }, end: { line: 53, column: 1 } } } }, branchMap: { '0': { loc: { start: { line: 22, column: 2 }, end: { line: 24, column: 3 } }, type: 'if', locations: [{ start: { line: 22, column: 2 }, end: { line: 24, column: 3 } }, { start: { line: 22, column: 2 }, end: { line: 24, column: 3 } }] }, '1': { loc: { start: { line: 29, column: 19 }, end: { line: 29, column: 38 } }, type: 'default-arg', locations: [{ start: { line: 29, column: 36 }, end: { line: 29, column: 38 } }] }, '2': { loc: { start: { line: 40, column: 4 }, end: { line: 51, column: 5 } }, type: 'if', locations: [{ start: { line: 40, column: 4 }, end: { line: 51, column: 5 } }, { start: { line: 40, column: 4 }, end: { line: 51, column: 5 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0], '1': [0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_effects = require('redux-saga/effects');
+var /* istanbul ignore next */_actions = require('./actions'); /* istanbul ignore next */var actions = _interopRequireWildcard(_actions);
+var /* istanbul ignore next */_selectors = require('./selectors');
+
+
+
+
+
+var /* istanbul ignore next */_selectors2 = require('../app/selectors');
+var /* istanbul ignore next */_fecth = require('./fecth');
+var /* istanbul ignore next */_helpers = require('../../helpers'); /* istanbul ignore next */function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _marked = [
+
+
+
+
+
+
+
+
+loadBanks,
+
+
+
+
+
+
+watchLoadCurrencyPopularPage,
+
+
+
+
+
+
+
+
+watchToggleShowCurrencyPopular].map(_regenerator2.default.mark); /* istanbul ignore next */var _ref = (++cov_f1jhq2583.s[0], actions),LOAD_CURRENCY_POPULAR_PAGE = _ref.LOAD_CURRENCY_POPULAR_PAGE,TOGGLE_SHOW_CURRENCY_POPULAR = _ref.TOGGLE_SHOW_CURRENCY_POPULAR,banks = _ref.banks,updateCurrencyPopular = _ref.updateCurrencyPopular;function loadBanks(requiredFields) /* istanbul ignore next */{var banks;return _regenerator2.default.wrap(function loadBanks$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:++cov_f1jhq2583.f[0];++cov_f1jhq2583.s[1];_context.next = 4;return (/* istanbul ignore next */(0, _effects.select)( /* istanbul ignore next */_selectors.getBanks));case 4:banks = _context.sent;++cov_f1jhq2583.s[2];if (!(banks.length === 0)) {_context.next = 13;break;}++cov_f1jhq2583.b[0][0];++cov_f1jhq2583.s[3];_context.next = 11;return (/* istanbul ignore next */(0, _effects.call)( /* istanbul ignore next */_fecth.fetchBanks));case 11:_context.next = 14;break;case 13:++cov_f1jhq2583.b[0][1];case 14:case 'end':return _context.stop();}}}, _marked[0], this);}function watchLoadCurrencyPopularPage() /* istanbul ignore next */{var _ref2, login, _ref2$requiredFields, requiredFields;return _regenerator2.default.wrap(function watchLoadCurrencyPopularPage$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:++cov_f1jhq2583.f[1];++cov_f1jhq2583.s[4];case 2:if (!true) {_context2.next = 15;break;}++cov_f1jhq2583.s[5];_context2.next = 6;return (/* istanbul ignore next */(0, _effects.take)(LOAD_CURRENCY_POPULAR_PAGE));case 6:_ref2 = _context2.sent;login = _ref2.login;_ref2$requiredFields = _ref2.requiredFields;requiredFields = _ref2$requiredFields === undefined ? (++cov_f1jhq2583.b[1][0], []) : _ref2$requiredFields;++cov_f1jhq2583.s[6];_context2.next = 13;return (/* istanbul ignore next */(0, _effects.fork)(loadBanks));case 13:_context2.next = 2;break;case 15:case 'end':return _context2.stop();}}}, _marked[1], this);}function watchToggleShowCurrencyPopular() /* istanbul ignore next */{var _ref3, index, _ref4, isTotal, _ref5, popularCurrenciesLists, bank, _ref6, data;return _regenerator2.default.wrap(function watchToggleShowCurrencyPopular$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:++cov_f1jhq2583.f[2];++cov_f1jhq2583.s[7];case 2:if (!
+          true) {_context3.next = 41;break;}++cov_f1jhq2583.s[8];_context3.next = 6;return (
+            /* istanbul ignore next */(0, _effects.take)(TOGGLE_SHOW_CURRENCY_POPULAR));case 6:_ref3 = _context3.sent;index = _ref3.index;++cov_f1jhq2583.s[9];_context3.next = 11;return (
+            /* istanbul ignore next */(0, _effects.select)( /* istanbul ignore next */_selectors.getBankCurrencyPopularByIndex, index));case 11:_ref4 = _context3.sent;isTotal = _ref4.isTotal;++cov_f1jhq2583.s[10];if (!
+          isTotal) {_context3.next = 30;break;}++cov_f1jhq2583.b[2][0];++cov_f1jhq2583.s[11];_context3.next = 19;return (
+            /* istanbul ignore next */(0, _effects.select)( /* istanbul ignore next */_selectors2.getAppSetting));case 19:_ref5 = _context3.sent;popularCurrenciesLists = _ref5.popularCurrenciesLists;++cov_f1jhq2583.s[12];_context3.next = 24;return (
+            /* istanbul ignore next */(0, _effects.select)( /* istanbul ignore next */_selectors.getBankCurrencyPopularPropsDataByPopular,
+
+            index,
+            /* istanbul ignore next */_helpers.currency.injectCurrency(popularCurrenciesLists, 'USD')));case 24:bank = _context3.sent;++cov_f1jhq2583.s[13];_context3.next = 28;return (
+
+            /* istanbul ignore next */(0, _effects.put)(updateCurrencyPopular(index, bank)));case 28:_context3.next = 39;break;case 30:++cov_f1jhq2583.b[2][1];++cov_f1jhq2583.s[14];_context3.next = 34;return (
+
+            /* istanbul ignore next */(0, _effects.select)( /* istanbul ignore next */_selectors.getBanksByIndex, index));case 34:_ref6 = _context3.sent;data = _ref6.data;++cov_f1jhq2583.s[15];_context3.next = 39;return (
+            /* istanbul ignore next */(0, _effects.put)(updateCurrencyPopular(index, data)));case 39:_context3.next = 2;break;case 41:case 'end':return _context3.stop();}}}, _marked[2], this);} /* istanbul ignore next */exports.
+
+
+
+
+
+loadBanks = loadBanks; /* istanbul ignore next */exports.
+watchLoadCurrencyPopularPage = watchLoadCurrencyPopularPage; /* istanbul ignore next */exports.
+watchToggleShowCurrencyPopular = watchToggleShowCurrencyPopular;

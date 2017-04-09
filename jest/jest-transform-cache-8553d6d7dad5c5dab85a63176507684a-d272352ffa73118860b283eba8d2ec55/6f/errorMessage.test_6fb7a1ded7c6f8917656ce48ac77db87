@@ -1,0 +1,41 @@
+'use strict';var _errorMessage = require('../errorMessage');var _errorMessage2 = _interopRequireDefault(_errorMessage);
+var _actions = require('../../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('errorMessage reducer', function () {
+  it('returns correct initial state', function () {
+    var expectedState = function expectedState() {return null;};
+    expect((0, _errorMessage2.default)(undefined, {})).toEqual(expectedState);
+  });
+
+  it('returns current state if no action matched', function () {
+    var curState = function curState() {return null;};
+    var action = {
+      type: 'test' };
+
+    var nextState = (0, _errorMessage2.default)(curState, action);
+    expect(nextState).toBe(curState);
+    expect(nextState).toEqual(curState);
+  });
+
+  it('reset error message when receiving RESET_ERROR_MESSAGE action', function () {
+    var curState = { error: 'some error' };
+    var action = {
+      type: ActionTypes.RESET_ERROR_MESSAGE };
+
+    var nextState = (0, _errorMessage2.default)(curState, action);
+    var expectedState = null;
+    expect(nextState).toEqual(expectedState);
+    expect(nextState).not.toBe(curState);
+  });
+
+  it('catch error message when receiving error', function () {
+    var curState = function curState() {return null;};
+    var action = {
+      error: 'something went wrong' };
+
+    var nextState = (0, _errorMessage2.default)(curState, action);
+    var expectedState = 'something went wrong';
+    expect(nextState).toEqual(expectedState);
+    expect(nextState).not.toBe(curState);
+  });
+});

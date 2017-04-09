@@ -1,0 +1,8 @@
+'use strict';var _entities = require('../entities');var _entities2 = _interopRequireDefault(_entities);
+var _actions = require('../../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('entities reducer', function () {
+  it('returns correct initial state', function () {
+    expect((0, _entities2.default)(undefined, {})).toEqual({ banks: [] });
+  });
+});

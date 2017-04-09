@@ -1,0 +1,36 @@
+'use strict';var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _action = require('../action');
+var _actions = require('../../modules/app/actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('services action', function () {
+  it('fetchActios', function () {
+    var expectedFetchActios = ['REQUEST', 'SUCCESS', 'FAILURE'];
+    expect(_action.fetchActios).toEqual(expectedFetchActios);
+    expect(_action.fetchActios).not.toBe(expectedFetchActios);
+  });
+
+  it('action', function () {
+    var payload = {
+      path: '/USD',
+      nextPath: '/USD/100' };
+
+    var expectedAction = (0, _extends3.default)({
+      type: ActionTypes.NAVIGATE },
+    payload);
+
+    var actionWithPayload = (0, _action.action)(ActionTypes.NAVIGATE, payload);
+    expect(actionWithPayload).toEqual(expectedAction);
+    expect(actionWithPayload).not.toBe(expectedAction);
+  });
+
+  it('createRequestTypes', function () {
+    var expectedCreateRequestTypes = {
+      FAILURE: 'VIDEOS_FAILURE',
+      REQUEST: 'VIDEOS_REQUEST',
+      SUCCESS: 'VIDEOS_SUCCESS' };
+
+    var actions = (0, _action.createRequestTypes)('VIDEOS');
+
+    expect(actions).toEqual(expectedCreateRequestTypes);
+    expect(actions).not.toBe(expectedCreateRequestTypes);
+  });
+});

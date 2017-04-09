@@ -1,0 +1,3 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });var getBankCurrencyExchange = function getBankCurrencyExchange(state) {return state.feature.currencyExchange.banks;};exports.
+
+getBankCurrencyExchange = getBankCurrencyExchange;

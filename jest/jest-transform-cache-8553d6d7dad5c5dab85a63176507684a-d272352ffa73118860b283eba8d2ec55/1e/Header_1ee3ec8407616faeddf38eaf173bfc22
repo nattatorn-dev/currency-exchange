@@ -1,0 +1,390 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = undefined;var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _createClass2 = require('babel-runtime/helpers/createClass');var _createClass3 = _interopRequireDefault(_createClass2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);var cov_29ozy3dnct = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/Header.js',hash = 'ef73a5f4a2eb262051507f2591b6232784c47ace',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/Header.js', statementMap: { '0': { start: { line: 9, column: 19 }, end: { line: 18, column: 3 } }, '1': { start: { line: 9, column: 32 }, end: { line: 18, column: 1 } }, '2': { start: { line: 20, column: 12 }, end: { line: 25, column: 1 } }, '3': { start: { line: 27, column: 23 }, end: { line: 67, column: 3 } }, '4': { start: { line: 39, column: 4 }, end: { line: 39, column: 26 } }, '5': { start: { line: 40, column: 4 }, end: { line: 40, column: 27 } }, '6': { start: { line: 41, column: 4 }, end: { line: 41, column: 51 } }, '7': { start: { line: 44, column: 4 }, end: { line: 44, column: 50 } }, '8': { start: { line: 47, column: 4 }, end: { line: 47, column: 38 } }, '9': { start: { line: 47, column: 32 }, end: { line: 47, column: 38 } }, '10': { start: { line: 48, column: 4 }, end: { line: 48, column: 50 } }, '11': { start: { line: 51, column: 4 }, end: { line: 65, column: 5 } }, '12': { start: { line: 69, column: 22 }, end: { line: 102, column: 3 } }, '13': { start: { line: 76, column: 26 }, end: { line: 90, column: 5 } }, '14': { start: { line: 91, column: 4 }, end: { line: 100, column: 5 } }, '15': { start: { line: 104, column: 22 }, end: { line: 139, column: 3 } }, '16': { start: { line: 109, column: 4 }, end: { line: 114, column: 5 } }, '17': { start: { line: 117, column: 55 }, end: { line: 117, column: 65 } }, '18': { start: { line: 118, column: 4 }, end: { line: 118, column: 30 } }, '19': { start: { line: 119, column: 4 }, end: { line: 119, column: 44 } }, '20': { start: { line: 122, column: 24 }, end: { line: 122, column: 52 } }, '21': { start: { line: 124, column: 4 }, end: { line: 137, column: 5 } }, '22': { start: { line: 141, column: 28 }, end: { line: 175, column: 3 } }, '23': { start: { line: 146, column: 4 }, end: { line: 151, column: 5 } }, '24': { start: { line: 154, column: 4 }, end: { line: 154, column: 30 } }, '25': { start: { line: 157, column: 24 }, end: { line: 157, column: 52 } }, '26': { start: { line: 159, column: 4 }, end: { line: 173, column: 5 } }, '27': { start: { line: 178, column: 2 }, end: { line: 178, column: 23 } }, '28': { start: { line: 183, column: 4 }, end: { line: 183, column: 18 } }, '29': { start: { line: 184, column: 4 }, end: { line: 184, column: 52 } }, '30': { start: { line: 185, column: 4 }, end: { line: 185, column: 56 } }, '31': { start: { line: 188, column: 4 }, end: { line: 194, column: 5 } }, '32': { start: { line: 198, column: 4 }, end: { line: 198, column: 32 } }, '33': { start: { line: 202, column: 4 }, end: { line: 202, column: 31 } }, '34': { start: { line: 206, column: 4 }, end: { line: 208, column: 5 } }, '35': { start: { line: 207, column: 6 }, end: { line: 207, column: 26 } }, '36': { start: { line: 212, column: 4 }, end: { line: 212, column: 47 } }, '37': { start: { line: 216, column: 56 }, end: { line: 216, column: 66 } }, '38': { start: { line: 217, column: 4 }, end: { line: 217, column: 35 } }, '39': { start: { line: 221, column: 4 }, end: { line: 221, column: 23 } }, '40': { start: { line: 222, column: 4 }, end: { line: 225, column: 7 } }, '41': { start: { line: 229, column: 42 }, end: { line: 229, column: 52 } }, '42': { start: { line: 230, column: 25 }, end: { line: 230, column: 56 } }, '43': { start: { line: 231, column: 24 }, end: { line: 239, column: 7 } }, '44': { start: { line: 231, column: 32 }, end: { line: 239, column: 5 } }, '45': { start: { line: 241, column: 26 }, end: { line: 259, column: 7 } }, '46': { start: { line: 241, column: 34 }, end: { line: 259, column: 5 } }, '47': { start: { line: 260, column: 18 }, end: { line: 262, column: 35 } }, '48': { start: { line: 263, column: 4 }, end: { line: 380, column: 5 } }, '49': { start: { line: 328, column: 32 }, end: { line: 328, column: 61 } }, '50': { start: { line: 384, column: 0 }, end: { line: 391, column: 1 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 9, column: 19 }, end: { line: 9, column: 20 } }, loc: { start: { line: 9, column: 32 }, end: { line: 18, column: 1 } } }, '1': { name: 'arrowRenderer', decl: { start: { line: 177, column: 9 }, end: { line: 177, column: 22 } }, loc: { start: { line: 177, column: 26 }, end: { line: 179, column: 1 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 182, column: 2 }, end: { line: 182, column: 3 } }, loc: { start: { line: 182, column: 24 }, end: { line: 186, column: 3 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 187, column: 2 }, end: { line: 187, column: 3 } }, loc: { start: { line: 187, column: 42 }, end: { line: 195, column: 3 } } }, '4': { name: '(anonymous_4)', decl: { start: { line: 197, column: 2 }, end: { line: 197, column: 3 } }, loc: { start: { line: 197, column: 19 }, end: { line: 199, column: 3 } } }, '5': { name: '(anonymous_5)', decl: { start: { line: 201, column: 2 }, end: { line: 201, column: 3 } }, loc: { start: { line: 201, column: 24 }, end: { line: 203, column: 3 } } }, '6': { name: '(anonymous_6)', decl: { start: { line: 205, column: 2 }, end: { line: 205, column: 3 } }, loc: { start: { line: 205, column: 20 }, end: { line: 209, column: 3 } } }, '7': { name: '(anonymous_7)', decl: { start: { line: 211, column: 2 }, end: { line: 211, column: 3 } }, loc: { start: { line: 211, column: 19 }, end: { line: 213, column: 3 } } }, '8': { name: '(anonymous_8)', decl: { start: { line: 215, column: 18 }, end: { line: 215, column: 19 } }, loc: { start: { line: 215, column: 23 }, end: { line: 218, column: 3 } } }, '9': { name: '(anonymous_9)', decl: { start: { line: 220, column: 2 }, end: { line: 220, column: 3 } }, loc: { start: { line: 220, column: 28 }, end: { line: 226, column: 3 } } }, '10': { name: '(anonymous_10)', decl: { start: { line: 228, column: 2 }, end: { line: 228, column: 3 } }, loc: { start: { line: 228, column: 12 }, end: { line: 381, column: 3 } } }, '11': { name: '(anonymous_11)', decl: { start: { line: 231, column: 24 }, end: { line: 231, column: 25 } }, loc: { start: { line: 231, column: 32 }, end: { line: 239, column: 5 } } }, '12': { name: '(anonymous_12)', decl: { start: { line: 241, column: 26 }, end: { line: 241, column: 27 } }, loc: { start: { line: 241, column: 34 }, end: { line: 259, column: 5 } } }, '13': { name: '(anonymous_13)', decl: { start: { line: 328, column: 27 }, end: { line: 328, column: 28 } }, loc: { start: { line: 328, column: 32 }, end: { line: 328, column: 61 } } } }, branchMap: { '0': { loc: { start: { line: 47, column: 4 }, end: { line: 47, column: 38 } }, type: 'if', locations: [{ start: { line: 47, column: 4 }, end: { line: 47, column: 38 } }, { start: { line: 47, column: 4 }, end: { line: 47, column: 38 } }] }, '1': { loc: { start: { line: 188, column: 4 }, end: { line: 194, column: 5 } }, type: 'if', locations: [{ start: { line: 188, column: 4 }, end: { line: 194, column: 5 } }, { start: { line: 188, column: 4 }, end: { line: 194, column: 5 } }] }, '2': { loc: { start: { line: 189, column: 6 }, end: { line: 191, column: 51 } }, type: 'binary-expr', locations: [{ start: { line: 189, column: 6 }, end: { line: 189, column: 42 } }, { start: { line: 190, column: 6 }, end: { line: 191, column: 51 } }] }, '3': { loc: { start: { line: 206, column: 4 }, end: { line: 208, column: 5 } }, type: 'if', locations: [{ start: { line: 206, column: 4 }, end: { line: 208, column: 5 } }, { start: { line: 206, column: 4 }, end: { line: 208, column: 5 } }] }, '4': { loc: { start: { line: 246, column: 15 }, end: { line: 246, column: 77 } }, type: 'cond-expr', locations: [{ start: { line: 246, column: 61 }, end: { line: 246, column: 68 } }, { start: { line: 246, column: 71 }, end: { line: 246, column: 77 } }] }, '5': { loc: { start: { line: 260, column: 18 }, end: { line: 262, column: 35 } }, type: 'binary-expr', locations: [{ start: { line: 260, column: 18 }, end: { line: 260, column: 35 } }, { start: { line: 261, column: 6 }, end: { line: 261, column: 30 } }, { start: { line: 262, column: 6 }, end: { line: 262, column: 35 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0, '22': 0, '23': 0, '24': 0, '25': 0, '26': 0, '27': 0, '28': 0, '29': 0, '30': 0, '31': 0, '32': 0, '33': 0, '34': 0, '35': 0, '36': 0, '37': 0, '38': 0, '39': 0, '40': 0, '41': 0, '42': 0, '43': 0, '44': 0, '45': 0, '46': 0, '47': 0, '48': 0, '49': 0, '50': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0], '4': [0, 0], '5': [0, 0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactHamburgerMenu = require('react-hamburger-menu'); /* istanbul ignore next */var _reactHamburgerMenu2 = _interopRequireDefault(_reactHamburgerMenu);
+var /* istanbul ignore next */_reactSelect = require('react-select'); /* istanbul ignore next */var _reactSelect2 = _interopRequireDefault(_reactSelect);
+var /* istanbul ignore next */_reactNumberInput = require('react-number-input'); /* istanbul ignore next */var _reactNumberInput2 = _interopRequireDefault(_reactNumberInput);
+var /* istanbul ignore next */_shared = require('../../../shared');
+var /* istanbul ignore next */_helpers = require('../../../helpers');
+var /* istanbul ignore next */_Setting = require('./Setting'); /* istanbul ignore next */var _Setting2 = _interopRequireDefault(_Setting);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_29ozy3dnct.s[0];
+
+var styleImage = function styleImage(acronym) {/* istanbul ignore next */++cov_29ozy3dnct.f[0];++cov_29ozy3dnct.s[1];return {
+    backgroundImage: /* istanbul ignore next */_helpers.url.currency(acronym),
+    height: '25px',
+    width: '25px',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '145% 110%',
+    borderRadius: '150px',
+    marginTop: '-3.5px',
+    boxShadow: '0 0 1px rgba(0, 0, 0, .8)' };
+};
+
+var THB = /* istanbul ignore next */(++cov_29ozy3dnct.s[2], [
+{
+  label: 'THB',
+  value: 'THB' }]);
+
+
+
+var GravatarOption = /* istanbul ignore next */(++cov_29ozy3dnct.s[3], /* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'GravatarOption',
+  propTypes: {
+    children: /* istanbul ignore next */_react2.default.PropTypes.node,
+    className: /* istanbul ignore next */_react2.default.PropTypes.string,
+    isDisabled: /* istanbul ignore next */_react2.default.PropTypes.bool,
+    isFocused: /* istanbul ignore next */_react2.default.PropTypes.bool,
+    isSelected: /* istanbul ignore next */_react2.default.PropTypes.bool,
+    onFocus: /* istanbul ignore next */_react2.default.PropTypes.func,
+    onSelect: /* istanbul ignore next */_react2.default.PropTypes.func,
+    option: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired }, /* istanbul ignore next */
+
+  handleMouseDown: function handleMouseDown(event) {/* istanbul ignore next */++cov_29ozy3dnct.s[4];
+    event.preventDefault(); /* istanbul ignore next */++cov_29ozy3dnct.s[5];
+    event.stopPropagation(); /* istanbul ignore next */++cov_29ozy3dnct.s[6];
+    this.props.onSelect(this.props.option, event);
+  }, /* istanbul ignore next */
+  handleMouseEnter: function handleMouseEnter(event) {/* istanbul ignore next */++cov_29ozy3dnct.s[7];
+    this.props.onFocus(this.props.option, event);
+  }, /* istanbul ignore next */
+  handleMouseMove: function handleMouseMove(event) {/* istanbul ignore next */++cov_29ozy3dnct.s[8];
+    if (this.props.isFocused) {/* istanbul ignore next */++cov_29ozy3dnct.b[0][0];++cov_29ozy3dnct.s[9];return;} else /* istanbul ignore next */{++cov_29ozy3dnct.b[0][1];}++cov_29ozy3dnct.s[10];
+    this.props.onFocus(this.props.option, event);
+  }, /* istanbul ignore next */
+  render: function render() {/* istanbul ignore next */++cov_29ozy3dnct.s[11];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+          className: this.props.className,
+          onMouseDown: this.handleMouseDown,
+          onMouseEnter: this.handleMouseEnter,
+          onMouseMove: this.handleMouseMove,
+          title: this.props.option.label },
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: styleImage(this.props.option.label) },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { margin: '-5px 35px 0 40px' } },
+            this.props.option.label))));
+
+
+
+
+  } }));
+
+
+var GravatarValue = /* istanbul ignore next */(++cov_29ozy3dnct.s[12], /* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'GravatarValue',
+  propTypes: {
+    children: /* istanbul ignore next */_react2.default.PropTypes.node,
+    placeholder: /* istanbul ignore next */_react2.default.PropTypes.string,
+    value: /* istanbul ignore next */_react2.default.PropTypes.object }, /* istanbul ignore next */
+
+  render: function render() {
+    var styleDropdown = /* istanbul ignore next */(++cov_29ozy3dnct.s[13], {
+      boxSizing: 'border-box',
+      // backgroundColor: this.props.setting.theme.inputBackgroundColorPrimary,
+      // border: `1px solid ${ this.props.setting.theme.inputBorderColorPrimary }`,
+      // color: this.props.setting.theme.fontColorPrimary,
+      left: '0',
+      padding: '8px 52px 8px 10px',
+      position: 'absolute',
+      right: '-15px',
+      top: '0',
+      maxWidth: '100%',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap' }); /* istanbul ignore next */++cov_29ozy3dnct.s[14];
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: styleDropdown, title: this.props.value.title },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */null,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: styleImage(this.props.value.label) }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { margin: '-20px 35px 0 40px' } },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */null, this.props.value.label)))));
+
+
+
+
+  } }));
+
+
+var CurrencyField = /* istanbul ignore next */(++cov_29ozy3dnct.s[15], /* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'CurrencyField',
+  propTypes: {
+    hint: /* istanbul ignore next */_react2.default.PropTypes.string }, /* istanbul ignore next */
+
+  getInitialState: function getInitialState() {/* istanbul ignore next */++cov_29ozy3dnct.s[16];
+    return {
+      label: 'USD',
+      value: 'USD',
+      clearable: false,
+      disabled: false };
+
+  }, /* istanbul ignore next */
+  setValue: function setValue(value) {/* istanbul ignore next */var _ref = (++cov_29ozy3dnct.s[17],
+    this.props),name = _ref.router.params.name,onChange = _ref.onChange; /* istanbul ignore next */++cov_29ozy3dnct.s[18];
+    this.setState({ value: value }); /* istanbul ignore next */++cov_29ozy3dnct.s[19];
+    onChange( /* istanbul ignore next */value.value + '/' + name);
+  }, /* istanbul ignore next */
+  render: function render() {
+    var placeholder = /* istanbul ignore next */(++cov_29ozy3dnct.s[20], /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */null, /* istanbul ignore next */'Select Currency')); /* istanbul ignore next */++cov_29ozy3dnct.s[21];
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'section' },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactSelect2.default, /* istanbul ignore next */{
+          clearable: this.state.clearable,
+          arrowRenderer: arrowRenderer,
+          onChange: this.setValue,
+          optionComponent: GravatarOption,
+          options: this.props.data,
+          placeholder: placeholder,
+          value: this.state.value,
+          valueComponent: GravatarValue })));
+
+
+
+  } }));
+
+
+var CurrencyFieldMaster = /* istanbul ignore next */(++cov_29ozy3dnct.s[22], /* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'CurrencyFieldMaster',
+  propTypes: {
+    hint: /* istanbul ignore next */_react2.default.PropTypes.string }, /* istanbul ignore next */
+
+  getInitialState: function getInitialState() {/* istanbul ignore next */++cov_29ozy3dnct.s[23];
+    return {
+      label: 'THB',
+      value: 'THB',
+      clearable: false,
+      disabled: true };
+
+  }, /* istanbul ignore next */
+  setValue: function setValue(value) {/* istanbul ignore next */++cov_29ozy3dnct.s[24];
+    this.setState({ value: value });
+  }, /* istanbul ignore next */
+  render: function render() {
+    var placeholder = /* istanbul ignore next */(++cov_29ozy3dnct.s[25], /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */null, /* istanbul ignore next */'Select Currency')); /* istanbul ignore next */++cov_29ozy3dnct.s[26];
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'section' },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactSelect2.default, /* istanbul ignore next */{
+          clearable: this.state.clearable,
+          disabled: this.state.disabled,
+          arrowRenderer: arrowRenderer,
+          onChange: this.setValue,
+          optionComponent: GravatarOption,
+          options: this.props.data,
+          placeholder: placeholder,
+          value: this.state.value,
+          valueComponent: GravatarValue })));
+
+
+
+  } }));
+
+
+function arrowRenderer() {/* istanbul ignore next */++cov_29ozy3dnct.f[1];++cov_29ozy3dnct.s[27];
+  return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */null, /* istanbul ignore next */'+'));
+} /* istanbul ignore next */var
+
+Header = function (_Component) {(0, _inherits3.default)(Header, _Component);
+  function /* istanbul ignore next */Header(props) {/* istanbul ignore next */(0, _classCallCheck3.default)(this, Header);++cov_29ozy3dnct.f[2];++cov_29ozy3dnct.s[28];var _this = (0, _possibleConstructorReturn3.default)(this, (Header.__proto__ || (0, _getPrototypeOf2.default)(Header)).call(this,
+    props)); /* istanbul ignore next */_this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    onPriceChange = function (e) {/* istanbul ignore next */++cov_29ozy3dnct.f[8];var _ref2 = (++cov_29ozy3dnct.s[37],
+      /* istanbul ignore next */_this.props),login = _ref2.router.params.login,onChange = _ref2.onChange; /* istanbul ignore next */++cov_29ozy3dnct.s[38];
+      onChange( /* istanbul ignore next */login + '/' + e);
+    }; /* istanbul ignore next */++cov_29ozy3dnct.s[29]; /* istanbul ignore next */_this.handleKeyUp = /* istanbul ignore next */_this.handleKeyUp.bind( /* istanbul ignore next */_this); /* istanbul ignore next */++cov_29ozy3dnct.s[30]; /* istanbul ignore next */_this.handleGoClick = /* istanbul ignore next */_this.handleGoClick.bind( /* istanbul ignore next */_this); /* istanbul ignore next */return _this;}(0, _createClass3.default)(Header, [{ key: 'componentWillReceiveProps', value: function componentWillReceiveProps(nextProps) {/* istanbul ignore next */++cov_29ozy3dnct.f[3];++cov_29ozy3dnct.s[31];if ( /* istanbul ignore next */(++cov_29ozy3dnct.b[2][0], nextProps.value !== this.props.value) || /* istanbul ignore next */(++cov_29ozy3dnct.b[2][1], nextProps.controller.dropdownMenuStyleOpen !== this.props.controller.dropdownMenuStyleOpen)) {// this.setInputValue( nextProps.value )
+        /* istanbul ignore next */++cov_29ozy3dnct.b[1][0];} else /* istanbul ignore next */{++cov_29ozy3dnct.b[1][1];}} }, { key: 'getInputValue', value: function getInputValue() {/* istanbul ignore next */++cov_29ozy3dnct.f[4];++cov_29ozy3dnct.s[32];return this.refs.input.value;} }, { key: 'setInputValue', value: function setInputValue(val) {/* istanbul ignore next */++cov_29ozy3dnct.f[5];++cov_29ozy3dnct.s[33];this.refs.input.value = val;} }, { key: 'handleKeyUp', value: function handleKeyUp(e) {/* istanbul ignore next */++cov_29ozy3dnct.f[6];++cov_29ozy3dnct.s[34];if (e.keyCode === 13) {/* istanbul ignore next */++cov_29ozy3dnct.b[3][0];++cov_29ozy3dnct.s[35];this.handleGoClick();} else /* istanbul ignore next */{++cov_29ozy3dnct.b[3][1];}} }, { key: 'handleGoClick', value: function handleGoClick() {/* istanbul ignore next */++cov_29ozy3dnct.f[7];++cov_29ozy3dnct.s[36];this.props.onChange(this.getInputValue());} }, { key: 'handleDropDownClick', value: function handleDropDownClick(
+    e) {/* istanbul ignore next */++cov_29ozy3dnct.f[9];++cov_29ozy3dnct.s[39];
+      e.stopPropagation(); /* istanbul ignore next */++cov_29ozy3dnct.s[40];
+      this.props.updateController( /* istanbul ignore next */(0, _extends3.default)({},
+      this.props.controller, {
+        dropdownMenuStyleOpen: !this.props.controller.dropdownMenuStyleOpen }));
+
+    } }, { key: 'render', value: function render()
+
+    {/* istanbul ignore next */var _this2 = this;++cov_29ozy3dnct.f[10];var _ref3 = (++cov_29ozy3dnct.s[41],
+      this.props),router = _ref3.router,onChange = _ref3.onChange,setting = _ref3.setting;
+      var currentTheme = /* istanbul ignore next */(++cov_29ozy3dnct.s[42], setting.themes[setting.theme]); /* istanbul ignore next */++cov_29ozy3dnct.s[43];
+      var styleHeader = function styleHeader() {/* istanbul ignore next */++cov_29ozy3dnct.f[11];++cov_29ozy3dnct.s[44];return {
+          top: 0,
+          background: currentTheme.backgroundColorSecondary,
+          boxShadow: /* istanbul ignore next */'0 0 10px ' + currentTheme.shadowPrimary,
+          width: '100%',
+          height: '55px',
+          fontFamily: 'Arial, sans-serif',
+          fontSize: '12px' };
+      }; /* istanbul ignore next */++cov_29ozy3dnct.s[45];
+
+      var stlyeDropDown = function stlyeDropDown() {/* istanbul ignore next */++cov_29ozy3dnct.f[12];++cov_29ozy3dnct.s[46];return {
+          position: 'absolute',
+          top: '100%',
+          right: '10px',
+          zIndex: '100',
+          display: /* istanbul ignore next */_this2.props.controller.dropdownMenuStyleOpen ? /* istanbul ignore next */(++cov_29ozy3dnct.b[4][0], 'block') : /* istanbul ignore next */(++cov_29ozy3dnct.b[4][1], 'none'),
+          float: 'left',
+          minWidth: '160px',
+          padding: '0',
+          margin: '2px 0 0',
+          listStyle: 'none',
+          fontSize: '14px',
+          color: currentTheme.fontColorPrimary,
+          backgroundColor: currentTheme.backgroundColorPrimary,
+          border: '1px solid rgba(0,0,0,.07)',
+          borderRadius: '1px',
+          boxShadow: '0 6px 12px rgba(0,0,0,.175)',
+          backgroundClip: 'padding-box' };
+      };
+      var value = /* istanbul ignore next */(++cov_29ozy3dnct.s[47], /* istanbul ignore next */(++cov_29ozy3dnct.b[5][0], this.props.router) && /* istanbul ignore next */(++cov_29ozy3dnct.b[5][1],
+      this.props.router.params) && /* istanbul ignore next */(++cov_29ozy3dnct.b[5][2],
+      this.props.router.params.name)); /* istanbul ignore next */++cov_29ozy3dnct.s[48];
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ style: styleHeader() },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+              style: {
+                display: 'flex',
+                position: 'relative',
+                height: '67px',
+                width: '100%',
+                maxWidth: '1010px',
+                margin: '0 auto',
+                paddingTop: '10px',
+                paddingBottom: '10px',
+                boxSizing: 'border-box',
+                justifyContent: 'space-between' } },
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+                style: {
+                  marginLeft: '25px' } },
+
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.LinkImage, /* istanbul ignore next */{ setting: setting })),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { display: 'block', float: 'left' } },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactNumberInput2.default, /* istanbul ignore next */{
+                style: {
+                  fontSize: '15px',
+                  display: 'block',
+                  height: '34px',
+                  padding: '0 10px',
+                  lineHeight: '1.42857143',
+                  backgroundColor: currentTheme.inputBackgroundColorPrimary,
+                  backgroundImage: 'none',
+                  border: /* istanbul ignore next */'1px solid ' + currentTheme.inputBorderColorPrimary,
+                  borderRadius: '4px' },
+
+                onChange: this.onPriceChange,
+                placeholder: 'Enter some money',
+                format: '0,0[.]00',
+                value: value,
+                min: 0,
+                max: 100 })),
+
+
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: '30%', display: 'block' } },
+              /* istanbul ignore next */_react2.default.createElement(CurrencyFieldMaster, /* istanbul ignore next */{
+                router: router,
+                data: THB,
+                onChange: onChange,
+                setting: setting })),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: '30%', display: 'block' } },
+              /* istanbul ignore next */_react2.default.createElement(CurrencyField, /* istanbul ignore next */{
+                router: router,
+                data: this.props.currencies,
+                onChange: onChange,
+                setting: setting })),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { margin: '10px 15px', fontSize: '30px' } },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactHamburgerMenu2.default, /* istanbul ignore next */{
+                isOpen: this.props.controller.dropdownMenuStyleOpen,
+                menuClicked: function /* istanbul ignore next */menuClicked(e) {/* istanbul ignore next */++cov_29ozy3dnct.f[13];++cov_29ozy3dnct.s[49];return (/* istanbul ignore next */_this2.handleDropDownClick(e));},
+                width: 25,
+                height: 15,
+                strokeWidth: 2,
+                rotate: 0,
+                color: currentTheme.fontColorPrimary,
+                borderRadius: 5,
+                animationDuration: 0.75 })),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: stlyeDropDown() },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+                  style: {
+                    position: 'absolute',
+                    top: '-8px',
+                    left: '135px',
+                    width: '18px',
+                    height: '10px',
+                    float: 'left',
+                    overflow: 'hidden' } },
+
+
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{
+                  style: {
+                    position: 'absolute',
+                    borderLeft: '9px solid transparent',
+                    borderRight: '9px solid transparent',
+                    borderBottom: '9px solid rgba(0,0,0,.1)',
+                    height: 'auto',
+                    left: '0',
+                    top: '0',
+                    width: 'auto',
+                    display: 'inline-block',
+                    marginLeft: '-1px' } }),
+
+
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{
+                  style: {
+                    position: 'absolute',
+                    display: 'inline-block',
+                    marginTop: '-1px',
+                    top: '1px',
+                    borderLeft: '9px solid transparent',
+                    borderRight: '9px solid transparent',
+                    borderBottom: /* istanbul ignore next */'9px solid ' + currentTheme.backgroundColorPrimary } })),
+
+
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Setting2.default, this.props)))));
+
+
+
+
+    } }]);return Header;}(_react.Component); /* istanbul ignore next */exports.default = Header; /* istanbul ignore next */++cov_29ozy3dnct.s[50];
+
+
+Header.propTypes = {
+  setting: /* istanbul ignore next */_react.PropTypes.object.isRequired,
+  controller: /* istanbul ignore next */_react.PropTypes.object.isRequired,
+  router: /* istanbul ignore next */_react.PropTypes.object.isRequired,
+  currencies: /* istanbul ignore next */_react.PropTypes.array.isRequired,
+  value: /* istanbul ignore next */_react.PropTypes.string.isRequired,
+  onChange: /* istanbul ignore next */_react.PropTypes.func.isRequired };

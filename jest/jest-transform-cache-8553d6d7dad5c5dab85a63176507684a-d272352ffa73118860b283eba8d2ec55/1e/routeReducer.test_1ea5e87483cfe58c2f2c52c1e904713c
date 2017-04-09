@@ -1,0 +1,30 @@
+'use strict';var _router = require('../router');var _router2 = _interopRequireDefault(_router);
+var _actions = require('../../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+describe('router reducer', function () {
+  it('returns correct initial state', function () {
+    expect(errorMessage(undefined, {})).toEqual({ pathname: '/' });
+  });
+
+  it('returns current state if no action matched', function () {
+    var curState = { pathname: '/' };
+    var action = {
+      type: 'test' };
+
+    var nextState = (0, _router2.default)(curState, action);
+    expect(nextState).toBe(curState);
+    expect(nextState).toEqual(curState);
+  });
+
+  it('update router when receiving UPDATE_ROUTER_STATE action', function () {
+    var curState = { pathname: '/' };
+    var action = {
+      type: ActionTypes.UPDATE_ROUTER_STATE,
+      state: { pathname: '/USD' } };
+
+    var nextState = (0, _router2.default)(curState, action);
+    var expectedState = { pathname: '/USD' };
+    expect(nextState).toEqual(expectedState);
+    expect(nextState).not.toBe(curState);
+  });
+});

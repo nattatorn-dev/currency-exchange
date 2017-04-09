@@ -1,0 +1,142 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _createClass2 = require('babel-runtime/helpers/createClass');var _createClass3 = _interopRequireDefault(_createClass2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);var cov_2f7688rswn = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/App.js',hash = 'a04ec7c3991cafca84b419a0858aa5365044c724',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/App.js', statementMap: { '0': { start: { line: 39, column: 4 }, end: { line: 42, column: 7 } }, '1': { start: { line: 46, column: 4 }, end: { line: 48, column: 5 } }, '2': { start: { line: 49, column: 4 }, end: { line: 54, column: 5 } }, '3': { start: { line: 50, column: 6 }, end: { line: 53, column: 9 } }, '4': { start: { line: 58, column: 4 }, end: { line: 58, column: 42 } }, '5': { start: { line: 59, column: 4 }, end: { line: 59, column: 22 } }, '6': { start: { line: 63, column: 4 }, end: { line: 63, column: 52 } }, '7': { start: { line: 67, column: 4 }, end: { line: 67, column: 22 } }, '8': { start: { line: 68, column: 4 }, end: { line: 71, column: 7 } }, '9': { start: { line: 83, column: 8 }, end: { line: 83, column: 18 } }, '10': { start: { line: 84, column: 4 }, end: { line: 116, column: 5 } }, '11': { start: { line: 120, column: 24 }, end: { line: 127, column: 3 } }, '12': { start: { line: 120, column: 35 }, end: { line: 127, column: 1 } }, '13': { start: { line: 129, column: 27 }, end: { line: 140, column: 3 } }, '14': { start: { line: 129, column: 41 }, end: { line: 140, column: 1 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 38, column: 2 }, end: { line: 38, column: 3 } }, loc: { start: { line: 38, column: 24 }, end: { line: 43, column: 3 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 45, column: 2 }, end: { line: 45, column: 3 } }, loc: { start: { line: 45, column: 42 }, end: { line: 55, column: 3 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 57, column: 23 }, end: { line: 57, column: 24 } }, loc: { start: { line: 57, column: 28 }, end: { line: 60, column: 3 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 62, column: 17 }, end: { line: 62, column: 18 } }, loc: { start: { line: 62, column: 30 }, end: { line: 64, column: 3 } } }, '4': { name: '(anonymous_4)', decl: { start: { line: 66, column: 24 }, end: { line: 66, column: 25 } }, loc: { start: { line: 66, column: 29 }, end: { line: 72, column: 3 } } }, '5': { name: '(anonymous_5)', decl: { start: { line: 74, column: 2 }, end: { line: 74, column: 3 } }, loc: { start: { line: 74, column: 12 }, end: { line: 117, column: 3 } } }, '6': { name: '(anonymous_6)', decl: { start: { line: 120, column: 24 }, end: { line: 120, column: 25 } }, loc: { start: { line: 120, column: 35 }, end: { line: 127, column: 1 } } }, '7': { name: '(anonymous_7)', decl: { start: { line: 129, column: 27 }, end: { line: 129, column: 28 } }, loc: { start: { line: 129, column: 41 }, end: { line: 140, column: 1 } } } }, branchMap: { '0': { loc: { start: { line: 46, column: 4 }, end: { line: 48, column: 5 } }, type: 'if', locations: [{ start: { line: 46, column: 4 }, end: { line: 48, column: 5 } }, { start: { line: 46, column: 4 }, end: { line: 48, column: 5 } }] }, '1': { loc: { start: { line: 49, column: 4 }, end: { line: 54, column: 5 } }, type: 'if', locations: [{ start: { line: 49, column: 4 }, end: { line: 54, column: 5 } }, { start: { line: 49, column: 4 }, end: { line: 54, column: 5 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _class, _temp2;var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_redux = require('redux');
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_reactHelmet = require('react-helmet'); /* istanbul ignore next */var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+var /* istanbul ignore next */_reactSticky = require('react-sticky');
+/* istanbul ignore next */require('./global-styles');
+var /* istanbul ignore next */_actions = require('./actions');
+
+
+
+
+
+
+var /* istanbul ignore next */_selectors = require('./selectors');
+var /* istanbul ignore next */_selectors2 = require('../currencyPopular/selectors');
+
+var /* istanbul ignore next */_components = require('./components'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var
+
+App = (_temp2 = _class = function (_Component) {(0, _inherits3.default)(App, _Component);function App() {var _ref;var _temp, _this, _ret;(0, _classCallCheck3.default)(this, App);for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = App.__proto__ || (0, _getPrototypeOf2.default)(App)).call.apply(_ref, [this].concat(args))), _this), _this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    handleDismissClick = function (e) {/* istanbul ignore next */++cov_2f7688rswn.f[2];++cov_2f7688rswn.s[4];
+      /* istanbul ignore next */_this.props.actions.resetErrorMessage(); /* istanbul ignore next */++cov_2f7688rswn.s[5];
+      e.preventDefault();
+    }, _this.
+
+    handleChange = function (nextValue) {/* istanbul ignore next */++cov_2f7688rswn.f[3];++cov_2f7688rswn.s[6];
+      /* istanbul ignore next */_this.props.actions.navigate( /* istanbul ignore next */'/' + nextValue);
+    }, _this.
+
+    handleDropDownClick = function (e) {/* istanbul ignore next */++cov_2f7688rswn.f[4];++cov_2f7688rswn.s[7];
+      e.preventDefault(); /* istanbul ignore next */++cov_2f7688rswn.s[8];
+      /* istanbul ignore next */_this.props.actions.updateController( /* istanbul ignore next */(0, _extends3.default)({},
+      /* istanbul ignore next */_this.props.controller, {
+        dropdownMenuStyleOpen: false }));
+
+    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);}(0, _createClass3.default)(App, [{ key: 'componentWillMount', value: function componentWillMount() {/* istanbul ignore next */++cov_2f7688rswn.f[0];++cov_2f7688rswn.s[0];this.props.actions.updateRouterState({ pathname: this.props.location.pathname, params: this.props.params });} }, { key: 'componentWillReceiveProps', value: function componentWillReceiveProps(nextProps) {/* istanbul ignore next */++cov_2f7688rswn.f[1];++cov_2f7688rswn.s[1];if (nextProps.errorMessage) {// handle error here
+        /* istanbul ignore next */++cov_2f7688rswn.b[0][0];} else /* istanbul ignore next */{++cov_2f7688rswn.b[0][1];}++cov_2f7688rswn.s[2];if (this.props.location.pathname !== nextProps.location.pathname) {/* istanbul ignore next */++cov_2f7688rswn.b[1][0];++cov_2f7688rswn.s[3];this.props.actions.updateRouterState({ pathname: nextProps.location.pathname, params: nextProps.params });} else /* istanbul ignore next */{++cov_2f7688rswn.b[1][1];}} }, { key: 'render', value: function render()
+    {/* istanbul ignore next */++cov_2f7688rswn.f[5];var _ref2 = (++cov_2f7688rswn.s[9],
+
+
+
+
+
+
+
+
+      this.props),_ref2$actions = _ref2.actions,updateSetting = _ref2$actions.updateSetting,updateController = _ref2$actions.updateController,children = _ref2.children,controller = _ref2.controller,currencies = _ref2.currencies,inputValue = _ref2.inputValue,router = _ref2.router,setting = _ref2.setting; /* istanbul ignore next */++cov_2f7688rswn.s[10];
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactHelmet2.default, /* istanbul ignore next */{
+            title: 'Currency Exchange Rates',
+            meta: [
+            { property: 'og:site_name', content: 'Currency Exchange Rates' }] }),
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactSticky.StickyContainer, /* istanbul ignore next */{ style: { zIndex: 4 } },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_components.Main, /* istanbul ignore next */{ setting: setting, onClick: this.handleDropDownClick },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactSticky.Sticky, /* istanbul ignore next */{ style: { zIndex: 3 } },
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_components.Theme, /* istanbul ignore next */{ setting: setting },
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_components.Header, /* istanbul ignore next */{
+                    setting: setting,
+                    controller: controller,
+                    router: router,
+                    currencies: currencies,
+                    value: inputValue,
+                    updateSetting: updateSetting,
+                    updateController: updateController,
+                    onChange: this.handleChange })),
+
+
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_components.Nav, /* istanbul ignore next */null),
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_components.Footer, /* istanbul ignore next */null)),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_components.Theme, /* istanbul ignore next */{ setting: setting },
+                children)))));
+
+
+
+
+
+    } }]);return App;}(_react.Component), _class.propTypes = { actions: /* istanbul ignore next */_react.PropTypes.shape({ navigate: /* istanbul ignore next */_react.PropTypes.func.isRequired, updateRouterState: /* istanbul ignore next */_react.PropTypes.func.isRequired, updateSetting: /* istanbul ignore next */_react.PropTypes.func.isRequired, updateController: /* istanbul ignore next */_react.PropTypes.func.isRequired, resetErrorMessage: /* istanbul ignore next */_react.PropTypes.func.isRequired }), children: /* istanbul ignore next */_react.PropTypes.node, controller: /* istanbul ignore next */_react.PropTypes.object, currencies: /* istanbul ignore next */_react.PropTypes.array, errorMessage: /* istanbul ignore next */_react.PropTypes.string, inputValue: /* istanbul ignore next */_react.PropTypes.string.isRequired, location: /* istanbul ignore next */_react.PropTypes.shape({ pathname: /* istanbul ignore next */_react.PropTypes.string }), router: /* istanbul ignore next */_react.PropTypes.object, setting: /* istanbul ignore next */_react.PropTypes.object }, _temp2); /* istanbul ignore next */++cov_2f7688rswn.s[11];
+
+
+var mapStateToProps = function mapStateToProps(state) {/* istanbul ignore next */++cov_2f7688rswn.f[6];++cov_2f7688rswn.s[12];return {
+    controller: /* istanbul ignore next */(0, _selectors.getAppController)(state),
+    currencies: /* istanbul ignore next */(0, _selectors2.getBankscurrenciesUniqToObj)(state),
+    errorMessage: state.errorMessage,
+    inputValue: state.router.pathname.substring(1),
+    router: state.router,
+    setting: /* istanbul ignore next */(0, _selectors.getAppSetting)(state) };
+}; /* istanbul ignore next */++cov_2f7688rswn.s[13];
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {/* istanbul ignore next */++cov_2f7688rswn.f[7];++cov_2f7688rswn.s[14];return {
+    actions: /* istanbul ignore next */(0, _redux.bindActionCreators)(
+    {
+      navigate: /* istanbul ignore next */_actions.navigate,
+      resetErrorMessage: /* istanbul ignore next */_actions.resetErrorMessage,
+      updateController: /* istanbul ignore next */_actions.updateController,
+      updateRouterState: /* istanbul ignore next */_actions.updateRouterState,
+      updateSetting: /* istanbul ignore next */_actions.updateSetting },
+
+    dispatch) };
+
+}; /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);

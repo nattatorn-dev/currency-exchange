@@ -1,0 +1,17 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _styledComponents = require('styled-components');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+Theme.propTypes = {
+  children: _react2.default.PropTypes.object.isRequired,
+  setting: _react2.default.PropTypes.object.isRequired };
+
+
+function Theme(_ref) {var children = _ref.children,setting = _ref.setting;
+  return (
+    _react2.default.createElement(_styledComponents.ThemeProvider, { theme: setting },
+      children));
+
+
+}exports.default =
+
+Theme;

@@ -1,0 +1,19 @@
+'use strict';var _actions = require('../actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+describe('app action', function () {
+  it('creates LOAD_REPO_PAGE action', function () {
+    var expectedAction = {
+      type: ActionTypes.LOAD_REPO_PAGE };
+
+    expect(ActionTypes.loadRepoPage()).toEqual(expectedAction);
+  });
+
+  it('creates ADD_CURRENCY_EXCHANGE action', function () {
+    var state = '/USD';
+    var expectedAction = {
+      type: ActionTypes.ADD_CURRENCY_EXCHANGE,
+      state: state };
+
+    expect(ActionTypes.addCurrencyExchange(state)).toEqual(expectedAction);
+  });
+});

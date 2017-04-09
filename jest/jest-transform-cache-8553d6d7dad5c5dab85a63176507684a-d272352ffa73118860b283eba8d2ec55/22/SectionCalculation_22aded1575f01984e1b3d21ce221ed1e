@@ -1,0 +1,58 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_20ymz3v20z = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/components/SectionCalculation.js',hash = '712cc9b37d4652f4e3c205a4fa60382011fcce73',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/currencyExchange/components/SectionCalculation.js', statementMap: { '0': { start: { line: 5, column: 0 }, end: { line: 8, column: 1 } }, '1': { start: { line: 11, column: 19 }, end: { line: 11, column: 57 } }, '2': { start: { line: 13, column: 2 }, end: { line: 55, column: 3 } } }, fnMap: { '0': { name: 'SectionCalculation', decl: { start: { line: 10, column: 9 }, end: { line: 10, column: 27 } }, loc: { start: { line: 10, column: 55 }, end: { line: 56, column: 1 } } } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_numbro = require('numbro'); /* istanbul ignore next */var _numbro2 = _interopRequireDefault(_numbro);
+var /* istanbul ignore next */_services = require('../../../services'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_20ymz3v20z.s[0];
+
+SectionCalculation.propTypes = {
+  firstBank: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired,
+  setting: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired };
+
+
+function SectionCalculation( /* istanbul ignore next */_ref) {/* istanbul ignore next */var firstBank = _ref.firstBank,setting = _ref.setting; /* istanbul ignore next */++cov_20ymz3v20z.f[0];
+  var currLang = /* istanbul ignore next */(++cov_20ymz3v20z.s[1], setting.langs[setting.lang].messages); /* istanbul ignore next */++cov_20ymz3v20z.s[2];
+
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'td', /* istanbul ignore next */{ colSpan: '4' },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { paddingLeft: '15px', paddingRight: '15px' } },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginBottom: '10px' } },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h4', /* istanbul ignore next */null,
+            currLang.BANK_TABLE_COL_CALCULATION_LABEL)),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */{
+              style: {
+                listStyleType: 'none',
+                fontSize: '16px',
+                color: 'dimgrey' } },
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */null,
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null, /* istanbul ignore next */
+
+                  currLang.BANK_TABLE_COL_CALCULATION_BUY + '\n                    ' +
+                  /* istanbul ignore next */_services.number.isNumber( /* istanbul ignore next */_services.number.mathRound(firstBank.calSell, 6)) + '\n                    ' +
+                  firstBank.currencyDetails.symbol))),
+
+
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */null,
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null, /* istanbul ignore next */
+
+                  currLang.BANK_TABLE_COL_CALCULATION_SELL + '\n                    ' +
+                  /* istanbul ignore next */_services.number.isNumber( /* istanbul ignore next */_services.number.mathRound(firstBank.calBuy, 6)) + '\n                    ' +
+                  firstBank.currencyDetails.symbol))))))));
+
+
+
+
+
+
+
+
+
+} /* istanbul ignore next */exports.default =
+
+SectionCalculation;

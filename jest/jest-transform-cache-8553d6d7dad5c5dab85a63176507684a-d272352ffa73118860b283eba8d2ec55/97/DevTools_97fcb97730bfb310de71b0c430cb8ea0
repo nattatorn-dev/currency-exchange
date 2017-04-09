@@ -1,0 +1,17 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1epwyu7xa5 = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/devTools/DevTools.js',hash = 'b89dd7bc5c3566d511bd88798943e64019c651d4',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/devTools/DevTools.js', statementMap: {}, fnMap: {}, branchMap: {}, s: {}, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reduxDevtools = require('redux-devtools');
+var /* istanbul ignore next */_reduxDevtoolsLogMonitor = require('redux-devtools-log-monitor'); /* istanbul ignore next */var _reduxDevtoolsLogMonitor2 = _interopRequireDefault(_reduxDevtoolsLogMonitor);
+var /* istanbul ignore next */_reduxSliderMonitor = require('redux-slider-monitor'); /* istanbul ignore next */var _reduxSliderMonitor2 = _interopRequireDefault(_reduxSliderMonitor);
+var /* istanbul ignore next */_reduxDevtoolsDockMonitor = require('redux-devtools-dock-monitor'); /* istanbul ignore next */var _reduxDevtoolsDockMonitor2 = _interopRequireDefault(_reduxDevtoolsDockMonitor);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+/* istanbul ignore next */(0, _reduxDevtools.createDevTools)(
+/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reduxDevtoolsDockMonitor2.default, /* istanbul ignore next */{
+    defaultIsVisible: false,
+    toggleVisibilityKey: 'ctrl-H',
+    changePositionKey: 'ctrl-Q',
+    changeMonitorKey: 'ctrl-m',
+    defaultPosition: 'bottom',
+    defaultSize: 0.3 },
+
+  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reduxSliderMonitor2.default, /* istanbul ignore next */{ keyboardEnabled: /* istanbul ignore next */true }),
+  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reduxDevtoolsLogMonitor2.default, /* istanbul ignore next */null)));

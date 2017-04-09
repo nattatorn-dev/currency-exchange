@@ -1,0 +1,47 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = undefined;var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _createClass2 = require('babel-runtime/helpers/createClass');var _createClass3 = _interopRequireDefault(_createClass2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);var cov_15w1wuyu7m = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/root/Root.dev.js',hash = '4e82ce6d5a95fdb992c1c70088c951c410826611',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/root/Root.dev.js', statementMap: { '0': { start: { line: 10, column: 4 }, end: { line: 10, column: 18 } }, '1': { start: { line: 11, column: 4 }, end: { line: 11, column: 46 } }, '2': { start: { line: 15, column: 28 }, end: { line: 15, column: 38 } }, '3': { start: { line: 16, column: 4 }, end: { line: 21, column: 5 } }, '4': { start: { line: 17, column: 20 }, end: { line: 17, column: 36 } }, '5': { start: { line: 18, column: 6 }, end: { line: 20, column: 7 } }, '6': { start: { line: 19, column: 8 }, end: { line: 19, column: 57 } }, '7': { start: { line: 24, column: 58 }, end: { line: 24, column: 68 } }, '8': { start: { line: 25, column: 4 }, end: { line: 38, column: 5 } }, '9': { start: { line: 42, column: 0 }, end: { line: 48, column: 1 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 9, column: 2 }, end: { line: 9, column: 3 } }, loc: { start: { line: 9, column: 24 }, end: { line: 12, column: 3 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 14, column: 2 }, end: { line: 14, column: 3 } }, loc: { start: { line: 14, column: 14 }, end: { line: 22, column: 3 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 23, column: 2 }, end: { line: 23, column: 3 } }, loc: { start: { line: 23, column: 12 }, end: { line: 39, column: 3 } } } }, branchMap: { '0': { loc: { start: { line: 16, column: 4 }, end: { line: 21, column: 5 } }, type: 'if', locations: [{ start: { line: 16, column: 4 }, end: { line: 21, column: 5 } }, { start: { line: 16, column: 4 }, end: { line: 21, column: 5 } }] }, '1': { loc: { start: { line: 18, column: 6 }, end: { line: 20, column: 7 } }, type: 'if', locations: [{ start: { line: 18, column: 6 }, end: { line: 20, column: 7 } }, { start: { line: 18, column: 6 }, end: { line: 20, column: 7 } }] }, '2': { loc: { start: { line: 28, column: 11 }, end: { line: 34, column: 16 } }, type: 'cond-expr', locations: [{ start: { line: 29, column: 14 }, end: { line: 29, column: 48 } }, { start: { line: 30, column: 14 }, end: { line: 34, column: 16 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_has = require('lodash/has'); /* istanbul ignore next */var _has2 = _interopRequireDefault(_has);
+var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_reactRouter = require('react-router');
+var /* istanbul ignore next */_DevTools = require('../devTools/DevTools'); /* istanbul ignore next */var _DevTools2 = _interopRequireDefault(_DevTools);
+var /* istanbul ignore next */_reactGa = require('react-ga'); /* istanbul ignore next */var _reactGa2 = _interopRequireDefault(_reactGa);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var
+
+Root = function (_Component) {(0, _inherits3.default)(Root, _Component);
+  function /* istanbul ignore next */Root(props) {/* istanbul ignore next */(0, _classCallCheck3.default)(this, Root);++cov_15w1wuyu7m.f[0];++cov_15w1wuyu7m.s[0];var _this = (0, _possibleConstructorReturn3.default)(this, (Root.__proto__ || (0, _getPrototypeOf2.default)(Root)).call(this,
+    props)); /* istanbul ignore next */++cov_15w1wuyu7m.s[1];
+    /* istanbul ignore next */_this.onUpdate = /* istanbul ignore next */_this.onUpdate.bind( /* istanbul ignore next */_this); /* istanbul ignore next */return _this;
+  }(0, _createClass3.default)(Root, [{ key: 'onUpdate', value: function onUpdate()
+
+    {/* istanbul ignore next */++cov_15w1wuyu7m.f[1];var _ref = (++cov_15w1wuyu7m.s[2],
+      this.props),store = _ref.store,type = _ref.type; /* istanbul ignore next */++cov_15w1wuyu7m.s[3];
+      if (type !== 'server') {/* istanbul ignore next */++cov_15w1wuyu7m.b[0][0];
+        var state = /* istanbul ignore next */(++cov_15w1wuyu7m.s[4], store.getState()); /* istanbul ignore next */++cov_15w1wuyu7m.s[5];
+        if ( /* istanbul ignore next */(0, _has2.default)(state, 'router.pathname')) {/* istanbul ignore next */++cov_15w1wuyu7m.b[1][0];++cov_15w1wuyu7m.s[6];
+          /* istanbul ignore next */_reactGa2.default.pageview(state.router.pathname);
+        } else /* istanbul ignore next */{++cov_15w1wuyu7m.b[1][1];}
+      } else /* istanbul ignore next */{++cov_15w1wuyu7m.b[0][1];}
+    } }, { key: 'render', value: function render()
+    {/* istanbul ignore next */++cov_15w1wuyu7m.f[2];var _ref2 = (++cov_15w1wuyu7m.s[7],
+      this.props),store = _ref2.store,history = _ref2.history,routes = _ref2.routes,type = _ref2.type,renderProps = _ref2.renderProps; /* istanbul ignore next */++cov_15w1wuyu7m.s[8];
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRedux.Provider, /* istanbul ignore next */{ store: store },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+            type === 'server' ? /* istanbul ignore next */(++cov_15w1wuyu7m.b[2][0],
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.RouterContext, renderProps)) : /* istanbul ignore next */(++cov_15w1wuyu7m.b[2][1],
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Router, /* istanbul ignore next */{
+              history: history,
+              routes: routes,
+              onUpdate: this.onUpdate })),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DevTools2.default, /* istanbul ignore next */null))));
+
+
+
+    } }]);return Root;}(_react.Component); /* istanbul ignore next */exports.default = Root; /* istanbul ignore next */++cov_15w1wuyu7m.s[9];
+
+
+Root.propTypes = {
+  store: /* istanbul ignore next */_react.PropTypes.object.isRequired,
+  history: /* istanbul ignore next */_react.PropTypes.object.isRequired,
+  routes: /* istanbul ignore next */_react.PropTypes.node.isRequired,
+  type: /* istanbul ignore next */_react.PropTypes.string,
+  renderProps: /* istanbul ignore next */_react.PropTypes.object };

@@ -1,0 +1,38 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1gtz4k252j = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/shared/index.js',hash = 'b627a44793fb6b7c5a0be651e6157264f8aa1c80',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/shared/index.js', statementMap: {}, fnMap: {}, branchMap: {}, s: {}, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_BankImage = require('./BankImage'); /* istanbul ignore next */var _BankImage2 = _interopRequireDefault(_BankImage);
+var /* istanbul ignore next */_BankImageCircle = require('./BankImageCircle'); /* istanbul ignore next */var _BankImageCircle2 = _interopRequireDefault(_BankImageCircle);
+var /* istanbul ignore next */_BankLabel = require('./BankLabel'); /* istanbul ignore next */var _BankLabel2 = _interopRequireDefault(_BankLabel);
+var /* istanbul ignore next */_ButtomHighlight = require('./ButtomHighlight'); /* istanbul ignore next */var _ButtomHighlight2 = _interopRequireDefault(_ButtomHighlight);
+var /* istanbul ignore next */_ButtonLoader = require('./ButtonLoader'); /* istanbul ignore next */var _ButtonLoader2 = _interopRequireDefault(_ButtonLoader);
+var /* istanbul ignore next */_Container = require('./Container'); /* istanbul ignore next */var _Container2 = _interopRequireDefault(_Container);
+var /* istanbul ignore next */_CurrencyImage = require('./CurrencyImage'); /* istanbul ignore next */var _CurrencyImage2 = _interopRequireDefault(_CurrencyImage);
+var /* istanbul ignore next */_InputInterval = require('./InputInterval'); /* istanbul ignore next */var _InputInterval2 = _interopRequireDefault(_InputInterval);
+var /* istanbul ignore next */_LinkImage = require('./LinkImage'); /* istanbul ignore next */var _LinkImage2 = _interopRequireDefault(_LinkImage);
+var /* istanbul ignore next */_NumberImage = require('./NumberImage'); /* istanbul ignore next */var _NumberImage2 = _interopRequireDefault(_NumberImage);
+var /* istanbul ignore next */_NumberImageCircle = require('./NumberImageCircle'); /* istanbul ignore next */var _NumberImageCircle2 = _interopRequireDefault(_NumberImageCircle);
+var /* istanbul ignore next */_Popup = require('./Popup'); /* istanbul ignore next */var _Popup2 = _interopRequireDefault(_Popup);
+var /* istanbul ignore next */_SectionDetail = require('./SectionDetail'); /* istanbul ignore next */var _SectionDetail2 = _interopRequireDefault(_SectionDetail);
+var /* istanbul ignore next */_SectionMain = require('./SectionMain'); /* istanbul ignore next */var _SectionMain2 = _interopRequireDefault(_SectionMain);
+var /* istanbul ignore next */_SpanSymbol = require('./SpanSymbol'); /* istanbul ignore next */var _SpanSymbol2 = _interopRequireDefault(_SpanSymbol);
+var /* istanbul ignore next */_TdBorder = require('./TdBorder'); /* istanbul ignore next */var _TdBorder2 = _interopRequireDefault(_TdBorder);
+var /* istanbul ignore next */_TdBorderHeader = require('./TdBorderHeader'); /* istanbul ignore next */var _TdBorderHeader2 = _interopRequireDefault(_TdBorderHeader);
+var /* istanbul ignore next */_TdBorderNumber = require('./TdBorderNumber'); /* istanbul ignore next */var _TdBorderNumber2 = _interopRequireDefault(_TdBorderNumber);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+{
+  BankImage: /* istanbul ignore next */_BankImage2.default,
+  BankImageCircle: /* istanbul ignore next */_BankImageCircle2.default,
+  BankLabel: /* istanbul ignore next */_BankLabel2.default,
+  ButtonHighlight: /* istanbul ignore next */_ButtomHighlight2.default,
+  ButtonLoader: /* istanbul ignore next */_ButtonLoader2.default,
+  Container: /* istanbul ignore next */_Container2.default,
+  CurrencyImage: /* istanbul ignore next */_CurrencyImage2.default,
+  InputInterval: /* istanbul ignore next */_InputInterval2.default,
+  LinkImage: /* istanbul ignore next */_LinkImage2.default,
+  NumberImage: /* istanbul ignore next */_NumberImage2.default,
+  NumberImageCircle: /* istanbul ignore next */_NumberImageCircle2.default,
+  Popup: /* istanbul ignore next */_Popup2.default,
+  SectionDetail: /* istanbul ignore next */_SectionDetail2.default,
+  SectionMain: /* istanbul ignore next */_SectionMain2.default,
+  SpanSymbol: /* istanbul ignore next */_SpanSymbol2.default,
+  TdBorder: /* istanbul ignore next */_TdBorder2.default,
+  TdBorderHeader: /* istanbul ignore next */_TdBorderHeader2.default,
+  TdBorderNumber: /* istanbul ignore next */_TdBorderNumber2.default };

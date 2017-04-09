@@ -1,0 +1,9 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var cov_2io2i8unvm = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/shared/InputInterval.js',hash = '061872f08d2cda9b717aa493c6b87fc74718b6a3',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/shared/InputInterval.js', statementMap: { '0': { start: { line: 3, column: 22 }, end: { line: 7, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  font-size: 30px;\n  \n  &:hover { box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1); }\n'], ['\n  font-size: 30px;\n  \n  &:hover { box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1); }\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var InputInterval = /* istanbul ignore next */(++cov_2io2i8unvm.s[0], /* istanbul ignore next */_styledComponents2.default.input(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+
+
+InputInterval;

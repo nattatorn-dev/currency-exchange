@@ -1,0 +1,20 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var cov_cztwgz2of = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/shared/Popup.js',hash = '0b6bb8f5878cc2375749bf0faa38c2a62d025028',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/shared/Popup.js', statementMap: { '0': { start: { line: 3, column: 14 }, end: { line: 18, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  border-bottom: 1px solid rgba(0,0,0,.07);\n\n  &:before {\n    content: " ";\n    display: table;\n    line-height: 0;\n  }\n  \n  &:after {\n    clear: both;\n    content: " ";\n    display: table;\n    line-height: 0;\n  }\n'], ['\n  border-bottom: 1px solid rgba(0,0,0,.07);\n\n  &:before {\n    content: " ";\n    display: table;\n    line-height: 0;\n  }\n  \n  &:after {\n    clear: both;\n    content: " ";\n    display: table;\n    line-height: 0;\n  }\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var Popup = /* istanbul ignore next */(++cov_cztwgz2of.s[0], /* istanbul ignore next */_styledComponents2.default.div(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Popup;

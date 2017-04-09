@@ -1,0 +1,25 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_25dcnjxohq = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/shared/LinkImage.js',hash = '6ba8121cc520d1ec9d5bad622aac62acb7d0883b',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/shared/LinkImage.js', statementMap: { '0': { start: { line: 5, column: 0 }, end: { line: 9, column: 1 } }, '1': { start: { line: 12, column: 2 }, end: { line: 22, column: 3 } } }, fnMap: { '0': { name: 'LinkImage', decl: { start: { line: 11, column: 9 }, end: { line: 11, column: 18 } }, loc: { start: { line: 11, column: 72 }, end: { line: 23, column: 1 } } } }, branchMap: { '0': { loc: { start: { line: 11, column: 30 }, end: { line: 11, column: 40 } }, type: 'default-arg', locations: [{ start: { line: 11, column: 37 }, end: { line: 11, column: 40 } }] }, '1': { loc: { start: { line: 11, column: 42 }, end: { line: 11, column: 67 } }, type: 'default-arg', locations: [{ start: { line: 11, column: 50 }, end: { line: 11, column: 67 } }] } }, s: { '0': 0, '1': 0 }, f: { '0': 0 }, b: { '0': [0], '1': [0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRouter = require('react-router');
+var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_25dcnjxohq.s[0];
+
+LinkImage.propTypes = {
+  theme: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired,
+  link: /* istanbul ignore next */_react2.default.PropTypes.string,
+  width: /* istanbul ignore next */_react2.default.PropTypes.object };
+
+
+function LinkImage( /* istanbul ignore next */_ref) {/* istanbul ignore next */var theme = _ref.theme,_ref$link = _ref.link,link = _ref$link === undefined ? (++cov_25dcnjxohq.b[0][0], '/') : _ref$link,_ref$style = _ref.style,style = _ref$style === undefined ? (++cov_25dcnjxohq.b[1][0], { width: '46px' }) : _ref$style; /* istanbul ignore next */++cov_25dcnjxohq.f[0];++cov_25dcnjxohq.s[1];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.IndexLink, /* istanbul ignore next */{ to: { link: link } },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{
+        alt: 'logo',
+        style: style,
+        src: /* istanbul ignore next */'' +
+        require( /* istanbul ignore next */'../../assets/images/' + theme.themes[theme.theme].logo + '.svg') })));
+
+
+
+
+} /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _styledComponents.withTheme)(LinkImage);

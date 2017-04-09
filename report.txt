@@ -1,0 +1,14 @@
+// TODO bug
+KRW BUG /100 sloved
+IDR BUG /100 sloved
+
+INR BUG ORDER  sloved
+PHP BUG ORDER  sloved
+BHD BUG ORDER  sloved
+
+
+case specific definition
+USD
+JPY
+KRW
+IDR

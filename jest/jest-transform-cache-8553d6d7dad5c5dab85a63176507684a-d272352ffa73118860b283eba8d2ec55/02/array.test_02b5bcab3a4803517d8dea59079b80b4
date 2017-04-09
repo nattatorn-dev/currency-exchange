@@ -1,0 +1,47 @@
+'use strict';var _array = require('../array');
+
+describe('services array', function () {
+  var array = ['USD', 'JPY', 'GBP', 'IDR', 'CNY'];
+  it('deleteByIndex', function () {
+    var expectedNewArray = ['USD', 'JPY', 'GBP', 'CNY'];
+    var newArray = (0, _array.deleteByIndex)(array, 3);
+    expect(newArray).toEqual(expectedNewArray);
+    expect(newArray).toBe(expectedNewArray);
+  });
+
+  it('splice', function () {
+    var expectedNewArray = [
+    'USD1',
+    'USD2',
+    'USD3',
+    'JPY',
+    'GBP',
+    'IDR',
+    'CNY'];
+
+    var newArray = (0, _array.findAndReplace)(array, 2, 'USD', ['USD1', 'USD2', 'USD3']);
+    expect(newArray).toEqual(expectedNewArray);
+    expect(newArray).toBe(expectedNewArray);
+  });
+
+  it('pop', function () {
+    var expectedNewArray = ['USD', 'JPY', 'GBP', 'IDR'];
+    var newArray = (0, _array.pop)(array);
+    expect(newArray).toEqual(expectedNewArray);
+    expect(newArray).toBe(expectedNewArray);
+  });
+
+  it('shift', function () {
+    var expectedNewArray = ['JPY', 'GBP', 'IDR', 'CNY'];
+    var newArray = (0, _array.shift)(array);
+    expect(newArray).toEqual(expectedNewArray);
+    expect(newArray).toBe(expectedNewArray);
+  });
+
+  it('splice', function () {
+    var expectedNewArray = ['USD', 'JPY', 'USD1', 'IDR', 'CNY'];
+    var newArray = (0, _array.splice)(array, 2, 1, 'USD1');
+    expect(newArray).toEqual(expectedNewArray);
+    expect(newArray).toBe(expectedNewArray);
+  });
+});

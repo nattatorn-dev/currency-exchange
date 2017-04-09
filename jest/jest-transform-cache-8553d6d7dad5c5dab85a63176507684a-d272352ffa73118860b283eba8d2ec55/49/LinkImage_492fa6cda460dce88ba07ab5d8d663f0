@@ -1,0 +1,25 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRouter = require('react-router');
+var _styledComponents = require('styled-components');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+LinkImage.propTypes = {
+  theme: _react2.default.PropTypes.object.isRequired,
+  link: _react2.default.PropTypes.string,
+  width: _react2.default.PropTypes.object };
+
+
+function LinkImage(_ref) {var theme = _ref.theme,_ref$link = _ref.link,link = _ref$link === undefined ? '/' : _ref$link,_ref$style = _ref.style,style = _ref$style === undefined ? { width: '46px' } : _ref$style;
+  return (
+    _react2.default.createElement(_reactRouter.IndexLink, { to: { link: link } },
+      _react2.default.createElement('img', {
+        alt: 'logo',
+        style: style,
+        src: '' +
+        require('../../assets/images/' + theme.themes[theme.theme].logo + '.svg') })));
+
+
+
+
+}exports.default =
+
+(0, _styledComponents.withTheme)(LinkImage);

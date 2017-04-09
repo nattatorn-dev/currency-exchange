@@ -1,0 +1,19 @@
+'use strict';var _action = require('../action');
+var _actions = require('../../modules/app/actions');var ActionTypes = _interopRequireWildcard(_actions);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+describe('services action', function () {
+  it('fetchActios', function () {
+    var expectedFetchActios = ['REQUEST', 'SUCCESS', 'FAILURE'];
+    expect(_action.fetchActios).toEqual(expectedFetchActios);
+  });
+
+  it('action', function () {
+    var expectedAction = {
+      type: ActionTypes.NAVIGATE,
+      path: '/USD',
+      nextPath: '/USD/100' };
+
+    var payload = {};
+    expect(_action.fetchActios).toEqual(expectedAction);
+  });
+});

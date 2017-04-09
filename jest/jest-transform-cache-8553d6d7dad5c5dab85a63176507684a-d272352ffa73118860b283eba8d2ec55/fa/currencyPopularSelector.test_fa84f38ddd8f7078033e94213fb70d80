@@ -1,0 +1,217 @@
+'use strict';var _selectors = require('../selectors');var selectors = _interopRequireWildcard(_selectors);function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}
+
+describe('currency popular selector', function () {
+  var state = {
+    entities: {
+      banks: [
+      {
+        bankNameThai: 'ธนาคารไทยพาณิชย์',
+        bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+        isTotal: true,
+        data: [
+        indexGroup,
+        index,
+        {
+          sell: 44.40625,
+          buy: 41.77375,
+          acronym: 'GBP',
+          fullname: 'BRITISH POUND STERLING',
+          extendName: null,
+          currencyDetails: {
+            symbol: '£',
+            name: 'British Pound Sterling',
+            symbol_native: '£',
+            decimal_digits: 2,
+            rounding: 0,
+            code: 'GBP',
+            name_plural: 'British pounds sterling' } },
+
+
+        {
+          sell: 37.38125,
+          buy: 36.06,
+          acronym: 'EUR',
+          fullname: 'EURO',
+          extendName: null,
+          currencyDetails: {
+            symbol: '€',
+            name: 'Euro',
+            symbol_native: '€',
+            decimal_digits: 2,
+            rounding: 0,
+            code: 'EUR',
+            name_plural: 'euros' },
+
+          indexGroup: 0,
+          index: 4 }],
+
+
+        GBP: {
+          sell: 44.40625,
+          buy: 41.77375,
+          acronym: 'GBP',
+          fullname: 'BRITISH POUND STERLING',
+          extendName: null,
+          currencyDetails: {
+            symbol: '£',
+            name: 'British Pound Sterling',
+            symbol_native: '£',
+            decimal_digits: 2,
+            rounding: 0,
+            code: 'GBP',
+            name_plural: 'British pounds sterling' },
+
+          indexGroup: 0 } }] },
+
+
+
+
+    feature: {
+      currencyPopular: {
+        banks: [
+        {
+          bankNameThai: 'ธนาคารไทยพาณิชย์',
+          bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+          isTotal: true,
+          data: [
+          {
+            sell: 44.40625,
+            buy: 41.77375,
+            acronym: 'GBP',
+            fullname: 'BRITISH POUND STERLING',
+            extendName: null,
+            currencyDetails: {
+              symbol: '£',
+              name: 'British Pound Sterling',
+              symbol_native: '£',
+              decimal_digits: 2,
+              rounding: 0,
+              code: 'GBP',
+              name_plural: 'British pounds sterling' },
+
+            indexGroup: 0,
+            index: 3 }],
+
+
+          GBP: {
+            sell: 44.40625,
+            buy: 41.77375,
+            acronym: 'GBP',
+            fullname: 'BRITISH POUND STERLING',
+            extendName: null,
+            currencyDetails: {
+              symbol: '£',
+              name: 'British Pound Sterling',
+              symbol_native: '£',
+              decimal_digits: 2,
+              rounding: 0,
+              code: 'GBP',
+              name_plural: 'British pounds sterling' },
+
+            indexGroup: 0 } }] } } };
+
+
+
+
+
+
+  it('selects bank entities', function () {
+    expect(selectors.getBanks(state)).toEqual([
+    {
+      bankNameThai: 'ธนาคารไทยพาณิชย์',
+      bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+      isTotal: true,
+      data: [
+      {
+        sell: 44.40625,
+        buy: 41.77375,
+        acronym: 'GBP',
+        fullname: 'BRITISH POUND STERLING',
+        extendName: null,
+        currencyDetails: {
+          symbol: '£',
+          name: 'British Pound Sterling',
+          symbol_native: '£',
+          decimal_digits: 2,
+          rounding: 0,
+          code: 'GBP',
+          name_plural: 'British pounds sterling' },
+
+        indexGroup: 0,
+        index: 3 }],
+
+
+      GBP: {
+        sell: 44.40625,
+        buy: 41.77375,
+        acronym: 'GBP',
+        fullname: 'BRITISH POUND STERLING',
+        extendName: null,
+        currencyDetails: {
+          symbol: '£',
+          name: 'British Pound Sterling',
+          symbol_native: '£',
+          decimal_digits: 2,
+          rounding: 0,
+          code: 'GBP',
+          name_plural: 'British pounds sterling' },
+
+        indexGroup: 0 } }]);
+
+
+
+  });
+
+  it('selects bank of currency popular', function () {
+    expect(selectors.getBanksCurrencyPopular(state)).toEqual([
+    {
+      bankNameThai: 'ธนาคารไทยพาณิชย์',
+      bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+      isTotal: true,
+      data: [
+      {
+        sell: 44.40625,
+        buy: 41.77375,
+        acronym: 'GBP',
+        fullname: 'BRITISH POUND STERLING',
+        extendName: null,
+        currencyDetails: {
+          symbol: '£',
+          name: 'British Pound Sterling',
+          symbol_native: '£',
+          decimal_digits: 2,
+          rounding: 0,
+          code: 'GBP',
+          name_plural: 'British pounds sterling' },
+
+        indexGroup: 0,
+        index: 3 }],
+
+
+      GBP: {
+        sell: 44.40625,
+        buy: 41.77375,
+        acronym: 'GBP',
+        fullname: 'BRITISH POUND STERLING',
+        extendName: null,
+        currencyDetails: {
+          symbol: '£',
+          name: 'British Pound Sterling',
+          symbol_native: '£',
+          decimal_digits: 2,
+          rounding: 0,
+          code: 'GBP',
+          name_plural: 'British pounds sterling' },
+
+        indexGroup: 0 } }]);
+
+
+
+  });
+
+  it('selects bank name of entities', function () {
+    expect(selectors.getBanksName(state)).toEqual([
+    'The Siam Commercial Bank Public Company Limited.']);
+
+  });
+});

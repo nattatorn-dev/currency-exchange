@@ -1,0 +1,22 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  from {\n    transform: translateY(-2px);\n  }\n  to {\n    transform: translateY(2px);\n  }\n'], ['\n  from {\n    transform: translateY(-2px);\n  }\n  to {\n    transform: translateY(2px);\n  }\n']),_templateObject2 = (0, _taggedTemplateLiteral3.default)(['\n  font-size: 16px;\n  animation: ', ' .85s linear infinite alternate;\n\n  &:after {\n    content: \'\u21E3\';\n    right: 10px;\n  }\n'], ['\n  font-size: 16px;\n  animation: ', ' .85s linear infinite alternate;\n\n  &:after {\n    content: \'\u21E3\';\n    right: 10px;\n  }\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var sudo = (0, _styledComponents.keyframes)(_templateObject);
+
+
+
+
+
+
+
+
+var ButtonLoader = _styledComponents2.default.p(_templateObject2,
+
+sudo);exports.default =
+
+
+
+
+
+
+
+ButtonLoader;

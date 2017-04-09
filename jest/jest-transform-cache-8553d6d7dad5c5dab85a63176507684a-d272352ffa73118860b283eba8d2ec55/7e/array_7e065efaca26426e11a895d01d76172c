@@ -1,0 +1,47 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.splice = exports.shift = exports.pop = exports.findAndReplace = exports.deleteByIndex = undefined;var _toConsumableArray2 = require("babel-runtime/helpers/toConsumableArray");var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} /** all pure func */
+
+/**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              * @param  {[array]}    arr             | ['USD', 'JPY', 'GBP'] |
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              * @param  {[number]}   index           | 0 |
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              * @return {[array]}    array           | ['JPY', 'GBP'] | delete element of array by index and return new array
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              */
+var deleteByIndex = function deleteByIndex(arr, index) {return (
+      arr.slice(0, index).concat(arr.slice(index + 1)));};
+
+/**
+                                                              * @param  {[array]}    arr             | ['USD', 'JPY', 'GBP'] |
+                                                              * @param  {[string]}   find            | 'USD' | find array index
+                                                              * @param  {[string]}   items           | ['USD1', 'USD2', 'USD3'] | find array index
+                                                              * @return {[array]}    array           | ['USD1', 'USD2', 'USD3', 'JPY', 'GBP'] | find and replace and return new array
+                                                              */
+var findAndReplace = function findAndReplace(arr, find, items) {
+   var startIndex = arr.findIndex(function (e) {return e === find;});
+   return [].concat((0, _toConsumableArray3.default)(arr.slice(0, startIndex)), (0, _toConsumableArray3.default)(items), (0, _toConsumableArray3.default)(arr.slice(startIndex + 1)));
+};
+
+/**
+      * @param  {[array]}    arr             | ['USD', 'JPY', 'GBP'] |
+      * @return {[array]}    array           | ['USD', 'JPY'] | delete last element and return new array
+      */
+var pop = function pop(arr) {return arr.slice(0, -1);};
+
+/**
+                                                           * @param  {[array]}    arr             | ['USD', 'JPY', 'GBP'] |
+                                                           * @return {[array]}    array           | ['JPY', 'GBP'] | delete first element and return new array]
+                                                           */
+var shift = function shift(arr) {return arr.slice(1);};
+
+/**
+                                                           * @param  {[array]}    arr             | ['USD', 'JPY', 'GBP', 'IDR', 'CNY'] |
+                                                           * @param  {[number]}   start           | 2 | start by index
+                                                           * @param  {[number]}   deleteCount     | 1 | delete by index after start by index
+                                                           * @param  {[string]}   items           | 'USD1' | find array index
+                                                           * @return {[array]}    array           | ['USD', 'JPY', 'USD1', 'IDR', 'CNY'] | insert element and remove and return new array
+                                                           */
+var splice = function splice(arr, start, deleteCount) {for (var _len = arguments.length, items = Array(_len > 3 ? _len - 3 : 0), _key = 3; _key < _len; _key++) {items[_key - 3] = arguments[_key];}return [].concat((0, _toConsumableArray3.default)(
+   arr.slice(0, start)),
+   items, (0, _toConsumableArray3.default)(
+   arr.slice(start + deleteCount)));};exports.
+
+
+deleteByIndex = deleteByIndex;exports.findAndReplace = findAndReplace;exports.pop = pop;exports.shift = shift;exports.splice = splice;

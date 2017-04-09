@@ -1,0 +1,8 @@
+'use strict';var _action = require('../action');
+
+describe('services action', function () {
+  it('fetchActios', function () {
+    var expectedFetchActios = ['REQUEST', 'SUCCESS', 'FAILURE'];
+    expect(_action.fetchActios).toEqual(expectedFetchActios);
+  });
+});

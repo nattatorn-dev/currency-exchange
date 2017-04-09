@@ -1,0 +1,16 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  font-family: ', ';\n  font-size: ', ';\n  color: ', ';\n  background-color: ', ';\n'], ['\n  font-family: ', ';\n  font-size: ', ';\n  color: ', ';\n  background-color: ', ';\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var Main = _styledComponents2.default.div(_templateObject,
+function (props) {return props.setting.fontFamilys[props.setting.fontFamily].fontPrimary || props.fontFamilys[props.fontFamily].fontPrimary;},
+function (props) {return (
+    props.setting.fontStyles[props.setting.fontStyle].fontSize ||
+    props.fontStyles[props.fontStyle].fontSize);},
+function (props) {return (
+    props.setting.themes[props.setting.theme].fontColorPrimary ||
+    props.themes[props.theme].fontColorPrimary);},
+function (props) {return (
+    props.setting.themes[props.setting.theme].backgroundColorPrimary ||
+    props.themes[props.theme].backgroundColorPrimary);});exports.default =
+
+
+Main;

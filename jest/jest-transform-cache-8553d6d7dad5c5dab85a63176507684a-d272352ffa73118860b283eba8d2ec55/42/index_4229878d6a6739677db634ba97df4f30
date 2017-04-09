@@ -1,0 +1,19 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.setting = undefined;var _langs = require('./langs');
+var _themes = require('./themes');
+var _fontStyles = require('./fontStyles');
+var _fontFamilys = require('./fontFamilys');
+
+var setting = exports.setting = {
+  layout: '', // bank dill down, bank column
+  popularCurrenciesLists: ['USD', 'GBP', 'EUR', 'JPY', 'CNY'], // relate dropdowncurrencies
+  popularBanksLists: ['KBANK'],
+  dropdownCurrencies: 'USD',
+  numberDigit: 5,
+  lang: 'th', // th, en
+  langs: _langs.langs,
+  theme: 'white',
+  themes: _themes.themes,
+  fontStyle: 'normal',
+  fontStyles: _fontStyles.fontStyles,
+  fontFamily: 'arial',
+  fontFamilys: _fontFamilys.fontFamilys };

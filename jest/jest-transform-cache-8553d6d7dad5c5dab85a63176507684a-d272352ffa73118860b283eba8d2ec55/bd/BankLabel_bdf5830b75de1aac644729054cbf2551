@@ -1,0 +1,8 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var cov_2k3d7r1h2o = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/shared/BankLabel.js',hash = '475011b65a0c6f256e601bda75a016ac65b47245',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/shared/BankLabel.js', statementMap: { '0': { start: { line: 3, column: 18 }, end: { line: 6, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  margin-left: 50px;\n  width: 330px;\n'], ['\n  margin-left: 50px;\n  width: 330px;\n']);var /* istanbul ignore next */_styledComponents = require('styled-components'); /* istanbul ignore next */var _styledComponents2 = _interopRequireDefault(_styledComponents);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var BankLabel = /* istanbul ignore next */(++cov_2k3d7r1h2o.s[0], /* istanbul ignore next */_styledComponents2.default.div(_templateObject)); /* istanbul ignore next */exports.default =
+
+
+
+
+BankLabel;

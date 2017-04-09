@@ -1,0 +1,158 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.usdExtendName = exports.usdExtend = exports.injectCurrency = exports.defaultCurrency = exports.defaultCurrenciesPopular = exports.currencyDivide = undefined;var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);var cov_18x41eknth = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/helpers/currency.js',hash = '553172f1bef623fea851581c24121709eca7c5b3',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/helpers/currency.js', statementMap: { '0': { start: { line: 3, column: 33 }, end: { line: 3, column: 76 } }, '1': { start: { line: 3, column: 39 }, end: { line: 3, column: 76 } }, '2': { start: { line: 4, column: 18 }, end: { line: 4, column: 44 } }, '3': { start: { line: 5, column: 22 }, end: { line: 5, column: 79 } }, '4': { start: { line: 45, column: 24 }, end: { line: 61, column: 3 } }, '5': { start: { line: 50, column: 7 }, end: { line: 61, column: 1 } }, '6': { start: { line: 121, column: 23 }, end: { line: 142, column: 5 } }, '7': { start: { line: 122, column: 2 }, end: { line: 142, column: 5 } }, '8': { start: { line: 149, column: 23 }, end: { line: 150, column: 53 } }, '9': { start: { line: 150, column: 2 }, end: { line: 150, column: 53 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 3, column: 33 }, end: { line: 3, column: 34 } }, loc: { start: { line: 3, column: 39 }, end: { line: 3, column: 76 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 45, column: 24 }, end: { line: 45, column: 25 } }, loc: { start: { line: 50, column: 7 }, end: { line: 61, column: 1 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 121, column: 23 }, end: { line: 121, column: 24 } }, loc: { start: { line: 122, column: 2 }, end: { line: 142, column: 5 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 149, column: 23 }, end: { line: 149, column: 24 } }, loc: { start: { line: 150, column: 2 }, end: { line: 150, column: 53 } } } }, branchMap: { '0': { loc: { start: { line: 49, column: 2 }, end: { line: 49, column: 11 } }, type: 'default-arg', locations: [{ start: { line: 49, column: 10 }, end: { line: 49, column: 11 } }] }, '1': { loc: { start: { line: 122, column: 2 }, end: { line: 142, column: 5 } }, type: 'cond-expr', locations: [{ start: { line: 123, column: 6 }, end: { line: 133, column: 5 } }, { start: { line: 134, column: 6 }, end: { line: 142, column: 5 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0 }, b: { '0': [0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_services = require('../services'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_18x41eknth.s[0];
+
+var defaultCurrenciesPopular = function defaultCurrenciesPopular() {/* istanbul ignore next */++cov_18x41eknth.f[0];++cov_18x41eknth.s[1];return ['USD', 'GBP', 'EUR', 'JPY', 'CNY'];};
+var usdExtend = /* istanbul ignore next */(++cov_18x41eknth.s[2], ['USD1', 'USD2', 'USD3']);
+var usdExtendName = /* istanbul ignore next */(++cov_18x41eknth.s[3], [{ text: '1-2' }, { text: '5-20' }, { text: '50-100' }]);
+
+/**
+                                                                                                                                  * @param  {[object]}      currencyMaster                |
+                                                                                                                                                                                            USD: {
+                                                                                                                                                                                              symbol: '$',
+                                                                                                                                                                                              name: 'US Dollar',
+                                                                                                                                                                                              symbol_native: '$',
+                                                                                                                                                                                              decimal_digits: 2,
+                                                                                                                                                                                              rounding: 0,
+                                                                                                                                                                                              code: 'USD',
+                                                                                                                                                                                              name_plural: 'US dollars',
+                                                                                                                                                                                             }
+                                                                                                                                                                                          | currency master details
+                                                                                                                                   * @param  {[string]}      bankNameEng, bankNameThai    | ธนาคารไทยพาณิชย์, The Siam Commercial Bank Public Company Limited. |
+                                                                                                                                   * @param  {[string]}      acronym                      | 'USD' |
+                                                                                                                                   * @param  {[number]}      index                        | 99 |
+                                                                                                                                   * @return {[object]}      object                       |
+                                                                                                                                                                                            {
+                                                                                                                                                                                              bankNameEng: 'The Siam Commercial Bank Public Company Limited.',
+                                                                                                                                                                                              bankNameThai: 'ธนาคารไทยพาณิชย์',
+                                                                                                                                                                                              sell: 0,
+                                                                                                                                                                                              buy: 0,
+                                                                                                                                                                                              calSell: 0,
+                                                                                                                                                                                              calBuy: 0,
+                                                                                                                                                                                              extendName: null,
+                                                                                                                                                                                              currencyDetails: {
+                                                                                                                                                                                                symbol: '$',
+                                                                                                                                                                                                name: 'US Dollar',
+                                                                                                                                                                                                symbol_native: '$',
+                                                                                                                                                                                                decimal_digits: 2,
+                                                                                                                                                                                                rounding: 0,
+                                                                                                                                                                                                code: 'USD',
+                                                                                                                                                                                                name_plural: 'US dollars',
+                                                                                                                                                                                              },
+                                                                                                                                                                                              indexGroup: 0,
+                                                                                                                                                                                              index: 99,
+                                                                                                                                                                                            }
+                                                                                                                                                                                          | return default currency
+                                                                                                                                   */ /* istanbul ignore next */++cov_18x41eknth.s[4];
+var defaultCurrency = function defaultCurrency(
+currencyMaster, /* istanbul ignore next */_ref,
+
+acronym)
+
+{/* istanbul ignore next */var bankNameEng = _ref.bankNameEng,bankNameThai = _ref.bankNameThai; /* istanbul ignore next */var index = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : (++cov_18x41eknth.b[0][0], 0); /* istanbul ignore next */++cov_18x41eknth.f[1];++cov_18x41eknth.s[5];return {
+    bankNameEng: bankNameEng,
+    bankNameThai: bankNameThai,
+    sell: 0,
+    buy: 0,
+    calSell: 0,
+    calBuy: 0,
+    extendName: null,
+    currencyDetails: currencyMaster[acronym.slice(0, 3)],
+    indexGroup: 0,
+    index: index };
+};
+
+/** specific
+     * @param  {[object]}      currencyMaster                |
+                                                               USD: {
+                                                                 symbol: '$',
+                                                                 name: 'US Dollar',
+                                                                 symbol_native: '$',
+                                                                 decimal_digits: 2,
+                                                                 rounding: 0,
+                                                                 code: 'USD',
+                                                                 name_plural: 'US dollars',
+                                                                }
+                                                             | currency master details
+      * @param  {[object]}     bank                          |
+                                                               {
+                                                                 bankNameEng: 'The Siam Commercial Bank Public Company Limited.'
+                                                                 bankNameThai: 'ธนาคารไทยพาณิชย์'}
+                                                                 data: [Array<any>]
+                                                               }
+                                                             | bank details
+      * @param  {[object]}     currency                      |
+                                                               {
+                                                                 acronym: 'USD1'
+                                                                 buy: '33.19'
+                                                                 currencyDetails: {Object<any>}
+                                                                 extendName: '1-2'
+                                                                 fullname: 'US DOLLAR $1-$2'
+                                                                 index: 0
+                                                                 indexGroup: 0
+                                                                 sell: '34.64'
+                                                               }
+                                                             | currency details
+      * @param  {[object]}     bank                          |
+                                                               {
+                                                                 bankNameEng: 'The Siam Commercial Bank Public Company Limited.'
+                                                                 bankNameThai: 'ธนาคารไทยพาณิชย์'}
+                                                                 data: [
+                                                                   {
+                                                                     acronym: 'USD1'
+                                                                     buy: '33.19'
+                                                                     currencyDetails: {
+                                                                       symbol: '$',
+                                                                       name: 'US Dollar',
+                                                                       symbol_native: '$',
+                                                                       decimal_digits: 2,
+                                                                       rounding: 0,
+                                                                       code: 'USD',
+                                                                       name_plural: 'US dollars',
+                                                                     }
+                                                                     extendName: '1-2'
+                                                                     fullname: 'US DOLLAR $1-$2'
+                                                                     index: 0
+                                                                     indexGroup: 0
+                                                                     sell: '34.64'
+                                                                   }
+                                                                 ]
+                                                               }
+                                                             | return bank detail
+   */ /* istanbul ignore next */++cov_18x41eknth.s[6];
+var currencyDivide = function currencyDivide(currencyMaster, bank, currency, acronym)
+{/* istanbul ignore next */++cov_18x41eknth.f[2];++cov_18x41eknth.s[7];return currency.sell > 1 ? /* istanbul ignore next */(++cov_18x41eknth.b[1][0], [].concat((0, _toConsumableArray3.default)(
+
+  bank), [(0, _extends3.default)({},
+
+  currency, {
+    buy: /* istanbul ignore next */_services.number.mathRound(currency.buy / 100, 5),
+    sell: /* istanbul ignore next */_services.number.mathRound(currency.sell / 100, 5),
+    extendName: null,
+    currencyDetails: currencyMaster[acronym],
+    indexGroup: 0 })])) : /* istanbul ignore next */(++cov_18x41eknth.b[1][1], [].concat((0, _toConsumableArray3.default)(
+
+
+
+  bank), [(0, _extends3.default)({},
+
+  currency, {
+    extendName: null,
+    currencyDetails: currencyMaster[acronym],
+    indexGroup: 0 })]));
+
+};
+
+/** specific
+      * @param  {[array]}    currencies      | ['USD', 'JPY', 'GBP'] |
+      * @param  {[string]}   find            | 'USD' |
+      * @return {[array]}    array           | ['USD1', 'USD2', 'USD3', 'JPY', 'GBP'] | inject currency
+      */ /* istanbul ignore next */++cov_18x41eknth.s[8];
+var injectCurrency = function injectCurrency(currencies, find)
+{/* istanbul ignore next */++cov_18x41eknth.f[3];++cov_18x41eknth.s[9];return (/* istanbul ignore next */_services.array.findAndReplace(currencies, find, usdExtend));}; /* istanbul ignore next */exports.
+
+
+currencyDivide = currencyDivide; /* istanbul ignore next */exports.
+defaultCurrenciesPopular = defaultCurrenciesPopular; /* istanbul ignore next */exports.
+defaultCurrency = defaultCurrency; /* istanbul ignore next */exports.
+injectCurrency = injectCurrency; /* istanbul ignore next */exports.
+usdExtend = usdExtend; /* istanbul ignore next */exports.
+usdExtendName = usdExtendName;

@@ -1,0 +1,14 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  background-position: initial;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: ', ';\n  height: ', ';\n  margin: 0;\n  width:', ';\n'], ['\n  background-position: initial;\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: ', ';\n  height: ', ';\n  margin: 0;\n  width:', ';\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);
+var _helpers = require('../helpers');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var NumberImage = _styledComponents2.default.div(_templateObject,
+
+
+
+function (props) {return _helpers.url.number(props.number);},
+function (props) {return props.size || '30px';},
+
+function (props) {return props.size || '30px';});exports.default =
+
+
+NumberImage;

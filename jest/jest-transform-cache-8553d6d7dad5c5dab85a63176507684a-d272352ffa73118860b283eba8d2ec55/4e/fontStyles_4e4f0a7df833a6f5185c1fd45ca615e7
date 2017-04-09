@@ -1,0 +1,12 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_z1inqeack = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/fontStyles.js',hash = 'd48ebb87196e1aec7d798ca9925a4019afad6ca7',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/constants/setting/fontStyles.js', statementMap: { '0': { start: { line: 1, column: 26 }, end: { line: 14, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var fontStyles = /* istanbul ignore next */exports.fontStyles = (++cov_z1inqeack.s[0], {
+  normal: {
+    fontSize: '12px',
+    fontDetailSize: '10.5px',
+    fontWeight: '500',
+    fontNumberSize: '16px' },
+
+  medium: {
+    fontSize: '14px',
+    fontDetailSize: '11.5px',
+    fontWeight: '500',
+    fontNumberSize: '17px' } });

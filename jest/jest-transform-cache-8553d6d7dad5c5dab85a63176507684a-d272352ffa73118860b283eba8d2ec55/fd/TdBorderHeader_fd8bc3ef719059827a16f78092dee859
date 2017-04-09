@@ -1,0 +1,9 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  border-top: 0;\n  font-weight: 400;\n'], ['\n  border-top: 0;\n  font-weight: 400;\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);
+var _TdBorder = require('./TdBorder');var _TdBorder2 = _interopRequireDefault(_TdBorder);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var TdBorderHeader = (0, _styledComponents2.default)(_TdBorder2.default)(_templateObject);exports.default =
+
+
+
+
+TdBorderHeader;

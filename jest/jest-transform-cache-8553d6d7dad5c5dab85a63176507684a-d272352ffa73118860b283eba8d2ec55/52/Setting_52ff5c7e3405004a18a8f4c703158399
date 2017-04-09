@@ -1,0 +1,82 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _react = require('react');var _react2 = _interopRequireDefault(_react);
+
+var _ButtonSetting = require('./ButtonSetting');
+
+
+
+
+
+var _shared = require('../../../shared');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+Setting.propTypes = {
+  updateSetting: _react2.default.PropTypes.func.isRequired };
+
+
+function Setting(_ref) {var updateSetting = _ref.updateSetting;
+  var handleClick = function handleClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  return (
+    _react2.default.createElement('div', {
+        style: {
+          minWidth: '160px',
+          fontSize: '13px' },
+
+        onClick: handleClick },
+
+      _react2.default.createElement(_shared.Popup, null,
+        _react2.default.createElement(_ButtonSetting.ButtonFontStyleSetting, {
+            updateSetting: updateSetting,
+            fontStyle: 'normal',
+            style: { fontSize: '14px', verticalAlign: 'middle' } }, 'A'),
+
+
+
+        _react2.default.createElement(_ButtonSetting.ButtonFontStyleSetting, {
+            updateSetting: updateSetting,
+            fontStyle: 'medium',
+            style: { fontSize: '20px', verticalAlign: 'middle' } }, 'A')),
+
+
+
+
+      _react2.default.createElement(_shared.Popup, null,
+        _react2.default.createElement(_ButtonSetting.ButtonColorThemeSetting, {
+            updateSetting: updateSetting,
+            themeColor: 'white' }, 'White'),
+
+
+
+        _react2.default.createElement(_ButtonSetting.ButtonColorThemeSetting, {
+            updateSetting: updateSetting,
+            themeColor: 'night' }, 'Night')),
+
+
+
+
+      _react2.default.createElement(_shared.Popup, null,
+        _react2.default.createElement(_ButtonSetting.ButtonFontSetting, { updateSetting: updateSetting, fontFamily: 'arial' }, 'Arial'),
+
+
+        _react2.default.createElement(_ButtonSetting.ButtonFontSetting, { updateSetting: updateSetting, fontFamily: 'kanit' }, 'Kanit'),
+
+
+        _react2.default.createElement(_ButtonSetting.ButtonFontSetting, { updateSetting: updateSetting, fontFamily: 'athiti' }, 'Athiti')),
+
+
+
+      _react2.default.createElement('div', null,
+        _react2.default.createElement(_ButtonSetting.ButtonLangSetting, { updateSetting: updateSetting, lang: 'th' }, 'TH'),
+
+
+        _react2.default.createElement(_ButtonSetting.ButtonLangSetting, { updateSetting: updateSetting, lang: 'en' }, 'EN'))));
+
+
+
+
+
+}exports.default =
+
+Setting;

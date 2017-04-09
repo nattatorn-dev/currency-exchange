@@ -1,0 +1,13 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _taggedTemplateLiteral2 = require('babel-runtime/helpers/taggedTemplateLiteral');var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  color: ', ';\n  font-size:  ', ';\n  letter-spacing: 0.5px;\n  text-align: right;\n  width: 33%;\n'], ['\n  color: ', ';\n  font-size:  ', ';\n  letter-spacing: 0.5px;\n  text-align: right;\n  width: 33%;\n']);var _styledComponents = require('styled-components');var _styledComponents2 = _interopRequireDefault(_styledComponents);
+var _TdBorder = require('./TdBorder');var _TdBorder2 = _interopRequireDefault(_TdBorder);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var TdBorderNumber = (0, _styledComponents2.default)(_TdBorder2.default)(_templateObject,
+function (props) {return props.theme.themes[props.theme.theme].fontColorSecondary;},
+function (props) {return (
+    props.theme.fontStyles[props.theme.fontStyle].fontNumberSize);});exports.default =
+
+
+
+
+
+TdBorderNumber;

@@ -1,0 +1,131 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.getBankCurrencyPopularPropsDataByPopular = exports.getBanksSortByCurrency = exports.getBanksTopRateValue = exports.getBankCurrencyPopularByIndex = exports.getBanksByIndex = exports.getBankscurrenciesUniqToObj = exports.getBankscurrenciesUniq = exports.getBanksCurrencies = exports.getBanksName = exports.getBanksCurrencyPopular = exports.getBanks = undefined;var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);var _reselect = require('reselect');
+var _uniq = require('lodash/uniq');var _uniq2 = _interopRequireDefault(_uniq);
+var _services = require('../../services');
+var _helpers = require('../../helpers');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var getBanks = function getBanks(state) {return state.entities.banks;};
+var getBanksCurrencyPopular = function getBanksCurrencyPopular(state) {return state.feature.currencyPopular.banks;};
+
+var getBanksName = (0, _reselect.createSelector)(getBanks, function (banks) {return (
+    banks.reduce(function (p, c) {return [].concat((0, _toConsumableArray3.default)(p), [c.bankNameEng]);}, []));});
+
+var getBanksCurrencies = (0, _reselect.createSelector)(getBanks, function (banks) {return (
+    banks.reduce(
+    function (p, c) {return [].concat((0, _toConsumableArray3.default)(
+      p), (0, _toConsumableArray3.default)(
+      c.data.reduce(function (p, c) {return [].concat((0, _toConsumableArray3.default)(p), [c.currencyDetails.code]);}, [])));},
+
+    []));});
+
+
+var getBankscurrenciesUniq = (0, _reselect.createSelector)(getBanksCurrencies, function (currencies) {return (
+    (0, _uniq2.default)(currencies));});
+
+var getBankscurrenciesUniqToObj = (0, _reselect.createSelector)(
+getBankscurrenciesUniq,
+function (currencies) {return currencies.map(function (e) {return { label: e, value: e };});});
+
+
+// additional arguments
+/**
+   * @param  {[number]}    index   [number such as 1, 2, 3, 4]
+   * @return {[array]}     banks   [return bank by index]
+   */
+var getBanksByIndex = function getBanksByIndex(state, index) {return getBanks(state)[index];};
+
+/**
+                                                                                                  * @param  {[number]}    index   [number such as 1, 2, 3, 4]
+                                                                                                  * @return {[array]}     banks   [return bank by index]
+                                                                                                  */
+var getBankCurrencyPopularByIndex = function getBankCurrencyPopularByIndex(state, index) {return (
+    getBanksCurrencyPopular(state)[index]);};
+
+/**
+                                                 * @param  {[string]}    acronym   [USD]
+                                                 * @param  {[float]}     num       [money]
+                                                 * @return {[array]}     banks     [return all banks give your high rate bank selling by currency and calculate selling price]
+                                                 */
+var getBanksTopRateValue = function getBanksTopRateValue(state, currenciesMaster, acronym, num) {return (
+    getBanks(state).
+    reduce(
+    function (p, c, k) {
+      // TODO [code fix]: USD case
+      var sort = !c['' + acronym] && acronym !== 'USD' ?
+      [_helpers.currency.defaultCurrency(currenciesMaster, c, acronym)] :
+      c.data.
+      filter(
+      function (e) {return (
+          acronym.toUpperCase().indexOf(e.currencyDetails.code) !==
+          -1 && e.sell !== 0);}).
+
+      map(function (e) {return (0, _extends3.default)({},
+        e, {
+          calSell: _services.number.isNumber(num / e.sell, 0),
+          calBuy: _services.number.isNumber(num / e.buy, 0) });}).
+
+      sort(function (a, b) {return b.calSell - a.calSell;});
+
+      // TODO USD case and duplicate
+      var addFirstLevel = !c['' + acronym] && acronym !== 'USD' ?
+      _helpers.currency.defaultCurrency(currenciesMaster, c, acronym) :
+      sort[0];
+      return [].concat((0, _toConsumableArray3.default)(p), [(0, _extends3.default)({}, c, { data: sort }, addFirstLevel)]);
+    },
+    []).
+
+    sort(function (a, b) {return b.calSell - a.calSell;}));};
+
+/**
+                                                                 * @param  {[array]}    popularCurrencies  ['USD', 'JPJ', 'GBP']
+                                                                 * @param  {[object]}   currenciesMaster   [currency detail give the detail symbol, name, etc...]
+                                                                 * @return {[array]}    banks              [return bank sorted by index]
+                                                                 */
+var getBanksSortByCurrency = function getBanksSortByCurrency(state, currenciesMaster, popularCurrencies) {return (
+    getBanks(state).reduce(
+    function (p, c) {
+      var popular = popularCurrencies.map(
+      function (e, k) {return (
+          !c[e] ?
+          _helpers.currency.defaultCurrency(currenciesMaster, c, e, k) : (0, _extends3.default)({},
+          c[e], { index: k }));});
+
+      var old = c.data.reduce(
+      function (p, c, k) {return (
+          popularCurrencies.every(function (e) {return c.acronym.indexOf(e) === -1;}) ? [].concat((0, _toConsumableArray3.default)(
+          p), [(0, _extends3.default)({}, c, { index: popular.length + p.length })]) :
+          p);},
+      []);
+
+
+      return [].concat((0, _toConsumableArray3.default)(p), [(0, _extends3.default)({}, c, { data: [].concat((0, _toConsumableArray3.default)(popular), (0, _toConsumableArray3.default)(old)) })]);
+    },
+    []));};
+
+
+/**
+               * @param  {[number]}   index                     [number such as 1, 2, 3, 4]
+               * @param  {[array]}    popularcurrenciesLists    ['USD', 'JPJ', 'GBP']
+               * @return {[array]}    banks                     [return banks slice by popular currencies]
+               */
+var getBankCurrencyPopularPropsDataByPopular = function getBankCurrencyPopularPropsDataByPopular(
+state,
+index,
+popularcurrenciesLists) {return (
+
+    getBankCurrencyPopularByIndex(state, index).data.slice(
+    0,
+    popularcurrenciesLists.length));};exports.
+
+
+
+getBanks = getBanks;exports.
+getBanksCurrencyPopular = getBanksCurrencyPopular;exports.
+getBanksName = getBanksName;exports.
+getBanksCurrencies = getBanksCurrencies;exports.
+getBankscurrenciesUniq = getBankscurrenciesUniq;exports.
+getBankscurrenciesUniqToObj = getBankscurrenciesUniqToObj;exports.
+getBanksByIndex = getBanksByIndex;exports.
+getBankCurrencyPopularByIndex = getBankCurrencyPopularByIndex;exports.
+getBanksTopRateValue = getBanksTopRateValue;exports.
+getBanksSortByCurrency = getBanksSortByCurrency;exports.
+getBankCurrencyPopularPropsDataByPopular = getBankCurrencyPopularPropsDataByPopular;

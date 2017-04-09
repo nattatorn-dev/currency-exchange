@@ -1,0 +1,118 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends2 = require('babel-runtime/helpers/extends');var _extends3 = _interopRequireDefault(_extends2);var cov_23kkjgvbka = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/ButtonSetting.js',hash = '71a68567a0a34825c0015c242965b4a0f871e61a',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/modules/app/components/ButtonSetting.js', statementMap: { '0': { start: { line: 6, column: 0 }, end: { line: 11, column: 1 } }, '1': { start: { line: 14, column: 21 }, end: { line: 18, column: 7 } }, '2': { start: { line: 15, column: 4 }, end: { line: 18, column: 7 } }, '3': { start: { line: 19, column: 2 }, end: { line: 29, column: 3 } }, '4': { start: { line: 32, column: 0 }, end: { line: 38, column: 1 } }, '5': { start: { line: 43, column: 25 }, end: { line: 47, column: 7 } }, '6': { start: { line: 44, column: 4 }, end: { line: 47, column: 7 } }, '7': { start: { line: 48, column: 2 }, end: { line: 59, column: 3 } }, '8': { start: { line: 62, column: 0 }, end: { line: 67, column: 1 } }, '9': { start: { line: 72, column: 27 }, end: { line: 76, column: 7 } }, '10': { start: { line: 73, column: 4 }, end: { line: 76, column: 7 } }, '11': { start: { line: 77, column: 2 }, end: { line: 86, column: 3 } }, '12': { start: { line: 89, column: 0 }, end: { line: 94, column: 1 } }, '13': { start: { line: 97, column: 21 }, end: { line: 101, column: 7 } }, '14': { start: { line: 98, column: 4 }, end: { line: 101, column: 7 } }, '15': { start: { line: 102, column: 2 }, end: { line: 111, column: 3 } } }, fnMap: { '0': { name: 'ButtonFontSetting', decl: { start: { line: 13, column: 9 }, end: { line: 13, column: 26 } }, loc: { start: { line: 13, column: 78 }, end: { line: 30, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 14, column: 21 }, end: { line: 14, column: 22 } }, loc: { start: { line: 15, column: 4 }, end: { line: 18, column: 7 } } }, '2': { name: 'ButtonFontStyleSetting', decl: { start: { line: 40, column: 9 }, end: { line: 40, column: 31 } }, loc: { start: { line: 42, column: 2 }, end: { line: 60, column: 1 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 43, column: 25 }, end: { line: 43, column: 26 } }, loc: { start: { line: 44, column: 4 }, end: { line: 47, column: 7 } } }, '4': { name: 'ButtonColorThemeSetting', decl: { start: { line: 69, column: 9 }, end: { line: 69, column: 32 } }, loc: { start: { line: 71, column: 2 }, end: { line: 87, column: 1 } } }, '5': { name: '(anonymous_5)', decl: { start: { line: 72, column: 27 }, end: { line: 72, column: 28 } }, loc: { start: { line: 73, column: 4 }, end: { line: 76, column: 7 } } }, '6': { name: 'ButtonLangSetting', decl: { start: { line: 96, column: 9 }, end: { line: 96, column: 26 } }, loc: { start: { line: 96, column: 72 }, end: { line: 112, column: 1 } } }, '7': { name: '(anonymous_7)', decl: { start: { line: 97, column: 21 }, end: { line: 97, column: 22 } }, loc: { start: { line: 98, column: 4 }, end: { line: 101, column: 7 } } } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_styledComponents = require('styled-components');
+
+var /* istanbul ignore next */_shared = require('../../../shared'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_23kkjgvbka.s[0];
+
+ButtonFontSetting.propTypes = {
+  children: /* istanbul ignore next */_react2.default.PropTypes.string.isRequired,
+  fontFamily: /* istanbul ignore next */_react2.default.PropTypes.string.isRequired,
+  theme: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired,
+  updateSetting: /* istanbul ignore next */_react2.default.PropTypes.func.isRequired };
+
+
+function ButtonFontSetting( /* istanbul ignore next */_ref) {/* istanbul ignore next */var children = _ref.children,theme = _ref.theme,updateSetting = _ref.updateSetting,fontFamily = _ref.fontFamily; /* istanbul ignore next */++cov_23kkjgvbka.f[0];++cov_23kkjgvbka.s[1];
+  var updateFont = function updateFont()
+  {/* istanbul ignore next */++cov_23kkjgvbka.f[1];++cov_23kkjgvbka.s[2];return updateSetting( /* istanbul ignore next */(0, _extends3.default)({},
+    theme, {
+      fontFamily: fontFamily }));
+  }; /* istanbul ignore next */++cov_23kkjgvbka.s[3];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.ButtonHighlight, /* istanbul ignore next */{
+        key: /* istanbul ignore next */'button-font-setting-' + fontFamily,
+        color: '#a6a6a6',
+        hoverColor: '#444',
+        width: '33%',
+        onClick: updateFont },
+
+      children));
+
+
+} /* istanbul ignore next */++cov_23kkjgvbka.s[4];
+
+ButtonFontStyleSetting.propTypes = {
+  children: /* istanbul ignore next */_react2.default.PropTypes.string.isRequired,
+  fontStyle: /* istanbul ignore next */_react2.default.PropTypes.string.isRequired,
+  style: /* istanbul ignore next */_react2.default.PropTypes.object,
+  theme: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired,
+  updateSetting: /* istanbul ignore next */_react2.default.PropTypes.func.isRequired };
+
+
+function ButtonFontStyleSetting( /* istanbul ignore next */_ref2)
+
+{/* istanbul ignore next */var children = _ref2.children,style = _ref2.style,theme = _ref2.theme,updateSetting = _ref2.updateSetting,fontStyle = _ref2.fontStyle; /* istanbul ignore next */++cov_23kkjgvbka.f[2];++cov_23kkjgvbka.s[5];
+  var updateFontSize = function updateFontSize()
+  {/* istanbul ignore next */++cov_23kkjgvbka.f[3];++cov_23kkjgvbka.s[6];return updateSetting( /* istanbul ignore next */(0, _extends3.default)({},
+    theme, {
+      fontStyle: fontStyle }));
+  }; /* istanbul ignore next */++cov_23kkjgvbka.s[7];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.ButtonHighlight, /* istanbul ignore next */{
+        key: /* istanbul ignore next */'button-fontstyle-setting-' + fontStyle,
+        color: '#a6a6a6',
+        hoverColor: '#444',
+        onClick: updateFontSize },
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ style: style },
+        children)));
+
+
+
+} /* istanbul ignore next */++cov_23kkjgvbka.s[8];
+
+ButtonColorThemeSetting.propTypes = {
+  children: /* istanbul ignore next */_react2.default.PropTypes.string.isRequired,
+  theme: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired,
+  themeColor: /* istanbul ignore next */_react2.default.PropTypes.string.isRequired,
+  updateSetting: /* istanbul ignore next */_react2.default.PropTypes.func.isRequired };
+
+
+function ButtonColorThemeSetting( /* istanbul ignore next */_ref3)
+
+{/* istanbul ignore next */var children = _ref3.children,theme = _ref3.theme,updateSetting = _ref3.updateSetting,themeColor = _ref3.themeColor; /* istanbul ignore next */++cov_23kkjgvbka.f[4];++cov_23kkjgvbka.s[9];
+  var updateColorTheme = function updateColorTheme()
+  {/* istanbul ignore next */++cov_23kkjgvbka.f[5];++cov_23kkjgvbka.s[10];return updateSetting( /* istanbul ignore next */(0, _extends3.default)({},
+    theme, {
+      theme: themeColor }));
+  }; /* istanbul ignore next */++cov_23kkjgvbka.s[11];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.ButtonHighlight, /* istanbul ignore next */{
+        key: /* istanbul ignore next */'button-theme-setting-' + themeColor,
+        color: '#a6a6a6',
+        hoverColor: '#444',
+        onClick: updateColorTheme },
+
+      children));
+
+
+} /* istanbul ignore next */++cov_23kkjgvbka.s[12];
+
+ButtonLangSetting.propTypes = {
+  children: /* istanbul ignore next */_react2.default.PropTypes.string.isRequired,
+  lang: /* istanbul ignore next */_react2.default.PropTypes.string.isRequired,
+  theme: /* istanbul ignore next */_react2.default.PropTypes.object.isRequired,
+  updateSetting: /* istanbul ignore next */_react2.default.PropTypes.func.isRequired };
+
+
+function ButtonLangSetting( /* istanbul ignore next */_ref4) {/* istanbul ignore next */var children = _ref4.children,theme = _ref4.theme,updateSetting = _ref4.updateSetting,lang = _ref4.lang; /* istanbul ignore next */++cov_23kkjgvbka.f[6];++cov_23kkjgvbka.s[13];
+  var updateLang = function updateLang()
+  {/* istanbul ignore next */++cov_23kkjgvbka.f[7];++cov_23kkjgvbka.s[14];return updateSetting( /* istanbul ignore next */(0, _extends3.default)({},
+    theme, {
+      lang: lang }));
+  }; /* istanbul ignore next */++cov_23kkjgvbka.s[15];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_shared.ButtonHighlight, /* istanbul ignore next */{
+        key: /* istanbul ignore next */'button-lang-setting-' + lang,
+        color: '#a6a6a6',
+        hoverColor: '#444',
+        onClick: updateLang },
+
+      children));
+
+
+} /* istanbul ignore next */exports.default =
+
+{
+  ButtonFontSetting: /* istanbul ignore next */(0, _styledComponents.withTheme)(ButtonFontSetting),
+  ButtonFontStyleSetting: /* istanbul ignore next */(0, _styledComponents.withTheme)(ButtonFontStyleSetting),
+  ButtonColorThemeSetting: /* istanbul ignore next */(0, _styledComponents.withTheme)(ButtonColorThemeSetting),
+  ButtonLangSetting: /* istanbul ignore next */(0, _styledComponents.withTheme)(ButtonLangSetting) };

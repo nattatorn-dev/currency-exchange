@@ -1,0 +1,15 @@
+'use strict';var _selectors = require('../selectors');
+var _constants = require('../../../constants');
+
+describe('app selector', function () {
+  var state = { app: { setting: _constants.setting, controller: _constants.controller } };
+  it('selects all app', function () {
+    expect((0, _selectors.getApp)(state)).toEqual({ setting: _constants.setting, controller: _constants.controller });
+  });
+  it('selects setting app', function () {
+    expect((0, _selectors.getAppSetting)(state)).toEqual(_constants.setting);
+  });
+  it('selects controller app', function () {
+    expect((0, _selectors.getAppController)(state)).toEqual(_constants.controller);
+  });
+});

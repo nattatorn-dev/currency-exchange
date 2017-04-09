@@ -1,0 +1,21 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_26vn6yruaz = function () {var path = '/Users/nattatorn.dev/projects/currency-exchange/src/routes/index.js',hash = '0c4d348a9decf4c3ff4f0e69417efc1d5f0fc7a4',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/nattatorn.dev/projects/currency-exchange/src/routes/index.js', statementMap: { '0': { start: { line: 12, column: 4 }, end: { line: 18, column: 12 } }, '1': { start: { line: 20, column: 2 }, end: { line: 20, column: 15 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 10, column: 15 }, end: { line: 10, column: 16 } }, loc: { start: { line: 10, column: 21 }, end: { line: 21, column: 1 } } } }, branchMap: {}, s: { '0': 0, '1': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRouter = require('react-router');
+var /* istanbul ignore next */_modules = require('../modules'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+
+
+
+
+
+function () {/* istanbul ignore next */++cov_26vn6yruaz.f[0];
+  var routes = /* istanbul ignore next */(++cov_26vn6yruaz.s[0],
+  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Route, /* istanbul ignore next */{ path: '/', component: /* istanbul ignore next */_modules.App },
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.IndexRedirect, /* istanbul ignore next */{ to: '/USD' }),
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Route, /* istanbul ignore next */{ path: '/:login', component: /* istanbul ignore next */_modules.CurrencyPopularPage }),
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Route, /* istanbul ignore next */{ path: '/:login/:name', component: /* istanbul ignore next */_modules.CurrencyExchangePage }),
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Route, /* istanbul ignore next */{ path: '/404', component: /* istanbul ignore next */_modules.NotFoundPage }),
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Route, /* istanbul ignore next */{ path: '*', component: /* istanbul ignore next */_modules.NotFoundPage }))); /* istanbul ignore next */++cov_26vn6yruaz.s[1];
+
+
+  return routes;
+};
