@@ -1,5 +1,6 @@
 
 # # React Universal Saga (currency-exchange)
+[![Build Status](https://travis-ci.org/nattatorn-dev/currency-exchange.svg?branch=master)](https://travis-ci.org/nattatorn-dev/currency-exchange)
 ---
 
 ## Getting Started
