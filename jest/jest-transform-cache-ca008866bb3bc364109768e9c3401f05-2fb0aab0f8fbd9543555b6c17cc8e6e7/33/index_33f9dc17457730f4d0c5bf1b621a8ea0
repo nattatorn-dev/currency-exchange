@@ -1,0 +1,4 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.controller = exports.setting = undefined;var _setting = require('constants/setting');
+var _controller = require('constants/controller');exports.
+
+setting = _setting.setting;exports.controller = _controller.controller;

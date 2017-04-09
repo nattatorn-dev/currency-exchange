@@ -1,0 +1,34 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.resetController = exports.updateController = exports.resetSetting = exports.updateSetting = exports.resetErrorMessage = exports.updateRouterState = exports.navigate = exports.RESET_CONTROLLER = exports.UPDATE_CONTROLLER = exports.RESET_SETTING = exports.UPDATE_SETTING = exports.RESET_ERROR_MESSAGE = exports.UPDATE_ROUTER_STATE = exports.NAVIGATE = undefined;var _action = require('services/action');
+
+var NAVIGATE = 'NAVIGATE';
+var UPDATE_ROUTER_STATE = 'UPDATE_ROUTER_STATE';
+var RESET_ERROR_MESSAGE = 'RESET_ERROR_MESSAGE';
+var UPDATE_SETTING = 'UPDATE_SETTING';
+var RESET_SETTING = 'RESET_SETTING';
+var UPDATE_CONTROLLER = 'UPDATE_CONTROLLER';
+var RESET_CONTROLLER = 'RESET_CONTROLLER';
+
+var navigate = function navigate(pathname) {return (0, _action.action)(NAVIGATE, { pathname: pathname });};
+var updateRouterState = function updateRouterState(state) {return (0, _action.action)(UPDATE_ROUTER_STATE, { state: state });};
+var resetErrorMessage = function resetErrorMessage() {return (0, _action.action)(RESET_ERROR_MESSAGE);};
+var updateSetting = function updateSetting(setting) {return (0, _action.action)(UPDATE_SETTING, { setting: setting });};
+var resetSetting = function resetSetting() {return (0, _action.action)(RESET_SETTING);};
+var updateController = function updateController(controller) {return (
+    (0, _action.action)(UPDATE_CONTROLLER, { controller: controller }));};
+var resetController = function resetController() {return (0, _action.action)(RESET_CONTROLLER);};exports.
+
+
+NAVIGATE = NAVIGATE;exports.
+UPDATE_ROUTER_STATE = UPDATE_ROUTER_STATE;exports.
+RESET_ERROR_MESSAGE = RESET_ERROR_MESSAGE;exports.
+UPDATE_SETTING = UPDATE_SETTING;exports.
+RESET_SETTING = RESET_SETTING;exports.
+UPDATE_CONTROLLER = UPDATE_CONTROLLER;exports.
+RESET_CONTROLLER = RESET_CONTROLLER;exports.
+navigate = navigate;exports.
+updateRouterState = updateRouterState;exports.
+resetErrorMessage = resetErrorMessage;exports.
+updateSetting = updateSetting;exports.
+resetSetting = resetSetting;exports.
+updateController = updateController;exports.
+resetController = resetController;

@@ -1,0 +1,29 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.toggleShowCurrencyPopular = exports.updateCurrencyPopular = exports.loadCurrencyPopularPage = exports.banks = exports.LOAD_CURRENCY_POPULAR_PAGE = exports.TOGGLE_SHOW_CURRENCY_POPULAR = exports.UPDATE_CURRENCY_POPULAR = exports.BANKS = undefined;var _action = require('services/action');
+
+var BANKS = (0, _action.createRequestTypes)('BANKS');
+var UPDATE_CURRENCY_POPULAR = 'UPDATE_CURRENCY_POPULAR';
+var TOGGLE_SHOW_CURRENCY_POPULAR = 'TOGGLE_SHOW_CURRENCY_POPULAR';
+var LOAD_CURRENCY_POPULAR_PAGE = 'LOAD_CURRENCY_POPULAR_PAGE';
+
+var banks = {
+  request: function request() {return (0, _action.action)(BANKS.REQUEST);},
+  success: function success(response) {return (0, _action.action)(BANKS.SUCCESS, { response: response });},
+  failure: function failure(error) {return (0, _action.action)(BANKS.FAILURE, { error: error });} };
+
+
+var loadCurrencyPopularPage = function loadCurrencyPopularPage(login) {var requiredFields = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];return (
+    (0, _action.action)(LOAD_CURRENCY_POPULAR_PAGE, { login: login, requiredFields: requiredFields }));};
+var updateCurrencyPopular = function updateCurrencyPopular(index, data) {return (
+    (0, _action.action)(UPDATE_CURRENCY_POPULAR, { index: index, data: data }));};
+var toggleShowCurrencyPopular = function toggleShowCurrencyPopular(index) {return (
+    (0, _action.action)(TOGGLE_SHOW_CURRENCY_POPULAR, { index: index }));};exports.
+
+
+BANKS = BANKS;exports.
+UPDATE_CURRENCY_POPULAR = UPDATE_CURRENCY_POPULAR;exports.
+TOGGLE_SHOW_CURRENCY_POPULAR = TOGGLE_SHOW_CURRENCY_POPULAR;exports.
+LOAD_CURRENCY_POPULAR_PAGE = LOAD_CURRENCY_POPULAR_PAGE;exports.
+banks = banks;exports.
+loadCurrencyPopularPage = loadCurrencyPopularPage;exports.
+updateCurrencyPopular = updateCurrencyPopular;exports.
+toggleShowCurrencyPopular = toggleShowCurrencyPopular;

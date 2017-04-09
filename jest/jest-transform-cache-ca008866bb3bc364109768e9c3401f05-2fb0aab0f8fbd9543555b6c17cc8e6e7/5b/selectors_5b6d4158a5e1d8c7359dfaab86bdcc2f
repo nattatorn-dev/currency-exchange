@@ -1,0 +1,5 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });var getApp = function getApp(state) {return state.app;};
+var getAppSetting = function getAppSetting(state) {return getApp(state).setting;};
+var getAppController = function getAppController(state) {return getApp(state).controller;};exports.
+
+getApp = getApp;exports.getAppSetting = getAppSetting;exports.getAppController = getAppController;
