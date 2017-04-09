@@ -1,0 +1,3 @@
+# Linguist language overrides
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
