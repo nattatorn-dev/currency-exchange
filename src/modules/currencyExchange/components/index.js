@@ -1,4 +1,4 @@
-import ComparisonList from './ComparisonList'
+import ComparisonList     from './ComparisonList'
 import SectionCalculation from './SectionCalculation'
 
 export default {

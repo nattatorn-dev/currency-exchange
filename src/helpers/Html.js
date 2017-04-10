@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
-import ReactDOM from 'react-dom/server'
-import serialize from 'serialize-javascript'
-import Helmet from 'react-helmet'
-import config from 'config'
-import styleSheet from 'styled-components/lib/models/StyleSheet'
+import ReactDOM                        from 'react-dom/server'
+import serialize                       from 'serialize-javascript'
+import Helmet                          from 'react-helmet'
+import config                          from 'config'
+import styleSheet                      from 'styled-components/lib/models/StyleSheet'
 
 class Html extends Component {
   static propTypes = {

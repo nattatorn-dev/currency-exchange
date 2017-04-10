@@ -1,12 +1,12 @@
-import React from 'react'
-import { render } from 'react-dom'
+import React           from 'react'
+import { render }      from 'react-dom'
 import GoogleAnalytics from 'react-ga'
-import { Root } from 'modules'
-import rootSaga from 'rootSaga'
-import getRoutes from 'routes'
-import { history } from 'services'
-import configureStore from 'store/configureStore'
-import config from 'config'
+import { Root }        from 'modules'
+import rootSaga        from 'rootSaga'
+import getRoutes       from 'routes'
+import { history }     from 'services'
+import configureStore  from 'store/configureStore'
+import config          from 'config'
 
 const dest = document.getElementById( 'content' )
 const store = configureStore(history, window.__data); // eslint-disable-line

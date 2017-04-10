@@ -1,4 +1,4 @@
-import currencyPopular from '../currencyPopular'
+import currencyPopular  from '../currencyPopular'
 import * as ActionTypes from '../../actions'
 
 describe( 'router currencyPopular', () => {

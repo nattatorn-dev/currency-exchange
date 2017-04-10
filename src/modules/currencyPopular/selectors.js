@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect'
-import uniq from 'lodash/uniq'
-import { number } from 'services'
-import { currency } from 'helpers'
+import uniq               from 'lodash/uniq'
+import { number }         from 'services'
+import { currency }       from 'helpers'
 
 const getBanks = state => state.entities.banks
 const getBanksCurrencyPopular = state => state.feature.currencyPopular.banks

@@ -1,12 +1,12 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import React, { Component, PropTypes }              from 'react'
+import { connect }                                  from 'react-redux'
+import { bindActionCreators }                       from 'redux'
 import { loadCurrencyExchange, loadMoreStargazers } from './actions'
-import { getBankCurrencyExchange } from './selectors'
-import { getAppSetting } from '../app/selectors'
+import { getBankCurrencyExchange }                  from './selectors'
+import { getAppSetting }                            from '../app/selectors'
 
-import { ComparisonList } from './components'
-import { Container } from 'shared'
+import { ComparisonList }                           from './components'
+import { Container }                                from 'shared'
 
 class CurrencyExchangePage extends Component {
   static propTypes = {

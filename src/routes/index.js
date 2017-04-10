@@ -1,11 +1,11 @@
-import React from 'react'
+import React                    from 'react'
 import { Route, IndexRedirect } from 'react-router'
 import {
   App,
   NotFoundPage,
   CurrencyPopularPage,
   CurrencyExchangePage,
-} from 'modules'
+}                               from 'modules'
 
 const Routes = () => (
   <Route path="/" component={App}>

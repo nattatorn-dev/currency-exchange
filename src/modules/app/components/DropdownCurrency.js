@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import Select from 'react-select'
+import Select                          from 'react-select'
 
-import CurrencyOption from './CurrencyOption'
-import CurrencyValue from './CurrencyValue'
+import CurrencyOption                  from './CurrencyOption'
+import CurrencyValue                   from './CurrencyValue'
 
 const arrowRenderer = () => <span>+</span>
 

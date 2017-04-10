@@ -1,14 +1,14 @@
 import { take, put, call, fork, select } from 'redux-saga/effects'
-import * as actions from './actions'
+import * as actions                      from './actions'
 import {
   getBanks,
   getBankCurrencyPopularByIndex,
   getBankCurrencyPopularPropsDataByPopular,
   getBanksByIndex,
-} from './selectors'
-import { getAppSetting } from '../app/selectors'
-import { fetchBanks } from './fecth'
-import { currency } from 'helpers'
+}                                        from './selectors'
+import { getAppSetting }                 from '../app/selectors'
+import { fetchBanks }                    from './fecth'
+import { currency }                      from 'helpers'
 
 const {
   LOAD_CURRENCY_POPULAR_PAGE,

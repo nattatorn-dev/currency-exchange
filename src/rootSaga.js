@@ -1,7 +1,6 @@
-import { fork } from 'redux-saga/effects'
-
-import { sagas as appSagas } from 'modules/app'
-import { sagas as currencyPopularSagas } from 'modules/currencyPopular'
+import { fork }                           from 'redux-saga/effects'
+import { sagas as appSagas }              from 'modules/app'
+import { sagas as currencyPopularSagas }  from 'modules/currencyPopular'
 import { sagas as currencyExchangeSagas } from 'modules/currencyExchange'
 
 export default function* rootSaga () {

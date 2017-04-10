@@ -1,5 +1,5 @@
-import React from 'react'
-import { withTheme } from 'styled-components'
+import React               from 'react'
+import { withTheme }       from 'styled-components'
 
 import { ButtonHighlight } from 'shared'
 

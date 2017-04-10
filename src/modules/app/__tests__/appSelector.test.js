@@ -1,5 +1,5 @@
 import { getApp, getAppSetting, getAppController } from '../selectors'
-import { setting, controller } from '../../../constants'
+import { setting, controller }                     from '../../../constants'
 
 describe( 'app selector', () => {
   const state = { app: { setting, controller } }

@@ -1,12 +1,12 @@
-import { currencies } from '../../../assets/data/currenciesMaster'
+import { currencies }                 from '../../../assets/data/currenciesMaster'
 
 import 'isomorphic-fetch'
 import { Schema, arrayOf, normalize } from 'normalizr'
-import { camelizeKeys } from 'humps'
-import config from 'config'
-import { getBanksSortByCurrency } from 'modules/currencyPopular/selectors'
-import { number } from 'services'
-import { currency } from 'helpers'
+import { camelizeKeys }               from 'humps'
+import config                         from 'config'
+import { getBanksSortByCurrency }     from 'modules/currencyPopular/selectors'
+import { number }                     from 'services'
+import { currency }                   from 'helpers'
 
 async function callBankApi ( endpoint ) {
   let fullUrl = endpoint.indexOf( config.apiBank.proxy ) === -1

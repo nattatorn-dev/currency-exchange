@@ -1,11 +1,11 @@
-import React, { Component, PropTypes } from 'react'
-import HamburgerMenu from 'react-hamburger-menu'
-import NumberInput from 'react-number-input'
-import { url } from 'helpers'
+import React, { Component, PropTypes }          from 'react'
+import HamburgerMenu                            from 'react-hamburger-menu'
+import NumberInput                              from 'react-number-input'
+import { url }                                  from 'helpers'
 
-import SettingOption from './SettingOption'
-import ArrowDropdown from './ArrowDropdown'
-import DropdownCurrency from './DropdownCurrency'
+import SettingOption                            from './SettingOption'
+import ArrowDropdown                            from './ArrowDropdown'
+import DropdownCurrency                         from './DropdownCurrency'
 import { InputInterval, LinkImage, SpanSymbol } from '../../../shared'
 
 const THB = [

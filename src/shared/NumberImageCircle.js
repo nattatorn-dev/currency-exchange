@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled      from 'styled-components'
 import NumberImage from 'shared/NumberImage'
 
 const NumberImageCircle = styled( NumberImage )`

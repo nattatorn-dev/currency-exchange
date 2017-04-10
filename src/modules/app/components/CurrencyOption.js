@@ -1,5 +1,5 @@
-import React from 'react'
-import { url } from 'helpers'
+import React                     from 'react'
+import { url }                   from 'helpers'
 
 import { DropdownCurrencyImage } from 'shared'
 

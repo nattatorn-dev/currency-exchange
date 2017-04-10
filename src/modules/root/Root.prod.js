@@ -1,8 +1,8 @@
-import has from 'lodash/has'
+import has                             from 'lodash/has'
 import React, { Component, PropTypes } from 'react'
-import { Provider } from 'react-redux'
-import { Router, RouterContext } from 'react-router'
-import GoogleAnalytics from 'react-ga'
+import { Provider }                    from 'react-redux'
+import { Router, RouterContext }       from 'react-router'
+import GoogleAnalytics                 from 'react-ga'
 
 export default class Root extends Component {
   constructor ( props ) {

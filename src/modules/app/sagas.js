@@ -1,5 +1,5 @@
-import { take } from 'redux-saga/effects'
-import { history } from 'services'
+import { take }     from 'redux-saga/effects'
+import { history }  from 'services'
 import * as actions from './actions'
 
 const { NAVIGATE } = actions

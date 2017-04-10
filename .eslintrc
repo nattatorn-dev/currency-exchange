@@ -7,6 +7,10 @@
   },
   "parser": "babel-eslint",
   "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "sourceType": "module"
   },
   "rules": {
@@ -41,7 +45,10 @@
     "array-bracket-spacing": [ 2, "always" ],
     "object-curly-spacing": [ 2, "always" ],
     "computed-property-spacing": [ 2, "always" ],
-    "no-multiple-empty-lines": [ 2, { "max": 1, "maxEOF": 0, "maxBOF": 0 } ],
+    "no-multi-spaces": [
+        "error",
+        {"exceptions": {"ImportDeclaration": true}}
+    ],
 
     // strings
     "quotes": [ 2, "single", "avoid-escape" ],
@@ -57,14 +64,14 @@
     "prefer-const": 1,
 
     // comma
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": ["error", "always-multiline"]
   },
   "plugins": [
     "react",
     "import",
     "standard",
     "promise",
-    "no-unused-vars-rest",
+    "no-unused-vars-rest"
   ],
   "settings": {
     "import/parser": "babel-eslint",

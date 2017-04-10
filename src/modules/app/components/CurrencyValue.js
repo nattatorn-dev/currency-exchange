@@ -1,6 +1,6 @@
-import React from 'react'
-import { url } from 'helpers'
-import { withTheme } from 'styled-components'
+import React                     from 'react'
+import { url }                   from 'helpers'
+import { withTheme }             from 'styled-components'
 
 import { DropdownCurrencyImage } from 'shared'
 

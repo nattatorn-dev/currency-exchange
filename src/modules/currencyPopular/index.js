@@ -1,7 +1,7 @@
-import * as actions from './actions'
-import * as sagas from './sagas'
-import * as selectors from './selectors'
-import * as reducer from './reducers'
+import * as actions       from './actions'
+import * as sagas         from './sagas'
+import * as selectors     from './selectors'
+import * as reducer       from './reducers'
 
 import CurrencyPopularPage from './CurrencyPopularPage'
 

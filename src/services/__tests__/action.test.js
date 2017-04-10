@@ -1,5 +1,5 @@
 import { fetchActios, action, createRequestTypes } from '../action'
-import * as ActionTypes from '../../modules/app/actions'
+import * as ActionTypes                            from '../../modules/app/actions'
 
 describe( 'services action', () => {
   it( 'fetchActios', () => {

@@ -1,7 +1,7 @@
-import React from 'react'
-import { storiesOf, action } from '@kadira/storybook'
+import React                        from 'react'
+import { storiesOf, action }        from '@kadira/storybook'
 import { withKnobs, text, boolean } from '@kadira/storybook-addon-knobs'
-import ButtonHighlight from '../ButtomHighlight'
+import ButtonHighlight              from '../ButtomHighlight'
 
 const buttonStyles = {
   backgroundColor: '#FFFFFF',

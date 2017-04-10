@@ -1,7 +1,7 @@
-import app from './app'
-import entities from './entities'
+import app          from './app'
+import entities     from './entities'
 import errorMessage from './errorMessage'
-import router from './router'
+import router       from './router'
 
 export default {
   app,

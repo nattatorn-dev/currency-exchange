@@ -1,7 +1,7 @@
-import React from 'react'
+import React                       from 'react'
 import { StickyContainer, Sticky } from 'react-sticky'
-import { url } from 'helpers'
-import { number } from 'services'
+import { url }                     from 'helpers'
+import { number }                  from 'services'
 
 import {
   BankImageCircle,
@@ -12,7 +12,7 @@ import {
   TdBorder,
   TdBorderHeader,
   TdBorderNumber,
-} from 'shared'
+}                                   from 'shared'
 
 PopularList.propTypes = {
   actions: React.PropTypes.shape( {

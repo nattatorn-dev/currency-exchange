@@ -1,6 +1,6 @@
-import React from 'react'
-import { url } from 'helpers'
-import { number } from 'services'
+import React              from 'react'
+import { url }            from 'helpers'
+import { number }         from 'services'
 
 import SectionCalculation from './SectionCalculation'
 import {
@@ -11,7 +11,7 @@ import {
   TdBorder,
   TdBorderHeader,
   TdBorderNumber,
-} from 'shared'
+}                          from 'shared'
 
 ComparisonList.propTypes = {
   banks: React.PropTypes.array.isRequired,

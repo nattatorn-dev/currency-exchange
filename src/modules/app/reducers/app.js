@@ -1,5 +1,5 @@
-import moment from 'moment'
-import * as ActionTypes from '../actions'
+import moment                  from 'moment'
+import * as ActionTypes        from '../actions'
 import { setting, controller } from '../../../constants'
 
 const initialState = () => ( {

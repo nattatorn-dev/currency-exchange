@@ -1,8 +1,8 @@
-import { take, put, call, select } from 'redux-saga/effects'
-import { currencies } from '../../../assets/data/currenciesMaster'
-import * as actions from './actions'
+import { take, put, call, select }        from 'redux-saga/effects'
+import { currencies }                     from '../../../assets/data/currenciesMaster'
+import * as actions                       from './actions'
 import { getBanks, getBanksTopRateValue } from '../currencyPopular/selectors'
-import { fetchBanks } from '../currencyPopular/fecth'
+import { fetchBanks }                     from '../currencyPopular/fecth'
 
 const { addCurrencyExchange } = actions
 
