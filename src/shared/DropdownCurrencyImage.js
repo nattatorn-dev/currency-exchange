@@ -1,5 +1,5 @@
-import styled  from 'styled-components'
-import { url } from 'helpers'
+import styled        from 'styled-components'
+import { url }       from 'helpers'
 
 import CurrencyImage from './CurrencyImage'
 
