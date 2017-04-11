@@ -1,6 +1,6 @@
 import Main          from './Main'
 import Theme         from './Theme'
-import Header        from './Header'
+import Header        from './Header.Container'
 import Nav           from './Nav'
 import Footer        from './Footer'
 import SettingOption from './SettingOption'

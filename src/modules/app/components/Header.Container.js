@@ -5,7 +5,7 @@ import { url }                                  from 'helpers'
 
 import SettingOption                            from './SettingOption'
 import ArrowDropdown                            from './ArrowDropdown'
-import DropdownCurrency                         from './DropdownCurrency'
+import DropdownCurrency                         from './DropdownCurrency.Container'
 import { InputInterval, LinkImage, SpanSymbol } from '../../../shared'
 
 const THB = [
