@@ -9,6 +9,9 @@ describe( 'app reducer', () => {
       setting,
       controller,
       date: moment().startOf( 'day' ).toISOString(),
+      delay: {
+        fetchBanks: 60,
+      },
     } )
   } )
 
