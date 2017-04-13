@@ -7,32 +7,21 @@ import 'moment/locale/en-au'
  * @return {[string]}     date           | '13 April 2017 12:00 AM' |
  */
 // April 13, 2017 12:00 AM
-const dateTimeFormat = date => moment( date ).format( 'LLL' )
+const dateTimeFormat = date => moment( date )
 // April 13, 2017
-const dateFormat = date => moment( date ).format( 'LL' )
+const dateFormat = date => dateTimeFormat( date ).format( 'LL' )
 // Apr 13, 2017
-const dateShortFormat = date => moment( date ).format( 'll' )
+const dateShortFormat = date => dateTimeFormat( date ).format( 'll' )
 // 13 เมษายน 2560 เวลา 0:00
-const thaiDateTimeFormat = date =>
-  moment( date )
-  .add( 543, 'year' )
-  .locale( 'th' )
-  .format( 'LLL' )
-// 13 เมษายน 2560
-const thaiDateFormat = date =>
-  moment( date )
-  .add( 543, 'year' )
-  .locale( 'th' )
-  .format( 'LL' )
-// 13 เม.ย. 2560
-const thaiDateShortFormat = date =>
-  moment( date )
-  .add( 543, 'year' )
-  .locale( 'th' )
-  .format( 'll' )
+const thaiDateTimeFormat = date => moment( date ).add( 543, 'year' ).locale( 'th' )
 
-const minute = () => 60 * 1000
+// 13 เมษายน 2560
+const thaiDateFormat = date => thaiDateTimeFormat( date ).format( 'LL' )
+// 13 เม.ย. 2560
+const thaiDateShortFormat = date => thaiDateTimeFormat( date ).format( 'll' )
+
 const second = () => 10 * 100
+const minute = () => 60 * second()
 
 export {
   dateFormat,
