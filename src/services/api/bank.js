@@ -8,7 +8,7 @@ import { getBanksSortByCurrency }     from 'modules/currencyPopular/selectors'
 import { number }                     from 'services'
 import { currency }                   from 'helpers'
 
-const callBankApi = async( endpoint ) => {
+async function callBankApi ( endpoint ) {
   let fullUrl = endpoint.indexOf( config.apiBank.proxy ) === -1
     ? `${ config.apiBank.proxy }/${ endpoint }`
     : endpoint

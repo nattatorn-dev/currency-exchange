@@ -1,13 +1,16 @@
 import { take, put, call, fork, select } from 'redux-saga/effects'
+import { delay }                         from 'redux-saga'
 import * as actions                      from './actions'
+import * as appActions                      from '../app/actions'
 import {
   getBanks,
   getBankCurrencyPopularByIndex,
   getBankCurrencyPopularPropsDataByPopular,
   getBanksByIndex,
 }                                        from './selectors'
-import { getAppSetting }                 from '../app/selectors'
+import { getAppSetting, getDelay }       from '../app/selectors'
 import { fetchBanks }                    from './fecth'
+import { datetime }                      from 'services'
 import { currency }                      from 'helpers'
 
 const {
@@ -17,10 +20,32 @@ const {
   updateCurrencyPopular,
 } = actions
 
+const {
+  updateDelayByName,
+  resetDelayByName,
+} = appActions
+
 function* loadBanks ( requiredFields ) {
   const banks = yield select( getBanks )
   if ( banks.length === 0 ) {
     yield call( fetchBanks )
+  }
+}
+
+function* forceLoadBanks () {
+  yield call( fetchBanks )
+}
+
+function* intervalLoadBanks () {
+  const { fetchBanks } = yield select( getDelay )
+  if ( fetchBanks !== 0 ) {
+    yield call( delay, datetime.second() )
+    yield put( updateDelayByName( 'fetchBanks', fetchBanks - 1 ) )
+    yield * intervalLoadBanks()
+  } else {
+    yield * forceLoadBanks()
+    yield put( resetDelayByName( 'fetchBanks' ) )
+    yield * intervalLoadBanks()
   }
 }
 
@@ -30,6 +55,7 @@ function* watchLoadCurrencyPopularPage () {
       LOAD_CURRENCY_POPULAR_PAGE,
     )
     yield fork( loadBanks )
+    yield * intervalLoadBanks()
   }
 }
 

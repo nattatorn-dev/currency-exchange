@@ -5,6 +5,7 @@ import ButtonHighlight       from 'shared/ButtomHighlight'
 import ButtonLoader          from 'shared/ButtonLoader'
 import Container             from 'shared/Container'
 import CurrencyImage         from 'shared/CurrencyImage'
+import DateTimeBar           from 'shared/DateTimeBar'
 import DropdownCurrencyImage from 'shared/DropdownCurrencyImage'
 import InputInterval         from 'shared/InputInterval'
 import LinkImage             from 'shared/LinkImage'
@@ -26,6 +27,7 @@ export default {
   ButtonLoader,
   Container,
   CurrencyImage,
+  DateTimeBar,
   DropdownCurrencyImage,
   InputInterval,
   LinkImage,

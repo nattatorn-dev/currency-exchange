@@ -11,14 +11,17 @@ const DropdownCurrency = React.createClass( {
     hint: React.PropTypes.string,
     initialState: React.PropTypes.object,
   },
+
   getInitialState () {
     return this.props.initialState
   },
+
   setValue ( value ) {
     const { router: { params: { name } }, onChange } = this.props
     this.setState( { value } )
     onChange( `${ value.value }/${ name }` )
   },
+
   render () {
     const placeholder = <span>Select Currency</span>
 

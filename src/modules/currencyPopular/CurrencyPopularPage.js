@@ -3,11 +3,11 @@ import { connect }                                            from 'react-redux'
 import { bindActionCreators }                                 from 'redux'
 import { toggleShowCurrencyPopular, loadCurrencyPopularPage } from './actions'
 import { getBanksName }                                       from './selectors'
-import { getAppSetting }                                      from '../app/selectors'
+import { getAppSetting, getDate, getDelay }                   from '../app/selectors'
 import { loadBanks }                                          from './sagas'
 
 import { PopularList }                                        from './components'
-import { Container }                                          from 'shared'
+import { Container, DateTimeBar }                             from 'shared'
 
 class CurrencyPopularPage extends Component {
   static propTypes = {
@@ -16,6 +16,8 @@ class CurrencyPopularPage extends Component {
       toggleShowCurrencyPopular: PropTypes.func.isRequired,
     } ),
     banks: PropTypes.array,
+    date: PropTypes.string.isRequired,
+    delay: PropTypes.object.isRequired,
     login: PropTypes.string.isRequired,
     setting: PropTypes.object,
   };
@@ -34,6 +36,7 @@ class CurrencyPopularPage extends Component {
     return !this.props.banks
       ? <h1><i>Loading...</i></h1>
       : <Container padding={'0 5% 5% 5%'}>
+          <DateTimeBar date={this.props.date} delay={this.props.delay} />
           <PopularList {...this.props} />
         </Container>
   }
@@ -49,6 +52,8 @@ const mapStateToProps = state => {
     banks,
     login,
     banksName: getBanksName( state ),
+    date: getDate( state ),
+    delay: getDelay( state ),
     setting: getAppSetting( state ),
   }
 }

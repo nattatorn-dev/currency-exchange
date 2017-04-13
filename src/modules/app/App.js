@@ -1,8 +1,8 @@
-import React, { Component, PropTypes }      from 'react'
-import { bindActionCreators }               from 'redux'
-import { connect }                          from 'react-redux'
-import Helmet                               from 'react-helmet'
-import { StickyContainer, Sticky }          from 'react-sticky'
+import React, { Component, PropTypes } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import Helmet from 'react-helmet'
+import { StickyContainer, Sticky } from 'react-sticky'
 import './global-styles'
 import {
   navigate,
@@ -10,9 +10,9 @@ import {
   updateController,
   updateRouterState,
   updateSetting,
-}                                           from './actions'
-import { getAppSetting, getAppController }  from './selectors'
-import { getBankscurrenciesUniqToObj }      from '../currencyPopular/selectors'
+} from './actions'
+import { getAppSetting, getAppController } from './selectors'
+import { getBankscurrenciesUniqToObj } from '../currencyPopular/selectors'
 
 import { Main, Theme, Header, Nav, Footer } from './components'
 
@@ -105,12 +105,14 @@ class App extends Component {
                 />
               </Theme>
               <Nav />
-              <Footer />
             </Sticky>
             <Theme setting={setting}>
               {children}
             </Theme>
           </Main>
+          <Theme setting={setting}>
+            <Footer />
+          </Theme>
         </StickyContainer>
       </div>
     )
