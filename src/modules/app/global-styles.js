@@ -23,6 +23,15 @@ injectGlobal`
     }
   }
 
+  ${/* override css */ '' }
+  .number-input-theme-white::placeholder {
+    color: rgb(68, 68, 68);
+  }
+
+  .number-input-theme-night::placeholder {
+    color: #CCC;
+  }
+
   .Select-control {
     border: 0px;
   }

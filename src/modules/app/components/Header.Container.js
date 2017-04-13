@@ -88,6 +88,7 @@ export default class Header extends Component {
           </div>
           <div style={{ display: 'block', float: 'left' }}>
             <NumberInput
+              className={`number-input-theme-${ setting.theme }`}
               style={{
                 backgroundColor: currentTheme.inputBackgroundColorPrimary,
                 backgroundImage: 'none',
