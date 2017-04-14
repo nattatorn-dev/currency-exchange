@@ -19,7 +19,7 @@ function DateTimeBar ( { date, delay, theme } ) {
       <span>
         {renderDateTime()}
       </span>
-      <div style={{ width: 30 }}>
+      <div style={{ width: 40 }}>
         <Circle strokeWidth="10" percent={100 * delay.fetchBanks / 60} />
         <div
           style={{

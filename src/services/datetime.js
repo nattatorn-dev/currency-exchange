@@ -22,6 +22,7 @@ const thaiDateShortFormat = date => thaiDateTimeFormat( date ).format( 'll' )
 
 const second = () => 10 * 100
 const minute = () => 60 * second()
+const hour = () => 60 * minute()
 
 export {
   dateFormat,
@@ -32,4 +33,5 @@ export {
   thaiDateFormat,
   thaiDateShortFormat,
   thaiDateTimeFormat,
+  hour,
 }
