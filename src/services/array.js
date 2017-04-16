@@ -48,4 +48,10 @@ const splice = ( array, start, deleteCount, ...items ) => [
   ...array.slice( start + deleteCount ),
 ]
 
-export { deleteByIndex, findAndReplace, pop, shift, splice }
+/**
+   * @param  {[array]}        array           | ['USD', 'JPY', 'GBP'] |
+   * @return {[array]}        array           | ['GBP'] | get last element and return new array
+   */
+const getLast = array => array.slice(-1)
+
+export { deleteByIndex, findAndReplace, getLast, pop, shift, splice }
