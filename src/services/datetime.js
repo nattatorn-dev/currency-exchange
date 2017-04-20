@@ -14,9 +14,9 @@ const dateFormat = date => dateTimeFormat( date ).format( 'LL' )
 const dateShortFormat = date => dateTimeFormat( date ).format( 'll' )
 // 13 เมษายน 2560 เวลา 0:00
 const thaiDateTimeFormat = date => moment( date ).add( 543, 'year' ).locale( 'th' )
-
-// 13 เมษายน 2560
-const thaiDateFormat = date => thaiDateTimeFormat( date ).format( 'LL' )
+// วันที่ 13 เมษายน 2560
+const thaiDateFormat = ( date, prefix = 'วันที่' ) =>
+  `${ prefix } ${ thaiDateTimeFormat( date ).format( 'LL' ) }`
 // 13 เม.ย. 2560
 const thaiDateShortFormat = date => thaiDateTimeFormat( date ).format( 'll' )
 
