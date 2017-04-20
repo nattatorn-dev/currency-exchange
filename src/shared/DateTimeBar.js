@@ -11,20 +11,33 @@ DateTimeBar.propTypes = {
 
 function DateTimeBar ( { date, delay, theme } ) {
   const renderDateTime = () =>
-    theme.lang === 'th'
+    ( theme.lang === 'th'
       ? datetime.thaiDateFormat( date )
-      : datetime.dateFormat( date )
+      : datetime.dateFormat( date ) )
   return (
-    <div>
-      <span>
+    <div
+      style={{
+        boxSizing: 'border-box',
+        display: 'flex',
+        justifyContent: 'space-between',
+        margin: '0px auto',
+        paddingBottom: '10px',
+        paddingTop: '10px',
+        width: '100%',
+      }}
+    >
+      <p>
         {renderDateTime()}
-      </span>
-      <div style={{ width: 40 }}>
+      </p>
+      <div style={{ width: '40px', height: '40px' }} placeholder="auto refresh">
         <Circle strokeWidth="10" percent={100 * delay.fetchBanks / 60} />
         <div
           style={{
-            position: 'absolute',
-            top: '88px',
+            position: 'relative',
+            top: '-30px',
+            right: '-12px',
+            width: '16px',
+            textAlign: 'center',
           }}
         >
           {delay.fetchBanks}

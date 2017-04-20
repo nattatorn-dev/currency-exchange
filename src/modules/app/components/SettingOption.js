@@ -1,11 +1,11 @@
-import React from 'react'
+import React    from 'react'
 
 import {
   ButtonFontSetting,
   ButtonFontStyleSetting,
   ButtonColorThemeSetting,
   ButtonLangSetting,
-} from './ButtonSetting'
+}                from './ButtonSetting'
 import { Popup } from 'shared'
 
 SettingOption.propTypes = {

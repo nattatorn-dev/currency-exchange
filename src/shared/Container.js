@@ -15,7 +15,7 @@ const Container = styled.div`
 
   /* Small Devices, Tablets */
   @media only screen and (min-width : 768px) {
-    margin: ${ props => props.margin || '8px 0 0 0' };
+    margin: ${ props => props.margin || '15px 0 0 0' };
     padding: ${ props => props.padding || 0 };
   }
 
