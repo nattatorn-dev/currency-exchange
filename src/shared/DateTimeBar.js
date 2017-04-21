@@ -17,12 +17,12 @@ function DateTimeBar ( { date, delay, theme } ) {
   return (
     <div
       style={{
+        borderTop: `1px solid ${ theme.themes[ theme.theme ].borderPrimary }`,
         boxSizing: 'border-box',
         display: 'flex',
         justifyContent: 'space-between',
         margin: '0px auto',
-        paddingBottom: '10px',
-        paddingTop: '10px',
+        padding: '10px 0',
         width: '100%',
       }}
     >
@@ -34,10 +34,10 @@ function DateTimeBar ( { date, delay, theme } ) {
         <div
           style={{
             position: 'relative',
-            top: '-30px',
             right: '-12px',
-            width: '16px',
             textAlign: 'center',
+            top: '-30px',
+            width: '16px',
           }}
         >
           {delay.fetchBanks}
