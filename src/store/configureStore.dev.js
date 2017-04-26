@@ -1,26 +1,37 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import createLogger                              from 'redux-logger'
 import createSagaMiddleware, { END }             from 'redux-saga'
-import { DevTools }                              from 'modules'
 import rootReducer                               from 'rootReducer'
 
+/**
+ * Method to create stores based on a set of passed
+ * reducers
+ * @param {object} history
+ * @param {object} initialState
+ * @return {object} redux store
+ */
 export default function configureStore ( history, initialState ) {
   const sagaMiddleware = createSagaMiddleware()
+  const middleware = applyMiddleware( sagaMiddleware, createLogger() )
+  const createStoreWithMiddleware = compose(
+    middleware,
+    __CLIENT__ && typeof window.devToolsExtension !== 'undefined'
+      ? window.devToolsExtension()
+      : f => f,
+  )
 
-  const store = createStore(
+  const composeEnhancers =
+    ( __CLIENT__ && typeof window.devToolsExtension !== 'undefined' ) || compose
+  const store = createStoreWithMiddleware( createStore )(
     rootReducer,
     initialState,
-    compose(
-      applyMiddleware( sagaMiddleware, createLogger() ),
-      DevTools.instrument(),
-    ),
   )
 
   if ( module.hot ) {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept( '../rootReducer.js', () => {
       // eslint-disable-next-line
-      const nextRootReducer = require('../rootReducer').default;
+      const nextRootReducer = require('../rootReducer').default
       store.replaceReducer( nextRootReducer )
     } )
   }
