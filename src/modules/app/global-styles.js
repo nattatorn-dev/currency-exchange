@@ -33,6 +33,6 @@ injectGlobal`
   }
 
   .Select-control {
-    border: 0px;
+    border: 0px !important;
   }
 `
