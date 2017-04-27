@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 
 const TdBorder = styled.td`
-  border-top: ${ props =>
-  `1px solid ${ props.theme.themes[ props.theme.theme ].borderPrimary }` };
-  color: ${ props => props.theme.themes[ props.theme.theme ].fontColorBold };
+  border-top: ${ ( { theme: { themes, currentTheme } } ) => `1px solid ${ themes[ currentTheme ].borderPrimary }` };
+  color: ${ ( { theme: { themes, currentTheme } } ) => themes[ currentTheme ].fontColorBold };
   line-height: 1.42;
   padding: 8px;
-  text-align: ${ props => props.align || 'left' };
+  text-align: ${ ( { align = 'left' } ) => align };
   vertical-align: middle;
 `
 

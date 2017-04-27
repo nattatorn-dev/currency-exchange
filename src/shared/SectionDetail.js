@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const SectionDetail = styled.div`
-  font-size: ${ props =>
-  props.theme.fontStyles[ props.theme.fontStyle ].fontDetailSize };
+  font-size: ${ ( { theme: { fontStyles, currentFontStyle } } ) => fontStyles[ currentFontStyle ].fontDetailSize };
 `
 export default SectionDetail

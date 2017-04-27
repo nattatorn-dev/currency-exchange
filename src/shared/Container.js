@@ -15,20 +15,20 @@ const Container = styled.div`
 
   /* Small Devices, Tablets */
   @media only screen and (min-width : 768px) {
-    margin: ${ props => props.margin || '15px 0 0 0' };
-    padding: ${ props => props.padding || 0 };
+    margin: ${ ( { margin = '15px 0 0 0' } ) => margin };
+    padding: ${ ( { padding = 0 } ) => padding };
   }
 
   /* Medium Devices, Desktops */
   @media only screen and (min-width : 992px) {
-    margin: ${ props => props.margin || '8px 0 0 0' };
-    padding: ${ props => props.padding || 0 };
+    margin: ${ ( { margin = '8px 0 0 0' } ) => margin };
+    padding: ${ ( { padding = 0 } ) => padding };
   }
 
   /* Large Devices, Wide Screens */
   @media only screen and (min-width : 1200px) {
-    margin: ${ props => props.margin || '8px 0 0 0' };
-    padding: ${ props => props.padding || 0 };
+    margin: ${ ( { margin = '8px 0 0 0' } ) => margin };
+    padding: ${ ( { padding = 0 } ) => padding };
   }
 `
 

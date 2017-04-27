@@ -37,7 +37,7 @@ export default class Header extends Component {
   onPriceChange = e => {
     const { router: { params: { login } }, onChange } = this.props
     onChange( `${ login }/${ e }` )
-  };
+  }
 
   handleDropDownClick = e => {
     e.stopPropagation()
@@ -45,11 +45,11 @@ export default class Header extends Component {
       ...this.props.controller,
       dropdownMenuStyleOpen: !this.props.controller.dropdownMenuStyleOpen,
     } )
-  };
+  }
 
   render () {
     const { router, onChange, setting } = this.props
-    const currentTheme = setting.themes[ setting.theme ]
+    const currentTheme = setting.themes[ setting.currentTheme ]
     const styleHeader = () => ( {
       top: 0,
       background: currentTheme.backgroundColorSecondary,
@@ -60,7 +60,8 @@ export default class Header extends Component {
       fontSize: '12px',
     } )
 
-    const value = this.props.router &&
+    const value =
+      this.props.router &&
       this.props.router.params &&
       this.props.router.params.name
     return (
@@ -154,7 +155,10 @@ export default class Header extends Component {
           <ArrowDropdown
             dropdownMenuStyleOpen={this.props.controller.dropdownMenuStyleOpen}
           >
-            <SettingOption updateSetting={this.props.updateSetting} />
+            <SettingOption
+              updateSetting={this.props.updateSetting}
+              setting={this.props.setting}
+            />
           </ArrowDropdown>
         </div>
       </header>

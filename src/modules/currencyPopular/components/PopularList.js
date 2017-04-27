@@ -12,7 +12,7 @@ import {
   TdBorder,
   TdBorderHeader,
   TdBorderNumber,
-}                                   from 'shared'
+}                                  from 'shared'
 
 PopularList.propTypes = {
   actions: React.PropTypes.shape( {
@@ -27,9 +27,12 @@ PopularList.defaultProps = {
   loadingLabel: 'Loading...',
 }
 
-function PopularList (
-  { actions: { toggleShowCurrencyPopular }, banks, loadingLabel, setting },
-) {
+function PopularList ( {
+  actions: { toggleShowCurrencyPopular },
+  banks,
+  loadingLabel,
+  setting,
+} ) {
   const styleImage = e => ( {
     backgroundImage: url.currency( e.currencyDetails.code ),
     height: '30px',
@@ -40,7 +43,8 @@ function PopularList (
     boxShadow: '0 0 8px rgba(0, 0, 0, .2)',
   } )
 
-  const extendName = ( { extendName } ) => extendName ? ` : ${ extendName }` : null
+  const extendName = ( { extendName } ) =>
+    ( extendName ? ` : ${ extendName }` : null )
   const listCurrencies = ( { data } ) =>
     data.map( ( e, k ) => (
       <tr key={k}>
@@ -63,8 +67,8 @@ function PopularList (
       </tr>
     ) )
 
-  const renderToggle = ( { isTotal } ) => isTotal ? 'show less' : 'show more'
-  const currLang = setting.langs[ setting.lang ].messages
+  const renderToggle = ( { isTotal } ) => ( isTotal ? 'show less' : 'show more' )
+  const currentLang = setting.langs[ setting.currentLang ].messages
 
   const listBanks = () =>
     banks.map( ( e, k ) => (
@@ -82,13 +86,13 @@ function PopularList (
             <thead>
               <tr>
                 <TdBorderHeader>
-                  {currLang.BANK_TABLE_COL_CURRENCIES}
+                  {currentLang.BANK_TABLE_COL_CURRENCIES}
                 </TdBorderHeader>
                 <TdBorderHeader align={'right'}>
-                  {currLang.BANK_TABLE_COL_SELL}
+                  {currentLang.BANK_TABLE_COL_SELL}
                 </TdBorderHeader>
                 <TdBorderHeader align={'right'}>
-                  {currLang.BANK_TABLE_COL_BUY}
+                  {currentLang.BANK_TABLE_COL_BUY}
                 </TdBorderHeader>
               </tr>
             </thead>

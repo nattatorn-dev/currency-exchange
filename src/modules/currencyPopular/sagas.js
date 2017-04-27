@@ -1,7 +1,7 @@
 import { take, put, call, fork, select } from 'redux-saga/effects'
 import { delay }                         from 'redux-saga'
 import * as actions                      from './actions'
-import * as appActions                      from '../app/actions'
+import * as appActions                   from '../app/actions'
 import {
   getBanks,
   getBankCurrencyPopularByIndex,
@@ -55,7 +55,7 @@ function* watchLoadCurrencyPopularPage () {
       LOAD_CURRENCY_POPULAR_PAGE,
     )
     yield fork( loadBanks )
-    yield * intervalLoadBanks()
+    // yield * intervalLoadBanks()
   }
 }
 

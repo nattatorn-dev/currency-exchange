@@ -6,9 +6,9 @@ const NumberImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-image: ${ props => url.number( props.number ) };
-  height: ${ props => props.size || '30px' };
+  height: ${ ( { size = '30px' } ) => size };
   margin: 0;
-  width:${ props => props.size || '30px' };
+  width: ${ ( { size = '30px' } ) => size };
 `
 
 export default NumberImage

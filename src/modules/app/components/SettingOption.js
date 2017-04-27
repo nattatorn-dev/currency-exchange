@@ -1,18 +1,19 @@
-import React    from 'react'
+import React                    from 'react'
 
 import {
   ButtonFontSetting,
   ButtonFontStyleSetting,
   ButtonColorThemeSetting,
   ButtonLangSetting,
-}                from './ButtonSetting'
-import { Popup } from 'shared'
+}                               from './ButtonSetting'
+import { Popup }                from 'shared'
 
 SettingOption.propTypes = {
+  setting: React.PropTypes.object.isRequired,
   updateSetting: React.PropTypes.func.isRequired,
 }
 
-function SettingOption ( { updateSetting } ) {
+function SettingOption ( { setting, updateSetting } ) {
   const handleClick = e => {
     e.preventDefault()
     e.stopPropagation()
@@ -28,50 +29,74 @@ function SettingOption ( { updateSetting } ) {
     >
       <Popup>
         <ButtonFontStyleSetting
-          updateSetting={updateSetting}
           fontStyle={'normal'}
+          setting={setting}
           style={{ fontSize: '14px', verticalAlign: 'middle' }}
+          updateSetting={updateSetting}
         >
           A
         </ButtonFontStyleSetting>
         <ButtonFontStyleSetting
-          updateSetting={updateSetting}
           fontStyle={'medium'}
+          setting={setting}
           style={{ fontSize: '20px', verticalAlign: 'middle' }}
+          updateSetting={updateSetting}
         >
           A
         </ButtonFontStyleSetting>
       </Popup>
       <Popup>
         <ButtonColorThemeSetting
+          setting={setting}
+          themeStyle={'white'}
           updateSetting={updateSetting}
-          themeColor={'white'}
         >
           White
         </ButtonColorThemeSetting>
         <ButtonColorThemeSetting
+          setting={setting}
+          themeStyle={'night'}
           updateSetting={updateSetting}
-          themeColor={'night'}
         >
           Night
         </ButtonColorThemeSetting>
       </Popup>
       <Popup>
-        <ButtonFontSetting updateSetting={updateSetting} fontFamily={'arial'}>
+        <ButtonFontSetting
+          fontFamily={'arial'}
+          setting={setting}
+          updateSetting={updateSetting}
+        >
           Arial
         </ButtonFontSetting>
-        <ButtonFontSetting updateSetting={updateSetting} fontFamily={'kanit'}>
+        <ButtonFontSetting
+          fontFamily={'kanit'}
+          setting={setting}
+          updateSetting={updateSetting}
+        >
           Kanit
         </ButtonFontSetting>
-        <ButtonFontSetting updateSetting={updateSetting} fontFamily={'athiti'}>
+        <ButtonFontSetting
+          fontFamily={'athiti'}
+          setting={setting}
+          updateSetting={updateSetting}
+        >
           Athiti
         </ButtonFontSetting>
       </Popup>
       <div>
-        <ButtonLangSetting updateSetting={updateSetting} lang={'th'}>
+        <ButtonLangSetting
+          lang={'th'}
+          setting={setting}
+          updateSetting={updateSetting}
+        >
           TH
         </ButtonLangSetting>
-        <ButtonLangSetting updateSetting={updateSetting} lang={'en'}>
+        <ButtonLangSetting
+          lang={'en'}
+          setting={setting}
+          updateSetting={updateSetting}
+        >
           EN
         </ButtonLangSetting>
       </div>

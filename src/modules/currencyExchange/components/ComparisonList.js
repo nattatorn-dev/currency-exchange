@@ -18,10 +18,16 @@ ComparisonList.propTypes = {
   setting: React.PropTypes.object.isRequired,
 }
 
-function ComparisonList ( { banks, banks: [ firstBank ], loadingLabel, setting } ) {
+function ComparisonList ( {
+  banks,
+  banks: [ firstBank ],
+  loadingLabel,
+  setting,
+  setting: { langs, currentLang, themes, currentTheme },
+} ) {
   const renderHighLevel = number =>
-    number < 4 ? <NumberImageCircle number={number} size={'25px'} /> : null
-  const currLang = setting.langs[ setting.lang ].messages
+    ( number < 4 ? <NumberImageCircle number={number} size={'25px'} /> : null )
+  const currLang = langs[ currentLang ].messages
   const listCurrencies = (
     { bankNameThai, bankNameEng, data: [ firstBank ] },
     k,
@@ -60,7 +66,7 @@ function ComparisonList ( { banks, banks: [ firstBank ], loadingLabel, setting }
       <tr
         key={`calculation-${ bankNameEng }`}
         style={{
-          backgroundColor: setting.themes[ setting.theme ].backgroundColorDetail,
+          backgroundColor: themes[ currentTheme ].backgroundColorDetail,
           textAlign: 'right',
           letterSpacing: '0.5px',
         }}

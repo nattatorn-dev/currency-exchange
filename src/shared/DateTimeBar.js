@@ -9,15 +9,19 @@ DateTimeBar.propTypes = {
   theme: React.PropTypes.object.isRequired,
 }
 
-function DateTimeBar ( { date, delay, theme } ) {
+function DateTimeBar ( {
+  date,
+  delay,
+  theme: { currentLang, currentTheme, themes },
+} ) {
   const renderDateTime = () =>
-    ( theme.lang === 'th'
+    ( currentLang === 'th'
       ? datetime.thaiDateFormat( date )
       : datetime.dateFormat( date ) )
   return (
     <div
       style={{
-        borderTop: `1px solid ${ theme.themes[ theme.theme ].borderPrimary }`,
+        borderTop: `1px solid ${ themes[ currentTheme ].borderPrimary }`,
         boxSizing: 'border-box',
         display: 'flex',
         justifyContent: 'space-between',

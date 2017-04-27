@@ -8,14 +8,14 @@ SectionCalculation.propTypes = {
 }
 
 function SectionCalculation ( { firstBank, setting } ) {
-  const currLang = setting.langs[ setting.lang ].messages
+  const currentLang = setting.langs[ setting.currentLang ].messages
 
   return (
     <td colSpan="4">
       <div style={{ paddingLeft: '15px', paddingRight: '15px' }}>
         <div style={{ marginBottom: '10px' }}>
           <h4>
-            {currLang.BANK_TABLE_COL_CALCULATION_LABEL}
+            {currentLang.BANK_TABLE_COL_CALCULATION_LABEL}
           </h4>
         </div>
         <div>
@@ -30,7 +30,7 @@ function SectionCalculation ( { firstBank, setting } ) {
               <div>
                 <p>
                   {
-                    `${ currLang.BANK_TABLE_COL_CALCULATION_BUY }
+                    `${ currentLang.BANK_TABLE_COL_CALCULATION_BUY }
                     ${ number.isNumber( number.mathRound( firstBank.calSell, 6 ) ) }
                     ${ firstBank.currencyDetails.symbol }`
                   }
@@ -41,7 +41,7 @@ function SectionCalculation ( { firstBank, setting } ) {
               <div>
                 <p>
                   {
-                    `${ currLang.BANK_TABLE_COL_CALCULATION_SELL }
+                    `${ currentLang.BANK_TABLE_COL_CALCULATION_SELL }
                     ${ number.isNumber( number.mathRound( firstBank.calBuy, 6 ) ) }
                     ${ firstBank.currencyDetails.symbol }`
                   }

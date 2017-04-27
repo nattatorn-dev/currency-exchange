@@ -6,9 +6,21 @@ Theme.propTypes = {
   setting: React.PropTypes.object.isRequired,
 }
 
-function Theme ( { children, setting } ) {
+function Theme ( {
+  children,
+  setting: {
+    currentLayout,
+    currentSortCurrenciesLists,
+    currentSortBanksLists,
+    currentDropdownCurrencies,
+    currentNumberDigit,
+    currentLang,
+    langs,
+    ...theme
+  },
+} ) {
   return (
-    <ThemeProvider theme={setting}>
+    <ThemeProvider theme={theme}>
       {children}
     </ThemeProvider>
   )

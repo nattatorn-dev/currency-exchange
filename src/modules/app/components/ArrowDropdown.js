@@ -7,20 +7,18 @@ ArrowDropdown.propTypes = {
   theme: React.PropTypes.object.isRequired,
 }
 
-function ArrowDropdown (
-  {
-    children,
-    dropdownMenuStyleOpen,
-    theme,
-  },
-) {
+function ArrowDropdown ( {
+  children,
+  dropdownMenuStyleOpen,
+  theme: { themes, currentTheme },
+} ) {
   const stlyeArrowDropdown = () => ( {
     backgroundClip: 'padding-box',
-    backgroundColor: theme.themes[ theme.theme ].backgroundColorPrimary,
+    backgroundColor: themes[ currentTheme ].backgroundColorPrimary,
     border: '1px solid rgba(0,0,0,.07)',
     borderRadius: '1px',
     boxShadow: '0 6px 12px rgba(0,0,0,.175)',
-    color: theme.themes[ theme.theme ].fontColorPrimary,
+    color: themes[ currentTheme ].fontColorPrimary,
     display: dropdownMenuStyleOpen ? 'block' : 'none',
     float: 'left',
     fontSize: '14px',
@@ -58,7 +56,7 @@ function ArrowDropdown (
   } )
 
   const stlyeRightLine = () => ( {
-    borderBottom: `9px solid ${ theme.themes[ theme.theme ].backgroundColorPrimary }`,
+    borderBottom: `9px solid ${ themes[ currentTheme ].backgroundColorPrimary }`,
     borderLeft: '9px solid transparent',
     borderRight: '9px solid transparent',
     display: 'inline-block',

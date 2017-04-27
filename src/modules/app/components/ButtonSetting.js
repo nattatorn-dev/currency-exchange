@@ -1,20 +1,19 @@
 import React               from 'react'
-import { withTheme }       from 'styled-components'
 
 import { ButtonHighlight } from 'shared'
 
 ButtonFontSetting.propTypes = {
   children: React.PropTypes.string.isRequired,
   fontFamily: React.PropTypes.string.isRequired,
-  theme: React.PropTypes.object.isRequired,
+  setting: React.PropTypes.object.isRequired,
   updateSetting: React.PropTypes.func.isRequired,
 }
 
-function ButtonFontSetting ( { children, theme, updateSetting, fontFamily } ) {
+function ButtonFontSetting ( { children, fontFamily, setting, updateSetting } ) {
   const updateFont = () =>
     updateSetting( {
-      ...theme,
-      fontFamily,
+      ...setting,
+      currentFontFamily: fontFamily,
     } )
   return (
     <ButtonHighlight
@@ -32,18 +31,22 @@ function ButtonFontSetting ( { children, theme, updateSetting, fontFamily } ) {
 ButtonFontStyleSetting.propTypes = {
   children: React.PropTypes.string.isRequired,
   fontStyle: React.PropTypes.string.isRequired,
+  setting: React.PropTypes.object.isRequired,
   style: React.PropTypes.object,
-  theme: React.PropTypes.object.isRequired,
   updateSetting: React.PropTypes.func.isRequired,
 }
 
-function ButtonFontStyleSetting (
-  { children, style, theme, updateSetting, fontStyle },
-) {
+function ButtonFontStyleSetting ( {
+  children,
+  fontStyle,
+  setting,
+  style,
+  updateSetting,
+} ) {
   const updateFontSize = () =>
     updateSetting( {
-      ...theme,
-      fontStyle,
+      ...setting,
+      currentFontStyle: fontStyle,
     } )
   return (
     <ButtonHighlight
@@ -61,22 +64,25 @@ function ButtonFontStyleSetting (
 
 ButtonColorThemeSetting.propTypes = {
   children: React.PropTypes.string.isRequired,
-  theme: React.PropTypes.object.isRequired,
-  themeColor: React.PropTypes.string.isRequired,
+  setting: React.PropTypes.object.isRequired,
+  themeStyle: React.PropTypes.string.isRequired,
   updateSetting: React.PropTypes.func.isRequired,
 }
 
-function ButtonColorThemeSetting (
-  { children, theme, updateSetting, themeColor },
-) {
+function ButtonColorThemeSetting ( {
+  children,
+  setting,
+  themeStyle,
+  updateSetting,
+} ) {
   const updateColorTheme = () =>
     updateSetting( {
-      ...theme,
-      theme: themeColor,
+      ...setting,
+      currentTheme: themeStyle,
     } )
   return (
     <ButtonHighlight
-      key={`button-theme-setting-${ themeColor }`}
+      key={`button-theme-setting-${ themeStyle }`}
       color={'#a6a6a6'}
       hoverColor={'#444'}
       onClick={updateColorTheme}
@@ -89,15 +95,15 @@ function ButtonColorThemeSetting (
 ButtonLangSetting.propTypes = {
   children: React.PropTypes.string.isRequired,
   lang: React.PropTypes.string.isRequired,
-  theme: React.PropTypes.object.isRequired,
+  setting: React.PropTypes.object.isRequired,
   updateSetting: React.PropTypes.func.isRequired,
 }
 
-function ButtonLangSetting ( { children, theme, updateSetting, lang } ) {
+function ButtonLangSetting ( { children, lang, setting, updateSetting } ) {
   const updateLang = () =>
     updateSetting( {
-      ...theme,
-      lang,
+      ...setting,
+      currentLang: lang,
     } )
   return (
     <ButtonHighlight
@@ -112,8 +118,8 @@ function ButtonLangSetting ( { children, theme, updateSetting, lang } ) {
 }
 
 export default {
-  ButtonFontSetting: withTheme( ButtonFontSetting ),
-  ButtonFontStyleSetting: withTheme( ButtonFontStyleSetting ),
-  ButtonColorThemeSetting: withTheme( ButtonColorThemeSetting ),
-  ButtonLangSetting: withTheme( ButtonLangSetting ),
+  ButtonFontSetting: ButtonFontSetting,
+  ButtonFontStyleSetting: ButtonFontStyleSetting,
+  ButtonColorThemeSetting: ButtonColorThemeSetting,
+  ButtonLangSetting: ButtonLangSetting,
 }

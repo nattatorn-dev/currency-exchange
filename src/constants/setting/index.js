@@ -4,17 +4,17 @@ import { fontStyles }   from './fontStyles'
 import { fontFamilies } from './fontFamilies'
 
 export const setting = {
-  layout: '', // bank dill down, bank column
-  popularCurrenciesLists: [ 'USD', 'GBP', 'EUR', 'JPY', 'CNY' ], // relate dropdowncurrencies
-  popularBanksLists: [ 'KBANK' ],
-  dropdownCurrencies: 'THB',
-  numberDigit: 5,
-  lang: 'th', // th, en
+  currentLayout: 'BANK', // bank dill down, bank column
+  currentSortCurrenciesLists: [ 'USD', 'GBP', 'EUR', 'JPY', 'CNY' ], // relate dropdowncurrencies
+  currentSortBanksLists: [ 'KBANK' ],
+  currentDropdownCurrencies: 'USD',
+  currentNumberDigit: 5,
+  currentLang: 'th',
+  currentTheme: 'white',
+  currentFontStyle: 'normal',
+  currentFontFamily: 'arial',
   langs,
-  theme: 'white',
   themes,
-  fontStyle: 'normal',
   fontStyles,
-  fontFamily: 'arial',
   fontFamilies,
 }

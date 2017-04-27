@@ -1,22 +1,22 @@
-import React from 'react'
+import React         from 'react'
 import { withTheme } from 'styled-components'
 
-const Footer = ( { theme } ) => (
+const Footer = ( { theme: { themes, currentTheme } } ) => (
   <footer>
     <div
       style={{
-        borderTop: `1px solid ${ theme.themes[ theme.theme ].borderPrimary }`,
+        borderTop: `1px solid ${ themes[ currentTheme ].borderPrimary }`,
         textAlign: 'center',
         padding: '1rem 0',
-        background: theme.themes[ theme.theme ].backgroundColorPrimary,
-        color: theme.themes[ theme.theme ].fontColorPrimary,
+        background: themes[ currentTheme ].backgroundColorPrimary,
+        color: themes[ currentTheme ].fontColorPrimary,
       }}
     >
       <div>
         <small>
           Copyright © 2017
           {' '}
-          <span style={{ color: theme.themes[ theme.theme ].fontColorHighlight }}>
+          <span style={{ color: themes[ currentTheme ].fontColorHighlight }}>
             Currency Exchange.
           </span>
           {' '}

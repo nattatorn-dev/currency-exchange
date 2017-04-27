@@ -8,15 +8,17 @@ LinkImage.propTypes = {
   width: React.PropTypes.object,
 }
 
-function LinkImage ( { theme, link = '/', style = { width: '46px' } } ) {
+function LinkImage ( {
+  theme: { themes, currentTheme },
+  link = '/',
+  style = { width: '46px' },
+} ) {
   return (
     <IndexLink to={{ link }}>
       <img
         alt="logo"
         style={style}
-        src={
-          `${ require( `../../assets/images/${ theme.themes[ theme.theme ].logo }.svg` ) }`
-        }
+        src={`${ require( `../../assets/images/${ themes[ currentTheme ].logo }.svg` ) }`}
       />
     </IndexLink>
   )

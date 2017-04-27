@@ -1,6 +1,6 @@
-import React from 'react'
-import { url } from 'helpers'
-import { withTheme } from 'styled-components'
+import React                     from 'react'
+import { url }                   from 'helpers'
+import { withTheme }             from 'styled-components'
 
 import { DropdownCurrencyImage } from 'shared'
 
@@ -12,12 +12,18 @@ CurrencyValue.propTypes = {
   value: React.PropTypes.object,
 }
 
-function CurrencyValue ( { children, disabled, placeholder, theme, value } ) {
+function CurrencyValue ( {
+  children,
+  disabled,
+  placeholder,
+  theme: { themes, currentTheme },
+  value,
+} ) {
   const styleDropdown = {
-    border: `1px solid ${ theme.themes[ theme.theme ].inputBorderColorPrimary }`,
+    border: `1px solid ${ themes[ currentTheme ].inputBorderColorPrimary }`,
     borderRadius: '4px',
     boxSizing: 'border-box',
-    color: theme.themes[ theme.theme ].fontColorPrimary,
+    color: themes[ currentTheme ].fontColorPrimary,
     left: '0',
     maxWidth: '100%',
     overflow: 'hidden',
@@ -28,11 +34,11 @@ function CurrencyValue ( { children, disabled, placeholder, theme, value } ) {
     top: '0',
     whiteSpace: 'nowrap',
   }
-  const styleIsDisabled = disabled && theme.theme === 'white'
+  const styleIsDisabled = disabled && currentTheme === 'white'
     ? styleDropdown
     : {
       ...styleDropdown,
-      backgroundColor: theme.themes[ theme.theme ].inputBackgroundColorPrimary,
+      backgroundColor: themes[ currentTheme ].inputBackgroundColorPrimary,
     }
   return (
     <div style={styleIsDisabled} title={value.title}>

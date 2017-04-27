@@ -1,6 +1,6 @@
-import moment from 'moment'
-import app from '../app'
-import * as ActionTypes from '../../actions'
+import moment                  from 'moment'
+import app                     from '../app'
+import * as ActionTypes        from '../../actions'
 import { setting, controller } from '../../../../constants'
 
 describe( 'app reducer', () => {
@@ -29,10 +29,10 @@ describe( 'app reducer', () => {
     const curState = { setting, controller }
     const action = {
       type: ActionTypes.UPDATE_SETTING,
-      setting: { ...setting, lang: 'en' },
+      setting: { ...setting, currentLang: 'en' },
     }
     const nextState = app( curState, action )
-    const expectedState = { setting: { ...setting, lang: 'en' }, controller }
+    const expectedState = { setting: { ...setting, currentLang: 'en' }, controller }
     expect( nextState ).toEqual( expectedState )
     expect( nextState ).not.toBe( curState )
   } )

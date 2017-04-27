@@ -5,8 +5,8 @@ import BankImage from 'shared/BankImage'
 
 const BankImageCircle = styled( BankImage )`
   border-radius: 150px;
-  border: ${ props => `5px solid ${ url.matchingBankColor( props.bank.toUpperCase() ) }` };
-  box-shadow: ${ props => `0 0 2px ${ props.theme.themes[ props.theme.theme ].shadowPrimary }` };
+  border: ${ ( { bank } ) => `5px solid ${ url.matchingBankColor( bank.toUpperCase() ) }` };
+  box-shadow: ${ ( { theme: { themes, currentTheme } } ) => `0 0 2px ${ themes[ currentTheme ].shadowPrimary }` };
   margin: 0;
 `
 
