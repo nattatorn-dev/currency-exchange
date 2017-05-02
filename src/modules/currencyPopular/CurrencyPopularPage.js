@@ -33,10 +33,11 @@ class CurrencyPopularPage extends Component {
   }
 
   render () {
-    return !this.props.banks
+    const { banks, date, delay, setting } = this.props
+    return !banks
       ? <h1><i>Loading...</i></h1>
       : <Container padding={'0 5% 5% 5%'}>
-          <DateTimeBar date={this.props.date} delay={this.props.delay} />
+          <DateTimeBar date={date} delay={delay} setting={setting}/>
           <PopularList {...this.props} />
         </Container>
   }

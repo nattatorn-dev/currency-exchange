@@ -1,11 +1,11 @@
-import React, { Component, PropTypes }          from 'react'
-import HamburgerMenu                            from 'react-hamburger-menu'
-import NumberInput                              from 'react-number-input'
-import { url }                                  from 'helpers'
+import React, { Component, PropTypes } from 'react'
+import HamburgerMenu from 'react-hamburger-menu'
+import NumberInput from 'react-number-input'
+import { url } from 'helpers'
 
-import SettingOption                            from './SettingOption'
-import ArrowDropdown                            from './ArrowDropdown'
-import DropdownCurrency                         from './DropdownCurrency.Container'
+import SettingOption from './SettingOption'
+import ArrowDropdown from './ArrowDropdown'
+import DropdownCurrency from './DropdownCurrency.Container'
 import { InputInterval, LinkImage, SpanSymbol } from '../../../shared'
 
 const THB = [
@@ -89,14 +89,14 @@ export default class Header extends Component {
           </div>
           <div style={{ display: 'block', float: 'left' }}>
             <NumberInput
-              className={`number-input-theme-${ setting.theme }`}
+              className={`number-input-theme-${ setting.currentTheme }`}
               style={{
                 backgroundColor: currentTheme.inputBackgroundColorPrimary,
                 backgroundImage: 'none',
                 border: `1px solid ${ currentTheme.inputBorderColorPrimary }`,
                 borderRadius: '4px',
                 display: 'block',
-                fontSize: '15px',
+                fontSize: '13.5px',
                 height: '34px',
                 lineHeight: '1.42857143',
                 padding: '0 10px',

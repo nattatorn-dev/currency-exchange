@@ -29,7 +29,7 @@ injectGlobal`
   }
 
   .number-input-theme-night::placeholder {
-    color: #CCC;
+    color: rgb(204, 204, 204);
   }
 
   .Select-control {

@@ -12,7 +12,7 @@ DateTimeBar.propTypes = {
 function DateTimeBar ( {
   date,
   delay,
-  theme: { currentLang, currentTheme, themes },
+  setting: { currentLang, currentTheme, themes },
 } ) {
   const renderDateTime = () =>
     ( currentLang === 'th'
@@ -34,7 +34,7 @@ function DateTimeBar ( {
         {renderDateTime()}
       </p>
       <div style={{ width: '40px', height: '40px' }} placeholder="auto refresh">
-        <Circle strokeWidth="10" percent={100 * delay.fetchBanks / 60} />
+        <Circle trailWidth="4" strokeWidth="10" percent={100 * delay.fetchBanks / 60} />
         <div
           style={{
             position: 'relative',
