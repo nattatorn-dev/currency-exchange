@@ -10,8 +10,8 @@ function Theme ( {
   children,
   setting: {
     currentLayout,
-    currentSortCurrenciesLists,
-    currentSortBanksLists,
+    currentSortCurrencies,
+    currentSortBanks,
     currentDropdownCurrencies,
     currentNumberDigit,
     currentLang,
