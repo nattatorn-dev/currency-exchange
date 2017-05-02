@@ -6,7 +6,7 @@ const NumberImageCircle = styled( NumberImage )`
   border-radius: 150px;
   box-shadow: ${ ( { theme: { themes, currentTheme } } ) => `0 0 2px ${ themes[ currentTheme ].shadowPrimary }` };
   color: ${ ( { theme: { themes, currentTheme } } ) => themes[ currentTheme ].textPrimary };
-  margin: -25px 0 0 18px;
+  margin: ${ ( { margin = '0px' } ) => margin };
 `
 
 export default NumberImageCircle

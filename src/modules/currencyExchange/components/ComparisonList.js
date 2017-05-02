@@ -11,7 +11,7 @@ import {
   TdBorder,
   TdBorderHeader,
   TdBorderNumber,
-}                          from 'shared'
+}                         from 'shared'
 
 ComparisonList.propTypes = {
   banks: React.PropTypes.array.isRequired,
@@ -20,13 +20,25 @@ ComparisonList.propTypes = {
 
 function ComparisonList ( {
   banks,
-  banks: [ firstBank ],
   loadingLabel,
   setting,
+  banks: [ firstBank ],
   setting: { langs, currentLang, themes, currentTheme },
 } ) {
   const renderHighLevel = number =>
-    ( number < 4 ? <NumberImageCircle number={number} size={'25px'} /> : null )
+    ( number < 4
+      ? <div
+          style={{
+            position: 'absolute',
+          }}
+        >
+          <NumberImageCircle
+            margin={'-25px 0 0 18px'}
+            number={number}
+            size={'25px'}
+          />
+        </div>
+      : null )
   const currLang = langs[ currentLang ].messages
   const listCurrencies = (
     { bankNameThai, bankNameEng, data: [ firstBank ] },
@@ -34,26 +46,31 @@ function ComparisonList ( {
   ) => (
     <tbody key={`tbody-${ bankNameEng }`}>
       <tr key={bankNameEng}>
-        <TdBorder>
-          <BankImageCircle bank={bankNameEng}>
-            <div style={{ marginLeft: '45px', width: '170px' }}>
-              <strong style={{ fontWeight: '600' }}>
-                {bankNameThai}
-              </strong>
-              <div
-                style={{
-                  width: '250px',
-                  color: 'gray',
-                  marginTop: '-2px',
-                  fontSize: '10.5px',
-                }}
-              >
-                <div>
-                  {bankNameEng}
-                </div>
+        <TdBorder style={{ display: 'block', position: 'relative' }}>
+          <BankImageCircle bank={bankNameEng} />
+          <div
+            style={{
+              position: 'absolute',
+              margin: '-35px 0 0 50px',
+              wordBreak: 'break-word',
+              minWidth: '140px',
+            }}
+          >
+            <strong style={{ fontWeight: '600' }}>
+              {bankNameThai}
+            </strong>
+            <div
+              style={{
+                color: 'gray',
+                marginTop: '-2px',
+                fontSize: '10.5px',
+              }}
+            >
+              <div>
+                {bankNameEng}
               </div>
             </div>
-          </BankImageCircle>
+          </div>
           {renderHighLevel( k + 1 )}
         </TdBorder>
         <TdBorderNumber>

@@ -52,7 +52,7 @@ function* watchLoadCurrencyPopularPage () {
       LOAD_CURRENCY_POPULAR_PAGE,
     )
     yield fork( loadBanks )
-    yield * intervalLoadBanks()
+    // yield * intervalLoadBanks()
   }
 }
 
@@ -61,11 +61,11 @@ function* watchToggleShowCurrencyPopular () {
     const { index } = yield take( TOGGLE_SHOW_CURRENCY_POPULAR )
     const { isTotal } = yield select( getBankCurrencyPopularByIndex, index )
     if ( isTotal ) {
-      const { currentSortCurrenciesLists } = yield select( getAppSetting )
+      const { currentSortCurrencies } = yield select( getAppSetting )
       const bank = yield select(
         getBankCurrencyPopularPropsDataByPopular,
         index,
-        currency.injectCurrency( currentSortCurrenciesLists, 'USD' ),
+        currency.injectCurrency( currentSortCurrencies, 'USD' ),
       )
       yield put( updateCurrencyPopular( index, bank ) )
     } else {

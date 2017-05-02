@@ -12,6 +12,7 @@ import LinkImage             from 'shared/LinkImage'
 import NumberImage           from 'shared/NumberImage'
 import NumberImageCircle     from 'shared/NumberImageCircle'
 import Popup                 from 'shared/Popup'
+import Row                   from 'shared/Row'
 import SectionDetail         from 'shared/SectionDetail'
 import SectionMain           from 'shared/SectionMain'
 import SpanSymbol            from 'shared/SpanSymbol'
@@ -34,6 +35,7 @@ export default {
   NumberImage,
   NumberImageCircle,
   Popup,
+  Row,
   SectionDetail,
   SectionMain,
   SpanSymbol,

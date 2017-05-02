@@ -4,15 +4,15 @@ import { fontStyles }   from './fontStyles'
 import { fontFamilies } from './fontFamilies'
 
 export const setting = {
-  currentLayout: 'BANK', // bank dill down, bank column
-  currentSortCurrenciesLists: [ 'USD', 'GBP', 'EUR', 'JPY', 'CNY' ], // relate dropdowncurrencies
-  currentSortBanksLists: [ 'KBANK' ],
+  currentLayout: 'BANK', // bank, currency
+  currentSortCurrencies: [ 'USD', 'GBP', 'EUR', 'JPY', 'CNY' ],
+  currentSortBanks: [ 'SCB', 'KTB', 'BAY', 'GSB', 'KBANK', 'IBANK' ],
   currentDropdownCurrencies: 'USD',
-  currentNumberDigit: 5,
-  currentLang: 'th',
-  currentTheme: 'white',
-  currentFontStyle: 'normal',
-  currentFontFamily: 'arial',
+  currentNumberDigit: 5, // 1000.19999
+  currentLang: 'th', // th, en
+  currentTheme: 'white', // white, night
+  currentFontStyle: 'normal', // normal, medium
+  currentFontFamily: 'arial', // arial, kanit, athiti
   langs,
   themes,
   fontStyles,
