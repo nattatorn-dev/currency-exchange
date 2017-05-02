@@ -20,10 +20,7 @@ const {
   updateCurrencyPopular,
 } = actions
 
-const {
-  updateDelayByName,
-  resetDelayByName,
-} = appActions
+const { updateDelayByName, resetDelayByName } = appActions
 
 function* loadBanks ( requiredFields ) {
   const banks = yield select( getBanks )
@@ -55,7 +52,7 @@ function* watchLoadCurrencyPopularPage () {
       LOAD_CURRENCY_POPULAR_PAGE,
     )
     yield fork( loadBanks )
-    // yield * intervalLoadBanks()
+    yield * intervalLoadBanks()
   }
 }
 
@@ -64,11 +61,11 @@ function* watchToggleShowCurrencyPopular () {
     const { index } = yield take( TOGGLE_SHOW_CURRENCY_POPULAR )
     const { isTotal } = yield select( getBankCurrencyPopularByIndex, index )
     if ( isTotal ) {
-      const { popularCurrenciesLists } = yield select( getAppSetting )
+      const { currentSortCurrenciesLists } = yield select( getAppSetting )
       const bank = yield select(
         getBankCurrencyPopularPropsDataByPopular,
         index,
-        currency.injectCurrency( popularCurrenciesLists, 'USD' ),
+        currency.injectCurrency( currentSortCurrenciesLists, 'USD' ),
       )
       yield put( updateCurrencyPopular( index, bank ) )
     } else {
