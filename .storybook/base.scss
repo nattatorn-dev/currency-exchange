@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import "~react-filters/components/Slider/Slider";
+@import "~react-filters/components/Toggle/Toggle";
+
+#root {
+  //height: 100vh;
+  //position: absolute;
+  //top: 0px;
+  //left: 0px;
+  //bottom: 0px;
+  //right: 0px;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+}
+
+.ac-suggestion {
+  span{
+    float: right;
+  }
+}
+
+.range-container {
+  width: 80%;
+}
+
+.rf-autocomplete {
+  width: 80%;
+}
+
+.rf-slider {
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+.group {
+  width: 200px;
+}

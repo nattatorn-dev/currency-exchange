@@ -1,7 +1,7 @@
-import React                        from 'react'
-import { storiesOf, action }        from '@kadira/storybook'
+import React from 'react'
+import { storiesOf, action } from '@kadira/storybook'
 import { withKnobs, text, boolean } from '@kadira/storybook-addon-knobs'
-import ButtonHighlight              from '../ButtomHighlight'
+import ButtonHighlight from '../ButtomHighlight'
 
 const buttonStyles = {
   backgroundColor: '#FFFFFF',
@@ -12,17 +12,6 @@ const buttonStyles = {
   fontSize: 15,
   margin: 10,
   padding: '3px 10px',
-}
-
-const Button = ( { children, onClick } ) => (
-  <button style={buttonStyles} onClick={onClick}>
-    {children}
-  </button>
-)
-
-Button.propTypes = {
-  children: React.PropTypes.string.isRequired,
-  onClick: React.PropTypes.func,
 }
 
 const ButtonThemeSetting = ( { children, onClick } ) => (
@@ -36,13 +25,8 @@ ButtonThemeSetting.propTypes = {
   onClick: React.PropTypes.func,
 }
 
-storiesOf( 'Button', module )
-  .addDecorator( withKnobs )
-  .add( 'with text', () => (
-    <Button onClick={action( 'clicked' )}>Hello Button</Button>
-  ) )
-  .add( 'with theme setting', () => (
-    <ButtonThemeSetting onClick={action( 'clicked' )}>
-      setting
-    </ButtonThemeSetting>
-  ) )
+storiesOf( 'Button', module ).addDecorator( withKnobs ).add( 'Theme', () => (
+  <ButtonThemeSetting onClick={action( 'clicked' )}>
+    setting
+  </ButtonThemeSetting>
+) )

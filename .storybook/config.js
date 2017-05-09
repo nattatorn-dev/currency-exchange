@@ -1,4 +1,5 @@
 import { configure, setAddon } from '@kadira/storybook'
+import './base.scss'
 import infoAddon from '@kadira/react-storybook-addon-info'
 
 const req = require.context( '../src', true, /.stories.js$/ )
