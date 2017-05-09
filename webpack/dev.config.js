@@ -4,6 +4,7 @@ var path = require('path');
 var webpack = require('webpack');
 var precss = require('precss');
 var autoprefixer = require('autoprefixer');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var assetsPath = path.resolve(__dirname, '../static/dist');
 var host = (process.env.HOST || 'localhost');
@@ -62,13 +63,17 @@ reactTransform[1].transforms.push({
   locals: ['module']
 });
 
+var cssVendor = [
+  /node_modules/
+]
+
 module.exports = {
   devtool: 'inline-source-map',
   context: path.resolve(__dirname, '..'),
   entry: {
     'main': [
       'webpack-hot-middleware/client?path=http://' + host + ':' + port + '/__webpack_hmr',
-      './src/client.js'
+      './src/client.js',
     ]
   },
   output: {
@@ -81,8 +86,36 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: ['babel?' + JSON.stringify(babelLoaderQuery), 'eslint-loader']},
       { test: /\.json$/, loader: 'json-loader' },
-      { test: /\.less$/, loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!postcss-loader!less?outputStyle=expanded&sourceMap' },
-      { test: /\.scss$/, loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!postcss-loader!sass?outputStyle=expanded&sourceMap' },
+      {
+        test: /\.less$/,
+        loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!postcss-loader!less?outputStyle=expanded&sourceMap',
+        exclude: cssVendor
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!postcss-loader!sass?outputStyle=expanded&sourceMap',
+        exclude: cssVendor,
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("style", "style!css?modules&importLoaders=1&sourceMap&localIdentName=[local]___[hash:base64:5]!postcss-loader?outputStyle=expanded&sourceMap"),
+        exclude: cssVendor,
+      },
+      {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract("style", 'css?importLoaders=2&sourceMap!postcss-loader!less'),
+        include: cssVendor,
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract("style", 'css?importLoaders=2&sourceMap!postcss-loader!sass'),
+        include: cssVendor,
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("style", "css?importLoaders=1!postcss"),
+        include: cssVendor,
+      },
       { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
       { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/font-woff" },
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
@@ -104,6 +137,7 @@ module.exports = {
   },
   plugins: [
     // hot reload
+    new ExtractTextPlugin('[name]-[chunkhash].css', { publicPath: 'http://' + host + ':' + port + '/dist/' }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.IgnorePlugin(/webpack-stats\.json$/),
     new webpack.DefinePlugin({
