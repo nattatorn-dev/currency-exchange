@@ -1,3 +1,4 @@
+import BackgroundEffect      from 'shared/BackgroundEffect'
 import BankImage             from 'shared/BankImage'
 import BankImageCircle       from 'shared/BankImageCircle'
 import BankLabel             from 'shared/BankLabel'
@@ -7,6 +8,7 @@ import Container             from 'shared/Container'
 import CurrencyImage         from 'shared/CurrencyImage'
 import DateTimeBar           from 'shared/DateTimeBar'
 import DropdownCurrencyImage from 'shared/DropdownCurrencyImage'
+import ExchangeBar           from 'shared/ExchangeBar'
 import InputInterval         from 'shared/InputInterval'
 import LinkImage             from 'shared/LinkImage'
 import NumberImage           from 'shared/NumberImage'
@@ -19,8 +21,8 @@ import SpanSymbol            from 'shared/SpanSymbol'
 import TdBorder              from 'shared/TdBorder'
 import TdBorderHeader        from 'shared/TdBorderHeader'
 import TdBorderNumber        from 'shared/TdBorderNumber'
-
 export default {
+  BackgroundEffect,
   BankImage,
   BankImageCircle,
   BankLabel,
@@ -30,6 +32,7 @@ export default {
   CurrencyImage,
   DateTimeBar,
   DropdownCurrencyImage,
+  ExchangeBar,
   InputInterval,
   LinkImage,
   NumberImage,

@@ -1,4 +1,4 @@
-import React         from 'react'
+import React from 'react'
 import { withTheme } from 'styled-components'
 
 ArrowDropdown.propTypes = {
@@ -10,7 +10,7 @@ ArrowDropdown.propTypes = {
 function ArrowDropdown ( {
   children,
   dropdownMenuStyleOpen,
-  theme: { themes, currentTheme },
+  theme: { currentTheme, themes },
 } ) {
   const stlyeArrowDropdown = () => ( {
     backgroundClip: 'padding-box',

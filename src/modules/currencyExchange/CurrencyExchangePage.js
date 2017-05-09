@@ -1,12 +1,12 @@
-import React, { Component, PropTypes }              from 'react'
-import { connect }                                  from 'react-redux'
-import { bindActionCreators }                       from 'redux'
+import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { loadCurrencyExchange, loadMoreStargazers } from './actions'
-import { getBankCurrencyExchange }                  from './selectors'
-import { getAppSetting }                            from '../app/selectors'
+import { getBankCurrencyExchange } from './selectors'
+import { getAppSetting } from '../app/selectors'
 
-import { ComparisonList }                           from './components'
-import { Container }                                from 'shared'
+import { ComparisonList } from './components'
+import { Container, ExchangeBar } from 'shared'
 
 class CurrencyExchangePage extends Component {
   static propTypes = {
@@ -17,7 +17,7 @@ class CurrencyExchangePage extends Component {
     login: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     setting: PropTypes.object,
-  };
+  }
 
   componentWillMount () {
     this.props.actions.loadCurrencyExchange( this.props.login, this.props.name )
@@ -36,6 +36,7 @@ class CurrencyExchangePage extends Component {
       ? <h1><i>Loading {name} {login} details...</i></h1>
       : <div>
           <Container padding={'0 5% 5% 5%'}>
+            <ExchangeBar {...this.props} />
             <ComparisonList {...this.props} />
           </Container>
         </div>
@@ -60,10 +61,10 @@ const mapDispatchToProps = dispatch => ( {
     {
       loadCurrencyExchange,
     },
-    dispatch,
+    dispatch
   ),
 } )
 
 export default connect( mapStateToProps, mapDispatchToProps )(
-  CurrencyExchangePage,
+  CurrencyExchangePage
 )

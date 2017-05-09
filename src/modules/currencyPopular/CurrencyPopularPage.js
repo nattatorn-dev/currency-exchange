@@ -1,13 +1,13 @@
-import React, { Component, PropTypes }                        from 'react'
-import { connect }                                            from 'react-redux'
-import { bindActionCreators }                                 from 'redux'
+import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { toggleShowCurrencyPopular, loadCurrencyPopularPage } from './actions'
-import { getBanksName }                                       from './selectors'
-import { getAppSetting, getDate, getDelay }                   from '../app/selectors'
-import { loadBanks }                                          from './sagas'
+import { getBanksName } from './selectors'
+import { getAppSetting, getDate, getDelay } from '../app/selectors'
+import { loadBanks } from './sagas'
 
-import { PopularList }                                        from './components'
-import { Container, DateTimeBar }                             from 'shared'
+import { PopularList } from './components'
+import { Container, DateTimeBar } from 'shared'
 
 class CurrencyPopularPage extends Component {
   static propTypes = {
@@ -20,7 +20,7 @@ class CurrencyPopularPage extends Component {
     delay: PropTypes.object.isRequired,
     login: PropTypes.string.isRequired,
     setting: PropTypes.object,
-  };
+  }
 
   componentWillMount () {
     this.props.actions.loadCurrencyPopularPage( this.props.login )
@@ -37,7 +37,7 @@ class CurrencyPopularPage extends Component {
     return !banks
       ? <h1><i>Loading...</i></h1>
       : <Container padding={'0 5% 5% 5%'}>
-          <DateTimeBar date={date} delay={delay} setting={setting}/>
+          <DateTimeBar {...this.props} />
           <PopularList {...this.props} />
         </Container>
   }
@@ -65,7 +65,7 @@ const mapDispatchToProps = dispatch => ( {
       loadCurrencyPopularPage,
       toggleShowCurrencyPopular,
     },
-    dispatch,
+    dispatch
   ),
 } )
 
@@ -73,6 +73,4 @@ const preload = ( { login } ) => [ [ loadBanks ] ]
 
 CurrencyPopularPage.preload = preload
 
-export default connect( mapStateToProps, mapDispatchToProps )(
-  CurrencyPopularPage,
-)
+export default connect( mapStateToProps, mapDispatchToProps )( CurrencyPopularPage )

@@ -45,10 +45,7 @@
     "array-bracket-spacing": [ 2, "always" ],
     "object-curly-spacing": [ 2, "always" ],
     "computed-property-spacing": [ 2, "always" ],
-    "no-multi-spaces": [
-        "error",
-        {"exceptions": {"ImportDeclaration": true}}
-    ],
+    "no-multi-spaces": [2, {"exceptions": {"ImportDeclaration": true}}],
 
     // strings
     "quotes": [ 2, "single", "avoid-escape" ],

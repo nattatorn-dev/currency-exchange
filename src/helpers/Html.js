@@ -1,16 +1,18 @@
 import React, { Component, PropTypes } from 'react'
-import ReactDOM                        from 'react-dom/server'
-import serialize                       from 'serialize-javascript'
-import Helmet                          from 'react-helmet'
-import config                          from 'config'
-import styleSheet                      from 'styled-components/lib/models/StyleSheet'
+import ReactDOM from 'react-dom/server'
+import serialize from 'serialize-javascript'
+import Helmet from 'react-helmet'
+import config from 'config'
+import styleSheet from 'styled-components/lib/models/StyleSheet'
+import 'react-filters/components/Slider/Slider.scss'
+import 'react-select/dist/react-select.css'
 
 class Html extends Component {
   static propTypes = {
     assets: PropTypes.object,
     component: PropTypes.node,
     store: PropTypes.object,
-  };
+  }
 
   render () {
     const { assets, component, store } = this.props
@@ -30,12 +32,8 @@ class Html extends Component {
           </style>
           <link rel="shortcut icon" href="/favicon.ico" />
           <link
+            rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Athiti|Kanit"
-            rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/react-select/0.9.1/react-select.min.css"
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 

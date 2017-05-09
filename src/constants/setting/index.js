@@ -1,6 +1,6 @@
-import { langs }        from './langs'
-import { themes }       from './themes'
-import { fontStyles }   from './fontStyles'
+import { langs } from './langs'
+import { themes } from './themes'
+import { fontStyles } from './fontStyles'
 import { fontFamilies } from './fontFamilies'
 
 export const setting = {
@@ -8,7 +8,7 @@ export const setting = {
   currentSortCurrencies: [ 'USD', 'GBP', 'EUR', 'JPY', 'CNY' ],
   currentSortBanks: [ 'SCB', 'KTB', 'BAY', 'GSB', 'KBANK', 'IBANK' ],
   currentDropdownCurrencies: 'USD',
-  currentNumberDigit: 5, // 1000.19999
+  currentFractionDigits: 4, // 1000.1999
   currentLang: 'th', // th, en
   currentTheme: 'white', // white, night
   currentFontStyle: 'normal', // normal, medium
