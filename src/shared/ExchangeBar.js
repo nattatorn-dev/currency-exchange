@@ -32,7 +32,7 @@ class ExchangeBar extends Component {
             value={this.state.value}
             step={1}
             min={0}
-            max={5}
+            max={6}
             showSteps
           />
         </div>
