@@ -1,15 +1,16 @@
-import * as ActionTypes from '../actions'
+import { ADD_CURRENCY_EXCHANGE } from '../actions'
+import { reducer }               from 'helpers'
 
 const initialState = () => ( {} )
+
+const handlers = {
+  [ ADD_CURRENCY_EXCHANGE ]: ( state, action ) => ( {
+    banks: action.banks,
+    currency: action.currency,
+    rate: action.rate,
+  } ),
+}
+
 export default function currencyExchange ( state = initialState(), action = {} ) {
-  switch ( action.type ) {
-  case ActionTypes.ADD_CURRENCY_EXCHANGE:
-    return {
-      banks: action.banks,
-      currency: action.currency,
-      rate: action.rate,
-    }
-  default:
-    return state
-  }
+  return reducer.CreateHanderReducer( state, action, handlers )
 }

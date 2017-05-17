@@ -1,14 +1,14 @@
-import * as ActionTypes from '../actions'
+import { UPDATE_ROUTER_STATE } from '../actions'
+import { reducer } from 'helpers'
 
 const initialState = () => ( {
   pathname: '/',
 } )
 
+const handlers = {
+  [ UPDATE_ROUTER_STATE ]: ( state, action ) => action.state,
+}
+
 export default function router ( state = initialState(), action = {} ) {
-  switch ( action.type ) {
-  case ActionTypes.UPDATE_ROUTER_STATE:
-    return action.state
-  default:
-    return state
-  }
+  return reducer.CreateHanderReducer( state, action, handlers )
 }
