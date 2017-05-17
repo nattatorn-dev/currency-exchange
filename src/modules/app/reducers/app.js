@@ -8,7 +8,7 @@ import {
   RESET_DELAY_BY_NAME,
   RESET_DELAY,
 } from '../actions'
-import { reducer }             from ' helpers'
+import { reducer }             from 'helpers'
 import { setting, controller } from '../../../constants'
 
 const initialState = () => ( {
