@@ -1,17 +1,18 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import React, { Component, PropTypes }              from 'react'
+import { connect }                                  from 'react-redux'
+import { bindActionCreators }                       from 'redux'
 import { loadCurrencyExchange, loadMoreStargazers } from './actions'
-import { getBankCurrencyExchange } from './selectors'
-import { getAppSetting } from '../app/selectors'
-
-import { ComparisonList } from './components'
-import { Container, ExchangeBar } from 'shared'
+import { getBankCurrencyExchange }                  from './selectors'
+import { getAppSetting, getAppController }          from '../app/selectors'
+import { updateSetting }                            from '../app/actions'
+import { ComparisonList }                           from './components'
+import { Container, ExchangeBar }                   from 'shared'
 
 class CurrencyExchangePage extends Component {
   static propTypes = {
     actions: PropTypes.shape( {
       loadCurrencyExchange: PropTypes.func.isRequired,
+      updateSetting: PropTypes.func.isRequired,
     } ),
     fullName: PropTypes.string.isRequired,
     login: PropTypes.string.isRequired,
@@ -52,6 +53,7 @@ const mapStateToProps = state => {
     login,
     name,
     banks: getBankCurrencyExchange( state ),
+    controller: getAppController( state ),
     setting: getAppSetting( state ),
   }
 }
@@ -60,6 +62,7 @@ const mapDispatchToProps = dispatch => ( {
   actions: bindActionCreators(
     {
       loadCurrencyExchange,
+      updateSetting,
     },
     dispatch
   ),

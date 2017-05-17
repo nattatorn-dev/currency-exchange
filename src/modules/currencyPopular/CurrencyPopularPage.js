@@ -1,13 +1,13 @@
-import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import React, { Component, PropTypes }                        from 'react'
+import { connect }                                            from 'react-redux'
+import { bindActionCreators }                                 from 'redux'
 import { toggleShowCurrencyPopular, loadCurrencyPopularPage } from './actions'
-import { getBanksName } from './selectors'
-import { getAppSetting, getDate, getDelay } from '../app/selectors'
-import { loadBanks } from './sagas'
+import { getBanksName }                                       from './selectors'
+import { getAppSetting, getDate, getDelay }                   from '../app/selectors'
+import { loadBanks }                                          from './sagas'
 
-import { PopularList } from './components'
-import { Container, DateTimeBar } from 'shared'
+import { PopularList }                                        from './components'
+import { Container, DateTimeBar }                             from 'shared'
 
 class CurrencyPopularPage extends Component {
   static propTypes = {

@@ -1,6 +1,6 @@
-import { langs } from './langs'
-import { themes } from './themes'
-import { fontStyles } from './fontStyles'
+import { langs }        from './langs'
+import { themes }       from './themes'
+import { fontStyles }   from './fontStyles'
 import { fontFamilies } from './fontFamilies'
 
 export const setting = {

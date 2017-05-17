@@ -1,6 +1,6 @@
-import React              from 'react'
-import { url }            from 'helpers'
-import { number }         from 'services'
+import React from 'react'
+import { url } from 'helpers'
+import { number } from 'services'
 
 import SectionCalculation from './SectionCalculation'
 import {
@@ -11,7 +11,7 @@ import {
   TdBorder,
   TdBorderHeader,
   TdBorderNumber,
-}                         from 'shared'
+} from 'shared'
 
 ComparisonList.propTypes = {
   banks: React.PropTypes.array.isRequired,
@@ -23,10 +23,10 @@ function ComparisonList ( {
   loadingLabel,
   setting,
   banks: [ firstBank ],
-  setting: { langs, currentLang, themes, currentTheme },
+  setting: { currentFractionDigits, currentLang, currentTheme, langs, themes },
 } ) {
   const renderHighLevel = number =>
-    ( number < 4
+    number < 4
       ? <div
           style={{
             position: 'absolute',
@@ -38,11 +38,11 @@ function ComparisonList ( {
             size={'25px'}
           />
         </div>
-      : null )
+      : null
   const currLang = langs[ currentLang ].messages
   const listCurrencies = (
     { bankNameThai, bankNameEng, data: [ firstBank ] },
-    k,
+    k
   ) => (
     <tbody key={`tbody-${ bankNameEng }`}>
       <tr key={bankNameEng}>
@@ -88,7 +88,11 @@ function ComparisonList ( {
           letterSpacing: '0.5px',
         }}
       >
-        <SectionCalculation firstBank={firstBank} setting={setting} />
+        <SectionCalculation
+          currentFractionDigits={currentFractionDigits}
+          firstBank={firstBank}
+          setting={setting}
+        />
       </tr>
     </tbody>
   )

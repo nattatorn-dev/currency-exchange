@@ -1,4 +1,6 @@
 import { injectGlobal } from 'styled-components'
+import 'react-filters/components/Slider/Slider.scss'
+import 'react-select/dist/react-select.css'
 
 injectGlobal`
   body {

@@ -49,7 +49,7 @@ function* intervalLoadBanks () {
 function* watchLoadCurrencyPopularPage () {
   while ( true ) {
     const { login, requiredFields = [] } = yield take(
-      LOAD_CURRENCY_POPULAR_PAGE,
+      LOAD_CURRENCY_POPULAR_PAGE
     )
     yield fork( loadBanks )
     // yield * intervalLoadBanks()
@@ -65,7 +65,7 @@ function* watchToggleShowCurrencyPopular () {
       const bank = yield select(
         getBankCurrencyPopularPropsDataByPopular,
         index,
-        currency.injectCurrency( currentSortCurrencies, 'USD' ),
+        currency.injectCurrency( currentSortCurrencies, 'USD' )
       )
       yield put( updateCurrencyPopular( index, bank ) )
     } else {

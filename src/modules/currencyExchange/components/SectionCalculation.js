@@ -1,5 +1,5 @@
-import React      from 'react'
-import numbro     from 'numbro'
+import React from 'react'
+import numbro from 'numbro'
 import { number } from 'services'
 
 SectionCalculation.propTypes = {
@@ -7,7 +7,7 @@ SectionCalculation.propTypes = {
   setting: React.PropTypes.object.isRequired,
 }
 
-function SectionCalculation ( { firstBank, setting } ) {
+function SectionCalculation ( { currentFractionDigits, firstBank, setting } ) {
   const currentLang = setting.langs[ setting.currentLang ].messages
 
   return (
@@ -29,22 +29,18 @@ function SectionCalculation ( { firstBank, setting } ) {
             <li>
               <div>
                 <p>
-                  {
-                    `${ currentLang.BANK_TABLE_COL_CALCULATION_BUY }
-                    ${ number.isNumber( number.mathRound( firstBank.calSell, 6 ) ) }
-                    ${ firstBank.currencyDetails.symbol }`
-                  }
+                  {`${ currentLang.BANK_TABLE_COL_CALCULATION_BUY }
+                    ${ number.isNumber( number.mathRound( firstBank.calSell, currentFractionDigits ) ) }
+                    ${ firstBank.currencyDetails.symbol }`}
                 </p>
               </div>
             </li>
             <li>
               <div>
                 <p>
-                  {
-                    `${ currentLang.BANK_TABLE_COL_CALCULATION_SELL }
-                    ${ number.isNumber( number.mathRound( firstBank.calBuy, 6 ) ) }
-                    ${ firstBank.currencyDetails.symbol }`
-                  }
+                  {`${ currentLang.BANK_TABLE_COL_CALCULATION_SELL }
+                    ${ number.isNumber( number.mathRound( firstBank.calBuy, currentFractionDigits ) ) }
+                    ${ firstBank.currencyDetails.symbol }`}
                 </p>
               </div>
             </li>
