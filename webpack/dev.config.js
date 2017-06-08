@@ -16,6 +16,7 @@ var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(require('./w
 
 var babelrc = fs.readFileSync('./.babelrc');
 var babelrcObject = {};
+var cssVendor = require('./vendorPath').css
 
 try {
   babelrcObject = JSON.parse(babelrc);
@@ -63,10 +64,6 @@ reactTransform[1].transforms.push({
   locals: ['module']
 });
 
-var cssVendor = [
-  /node_modules/
-]
-
 module.exports = {
   devtool: 'inline-source-map',
   context: path.resolve(__dirname, '..'),
@@ -98,7 +95,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style", "style!css?modules&importLoaders=1&sourceMap&localIdentName=[local]___[hash:base64:5]!postcss-loader?outputStyle=expanded&sourceMap"),
+        loader: 'style!css?modules&importLoaders=1&sourceMap&localIdentName=[local]___[hash:base64:5]!postcss-loader?outputStyle=expanded&sourceMap',
         exclude: cssVendor,
       },
       {
