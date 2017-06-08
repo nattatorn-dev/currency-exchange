@@ -52,7 +52,7 @@ function* watchLoadCurrencyPopularPage () {
       LOAD_CURRENCY_POPULAR_PAGE
     )
     yield fork( loadBanks )
-    // yield * intervalLoadBanks()
+    yield * intervalLoadBanks()
   }
 }
 
