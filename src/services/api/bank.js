@@ -8,6 +8,8 @@ import { getBanksSortByCurrency }     from 'modules/currencyPopular/selectors'
 import { number }                     from 'services'
 import { currency }                   from 'helpers'
 
+const currencyMaster = [ ...Object.keys( currencies ), ...[ 'USD1', 'USD2', 'USD3' ] ]
+
 async function callBankApi ( endpoint ) {
   let fullUrl = endpoint.indexOf( config.apiBank.proxy ) === -1
     ? `${ config.apiBank.proxy }/${ endpoint }`
@@ -27,76 +29,78 @@ async function callBankApi ( endpoint ) {
       return camelizeKeys( json )
     } )
     .then( camelizedJson =>
-      camelizedJson.reduce(
-        ( p, c ) => {
-          const divideCase = c.data.reduce(
-            ( p, c ) => {
-              if ( c.acronym.indexOf( 'JPY' ) !== -1 ) {
-                return currency.currencyDivide( currencies, p, c, 'JPY' )
-              } else if ( c.acronym.indexOf( 'KRW' ) !== -1 ) {
-                return currency.currencyDivide( currencies, p, c, 'KRW' )
-              } else if ( c.acronym.indexOf( 'IDR' ) !== -1 ) {
-                return currency.currencyDivide( currencies, p, c, 'IDR' )
-              } else if ( c.acronym.indexOf( 'USD' ) !== -1 ) {
-                return p
-              } else {
-                return [
-                  ...p,
-                  {
-                    ...c,
-                    extendName: null,
-                    currencyDetails: currencies[ c.acronym.substr( 0, 3 ) ],
-                    indexGroup: 0,
-                    sell: +c.sell,
-                    buy: +c.buy,
-                  },
-                ]
-              }
-            },
-            [],
-          )
-          const usdCase = c.data
-            .filter( e => e.acronym.indexOf( 'USD' ) !== -1 )
-            .sort( ( a, b ) => a.sell - b.sell )
-            .map( ( e, k ) => ( {
-              ...e,
-              acronym: `USD${ k + 1 }`,
-              extendName: currency.usdExtendName[ k ].text,
-              currencyDetails: currencies[ 'USD' ],
-              indexGroup: k,
-              sell: +e.sell,
-              buy: +e.buy,
-            } ) )
+      camelizedJson.reduce( ( p, c ) => {
+        const divideCase = c.data.reduce( ( p, c ) => {
+          if ( currencyMaster.includes( c.acronym ) ) {
+            if ( c.acronym.indexOf( 'JPY' ) !== -1 ) {
+              return currency.currencyDivide( currencies, p, c, 'JPY' )
+            } else if ( c.acronym.indexOf( 'KRW' ) !== -1 ) {
+              return currency.currencyDivide( currencies, p, c, 'KRW' )
+            } else if ( c.acronym.indexOf( 'IDR' ) !== -1 ) {
+              return currency.currencyDivide( currencies, p, c, 'IDR' )
+            } else if ( c.acronym.indexOf( 'USD' ) !== -1 ) {
+              return p
+            } else {
+              return [
+                ...p,
+                {
+                  ...c,
+                  extendName: null,
+                  currencyDetails: currencies[ c.acronym.substr( 0, 3 ) ],
+                  indexGroup: 0,
+                  sell: +c.sell,
+                  buy: +c.buy,
+                },
+              ]
+            }
+          } else {
+            return p
+          }
+        }, [] )
+        const usdCase = c.data
+          .filter( e => e.acronym.indexOf( 'USD' ) !== -1 )
+          .sort( ( a, b ) => a.sell - b.sell )
+          .map( ( e, k ) => ( {
+            ...e,
+            acronym: `USD${ k + 1 }`,
+            extendName: currency.usdExtendName[ k ].text,
+            currencyDetails: currencies[ 'USD' ],
+            indexGroup: k,
+            sell: +e.sell,
+            buy: +e.buy,
+          } ) )
 
-          return [
-            ...p,
-            {
-              ...c,
-              data: [ ...divideCase, ...usdCase ],
-              isTotal: true,
-              ...[ ...divideCase, ...usdCase ].reduce( (
+        return [
+          ...p,
+          {
+            ...c,
+            data: [ ...divideCase, ...usdCase ],
+            isTotal: true,
+            ...[ ...divideCase, ...usdCase ].reduce(
+              (
                 p,
-                c, // TODO: case usd fix
+                c // TODO: case usd fix
               ) =>
                 c.acronym.indexOf( 'USD' ) === -1
                   ? { ...p, [ c.currencyDetails.code ]: c }
-                  : { ...p, [ c.acronym ]: c }, {} ),
-            },
-          ]
-        },
-        [],
-      ) )
+                  : { ...p, [ c.acronym ]: c },
+              {}
+            ),
+          },
+        ]
+      }, [] )
+    )
     .then( complutedData => {
       const popularCurrenciesComputed = currency.injectCurrency(
         currency.defaultCurrenciesPopular(),
-        'USD',
+        'USD'
       )
       const popular = getBanksSortByCurrency(
         {
           entities: { banks: complutedData },
         },
         currencies,
-        popularCurrenciesComputed,
+        popularCurrenciesComputed
       )
 
       return {
@@ -107,7 +111,7 @@ async function callBankApi ( endpoint ) {
       response => response,
       error => ( {
         error: error.message || 'Something bad happened.',
-      } ),
+      } )
     )
 }
 
