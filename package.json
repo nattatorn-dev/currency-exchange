@@ -30,6 +30,7 @@
   "scripts": {
     "start": "concurrently --kill-others \"npm run start-prod\"",
     "start-prod": "better-npm-run start-prod",
+    "start-heroku": "better-npm-run start-heroku",
     "build": "better-npm-run build",
     "postinstall": "npm run build",
     "lint": "eslint -c .eslintrc src",
@@ -67,6 +68,14 @@
       "env": {
         "NODE_PATH": "./src",
         "NODE_ENV": "production"
+      }
+    },
+    "start-heroku": {
+      "command": "node ./bin/server.js",
+      "env": {
+        "NODE_PATH": "./src",
+        "NODE_ENV": "production",
+        "PORT": 8000
       }
     },
     "start-dev": {
@@ -108,7 +117,9 @@
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
     "lodash": "^4.13.1",
+    "logrocket": "^0.5.1",
     "moment": "^2.18.1",
+    "node-sass": "^4.5.3",
     "normalizr": "^2.0.1",
     "numbro": "^1.9.3",
     "pretty-error": "^2.0.1",
@@ -179,7 +190,6 @@
     "jest": "^19.0.2",
     "json-loader": "^0.5.4",
     "nock": "^9.0.9",
-    "node-sass": "^3.4.2",
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",
     "react-a11y": "^0.3.3",
