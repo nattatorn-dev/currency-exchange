@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from 'react-filters/dist/Slider'
+import 'react-filters/components/Slider/Slider.scss'
 
 import OptionBar from 'shared/OptionBar'
 

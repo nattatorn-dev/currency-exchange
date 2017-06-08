@@ -1,8 +1,8 @@
-import React, { Component, PropTypes }     from 'react'
-import { bindActionCreators }              from 'redux'
-import { connect }                         from 'react-redux'
-import Helmet                              from 'react-helmet'
-import { StickyContainer, Sticky }         from 'react-sticky'
+import React, { Component, PropTypes }      from 'react'
+import { bindActionCreators }               from 'redux'
+import { connect }                          from 'react-redux'
+import Helmet                               from 'react-helmet'
+import { StickyContainer, Sticky }          from 'react-sticky'
 import './global-styles'
 import {
   navigate,
@@ -33,7 +33,7 @@ class App extends Component {
     location: PropTypes.shape( { pathname: PropTypes.string } ),
     router: PropTypes.object,
     setting: PropTypes.object,
-  };
+  }
 
   componentWillMount () {
     this.props.actions.updateRouterState( {
@@ -57,11 +57,11 @@ class App extends Component {
   handleDismissClick = e => {
     this.props.actions.resetErrorMessage()
     e.preventDefault()
-  };
+  }
 
   handleChange = nextValue => {
     this.props.actions.navigate( `/${ nextValue }` )
-  };
+  }
 
   handleDropDownClick = e => {
     e.preventDefault()
@@ -69,7 +69,7 @@ class App extends Component {
       ...this.props.controller,
       dropdownMenuStyleOpen: false,
     } )
-  };
+  }
 
   render () {
     const {
@@ -137,7 +137,7 @@ const mapDispatchToProps = dispatch => ( {
       updateRouterState,
       updateSetting,
     },
-    dispatch,
+    dispatch
   ),
 } )
 

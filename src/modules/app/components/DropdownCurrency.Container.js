@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Select                          from 'react-select'
+import 'react-select/dist/react-select.css'
 
 import CurrencyOption                  from './CurrencyOption'
 import CurrencyValue                   from './CurrencyValue'
