@@ -17,14 +17,14 @@ export default function configureStore ( history, initialState ) {
     middleware,
     __CLIENT__ && typeof window.devToolsExtension !== 'undefined'
       ? window.devToolsExtension()
-      : f => f,
+      : f => f
   )
 
   const composeEnhancers =
     ( __CLIENT__ && typeof window.devToolsExtension !== 'undefined' ) || compose
   const store = createStoreWithMiddleware( createStore )(
     rootReducer,
-    initialState,
+    initialState
   )
 
   if ( module.hot ) {
